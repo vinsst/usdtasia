@@ -1,11 +1,14 @@
 import React from "react";
 import GB from "../assets/img/flags/GB.svg";
 import arrow_down from "../assets/img/arrow_down.svg";
+import menuHamburger from "../assets/img/menuHamburger.svg";
+import profile from "../assets/img/profile.svg";
 
 function Header() {
   return (
     <header>
       <div className="header_container container">
+        <img src={menuHamburger} alt="" className="header_burger" />
         <div className="header_logo">
           USDT<span className="header_logo2">ASIA</span>
         </div>
@@ -27,6 +30,7 @@ function Header() {
             <button className="group2__registration_up">Sign up</button>
           </div>
         </div>
+        <img src={profile} alt="" className="header_profile" />
       </div>
     </header>
   );
