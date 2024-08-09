@@ -66,6 +66,41 @@ function Footer() {
       </section>
       <section className="footer_container container">
         <div className="footer_top">
+          <section className="footer__top_txt_mob">
+            <div className="footer__top_txt_mob_container">
+              <h5 className="footer__usdtasia_h5_mob footer__h5_mob">
+                USDTASIA
+              </h5>
+              <nav className="footer__usdtasia_nav_mob">
+                <p className="footer__nav_p">About</p>
+                <p className="footer__nav_p">Our brand</p>
+                <p className="footer__nav_p">Affiliate program</p>
+                <p className="footer__nav_p">Terms of Service</p>
+                <p className="footer__nav_p">Privacy Policy</p>
+              </nav>
+            </div>
+            <div className="footer__top_txt_mob_container">
+              <h5 className="footer__usdtasia_h5_mob footer__h5_mob">
+                Popular
+              </h5>
+              <nav className="footer__usdtasia_nav_mob">
+                <p className="footer__nav_p">Blog</p>
+                <p className="footer__nav_p">XMR to BTC</p>
+                <p className="footer__nav_p">ETH to BTC</p>
+                <p className="footer__nav_p">LTC to ETH</p>
+              </nav>
+            </div>
+            <div className="footer__top_txt_mob_container">
+              <h5 className="footer__usdtasia_h5_mob footer__h5_mob">
+                Support
+              </h5>
+              <nav className="footer__usdtasia_nav_mob">
+                <p className="footer__nav_p">FAQ</p>
+                <p className="footer__nav_p">API</p>
+                <p className="footer__nav_p">Support</p>
+              </nav>
+            </div>
+          </section>
           <section className="">
             <div className="footer__logo footer_section">
               <div className="header_logo">
@@ -82,7 +117,7 @@ function Footer() {
             </div>
           </section>
           <div className="footer_line"></div>
-          <section className="">
+          <section className="footer__top_txt">
             <div className="footer_usdtasia footer_section">
               <h5 className="footer__usdtasia_h5 footer_h5">USDTASIA</h5>
               <nav className="footer__usdtasia_nav footer_elements">
@@ -95,7 +130,7 @@ function Footer() {
             </div>
           </section>
           <div className="footer_line"></div>
-          <section className="">
+          <section className="footer__top_txt">
             <div className="footer_popular footer_section">
               <h5 className="footer__popular_h5 footer_h5">POPULAR</h5>
               <div className="footer__popular_elements footer_elements">
@@ -105,7 +140,7 @@ function Footer() {
             </div>
           </section>
           <div className="footer_line"></div>
-          <section className="">
+          <section className="footer__top_txt">
             <div className="footer_support footer_section">
               <h5 className="footer__support_h5 footer_h5">SUPPORT</h5>
               <div className="footer__support_elements footer_elements">

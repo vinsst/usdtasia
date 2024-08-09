@@ -1,5 +1,6 @@
 import React from "react";
 import autorenew from "../assets/img/autorenew.svg";
+import autorenew2 from "../assets/img/autorenew2.svg";
 import Bitcoin from "../assets/img/Bitcoin.svg";
 import tCurr from "../assets/img/tCurr.svg";
 import wallet from "../assets/img/wallet.svg";
@@ -29,6 +30,11 @@ import arrRight from "../assets/img/arrRight.svg";
 import arrowUpDown from "../assets/img/arrowUpDown.svg";
 import infoSuccess from "../assets/img/infoSuccess.svg";
 
+import btcMob from "../assets/img/btcMob.svg";
+import EthereumMob from "../assets/img/EthereumMob.svg";
+import SOLMob from "../assets/img/SOLMob.svg";
+import WBNBMob from "../assets/img/WBNBMob.svg";
+
 function restore() {
   return (
     <main className="homeMain home_container container">
@@ -42,42 +48,46 @@ function restore() {
         </section>
         <div className="exchange_container_padding">
           <section className="quick__currencyChoioce_block">
-            <div className="quick__currencyChoioce_currency_container">
-              <div className="quick__curency_box">
-                <div className="quick__curency_box_side1">
-                  <img
-                    src={Bitcoin}
-                    alt=""
-                    className="quick__curency_box_currency_img"
-                  />
-                  <div className="quick__curency_box_currency_name_container">
-                    <p className="quick__curency_box_currency_send">Send</p>
-                    <p className="quick__curency_box_currency_name">
-                      Bitcoin BTC
-                    </p>
-                  </div>
-                  <img src={arrow_down} alt="" className="quick__curency_arr" />
+            <div className="quick__curency_box">
+              <div className="quick__curency_box_side1">
+                <img
+                  src={Bitcoin}
+                  alt=""
+                  className="quick__curency_box_currency_img"
+                />
+                <div className="quick__curency_box_currency_name_container">
+                  <p className="quick__curency_box_currency_send">Send</p>
+                  <p className="quick__curency_box_currency_name">
+                    Bitcoin BTC
+                  </p>
                 </div>
-                <div className="quick__curency_box_line"></div>
-                <div className="quick__curency_box_side2">
-                  <div className="quick__curency_box_currency_value">
-                    0.01689025&nbsp;
-                  </div>
-                  <div className="quick__curency_box_currency_init">BTC</div>
-                </div>
+                <img src={arrow_down} alt="" className="quick__curency_arr" />
               </div>
-              {/* <div className="quick__curency_span">
+              <div className="quick__curency_box_line"></div>
+              <div className="quick__curency_box_side2">
+                <div className="quick__curency_box_currency_value">
+                  0.01689025&nbsp;
+                </div>
+                <div className="quick__curency_box_currency_init">BTC</div>
+              </div>
+            </div>
+            {/* <div className="quick__curency_span">
                 <div className="quick__curency_span_1">
                   Курс обмена: 1 BTC ≈ 63513.537 USDT
                 </div>
                 <div className="quick__curency_span_2">Min:10 BTC</div>
               </div> */}
-            </div>
             <img
               src={autorenew}
               alt=""
               className="quick__currencyChoioce_autorenew"
             />
+            <img
+              src={autorenew2}
+              alt=""
+              className="quick__currencyChoioce_autorenewMobile_img"
+            />
+
             <div className="quick__curency_box">
               <div className="quick__curency_box_side1">
                 <img
@@ -103,7 +113,7 @@ function restore() {
             </div>
           </section>
           <section className="quick__exchange_currenct_span">
-            <div className="quick__exchange_currenct_span_1">
+            <div className="quick__exchange_currenct_span_1 quick__exchange_currenct_span_1_1_isInMobile">
               <div className="quick__exchange_currenct_span_1_1">
                 Курс обмена: 1 BTC ≈ 63513.537 USDT
               </div>
@@ -181,6 +191,20 @@ function restore() {
             <img src={WrappedBNB} alt="" className="currency__el_img" />
             <p className="currency__el_abr">BNB</p>
           </div>
+        </div>
+        <div className="rates_currency_container_mob">
+          <div className="rates__curr_el rates__current_curr">
+            <img
+              src={tether_usdtlogo_small}
+              alt=""
+              className="currency__el_img"
+            />
+            <p className="currency__el_abr">USDT</p>
+          </div>
+          <img src={btcMob} alt="" className="rates__mobile_img" />
+          <img src={EthereumMob} alt="" className="rates__mobile_img" />
+          <img src={SOLMob} alt="" className="rates__mobile_img" />
+          <img src={WBNBMob} alt="" className="rates__mobile_img" />
         </div>
       </section>
       <section className="countryToUsdt">
@@ -489,9 +513,14 @@ function restore() {
                 </p>
               </div>
               <div className="recent__block_line_side_container_left">
-                <p className="recent__block_line_side_container_right_value">
-                  140000 UDST
-                </p>
+                <div className="recent__block_line_side_container_left_mob_text">
+                  <p className="recent__block_line_side_container_right_value">
+                    140000 UDST
+                  </p>
+                  <p className="recent__block_line_side_container_right_value_under_mob">
+                    10 sec ago
+                  </p>
+                </div>
                 <img
                   src={tether_usdtlogo_small}
                   alt=""
@@ -507,9 +536,14 @@ function restore() {
                   alt=""
                   className="recent__block_line_side_container_right_crypto"
                 />
-                <p className="recent__block_line_side_container_right_value">
-                  140000 UDST
-                </p>
+                <div className="recent__block_line_side_container_left_mob_text recent__block_line_side_container_left_mob_text_right">
+                  <p className="recent__block_line_side_container_right_value">
+                    140000 UDST
+                  </p>
+                  <p className="recent__block_line_side_container_right_value_under_mob">
+                    16 sec
+                  </p>
+                </div>
               </div>
               <div className="recent__block_line_side_container_left">
                 <p className="recent__block_line_side_container_left_time">
@@ -523,7 +557,7 @@ function restore() {
               </div>
             </div>
           </div>
-          <div className="recent__block_line blue_footer">
+          <div className="recent__block_line  blue_footer">
             <div className="recent__block_line_side_container">
               <div className="recent__block_line_side_container_left">
                 <img
@@ -536,9 +570,14 @@ function restore() {
                 </p>
               </div>
               <div className="recent__block_line_side_container_left">
-                <p className="recent__block_line_side_container_right_value">
-                  140000 UDST
-                </p>
+                <div className="recent__block_line_side_container_left_mob_text">
+                  <p className="recent__block_line_side_container_right_value">
+                    140000 UDST
+                  </p>
+                  <p className="recent__block_line_side_container_right_value_under_mob">
+                    10 sec ago
+                  </p>
+                </div>
                 <img
                   src={tether_usdtlogo_small}
                   alt=""
@@ -554,103 +593,14 @@ function restore() {
                   alt=""
                   className="recent__block_line_side_container_right_crypto"
                 />
-                <p className="recent__block_line_side_container_right_value">
-                  140000 UDST
-                </p>
-              </div>
-              <div className="recent__block_line_side_container_left">
-                <p className="recent__block_line_side_container_left_time">
-                  16 sec
-                </p>
-                <img
-                  src={infoSuccess}
-                  alt=""
-                  className="recent__block_line_side_container_right_success"
-                />
-              </div>
-            </div>
-          </div>
-          <div className="recent__block_line">
-            <div className="recent__block_line_side_container">
-              <div className="recent__block_line_side_container_left">
-                <img
-                  src={arrowUpDown}
-                  alt=""
-                  className="recent__block_line_side_container_left_arrUpDown"
-                />
-                <p className="recent__block_line_side_container_left_time">
-                  a few seconds ago
-                </p>
-              </div>
-              <div className="recent__block_line_side_container_left">
-                <p className="recent__block_line_side_container_right_value">
-                  140000 UDST
-                </p>
-                <img
-                  src={tether_usdtlogo_small}
-                  alt=""
-                  className="recent__block_line_side_container_right_crypto"
-                />
-              </div>
-            </div>
-            <img src={arrRight} alt="" className="recent__block_line_arr" />
-            <div className="recent__block_line_side_container">
-              <div className="recent__block_line_side_container_left">
-                <img
-                  src={tether_usdtlogo_small}
-                  alt=""
-                  className="recent__block_line_side_container_right_crypto"
-                />
-                <p className="recent__block_line_side_container_right_value">
-                  140000 UDST
-                </p>
-              </div>
-              <div className="recent__block_line_side_container_left">
-                <p className="recent__block_line_side_container_left_time">
-                  16 sec
-                </p>
-                <img
-                  src={infoSuccess}
-                  alt=""
-                  className="recent__block_line_side_container_right_success"
-                />
-              </div>
-            </div>
-          </div>
-          <div className="recent__block_line blue_footer">
-            <div className="recent__block_line_side_container">
-              <div className="recent__block_line_side_container_left">
-                <img
-                  src={arrowUpDown}
-                  alt=""
-                  className="recent__block_line_side_container_left_arrUpDown"
-                />
-                <p className="recent__block_line_side_container_left_time">
-                  a few seconds ago
-                </p>
-              </div>
-              <div className="recent__block_line_side_container_left">
-                <p className="recent__block_line_side_container_right_value">
-                  140000 UDST
-                </p>
-                <img
-                  src={tether_usdtlogo_small}
-                  alt=""
-                  className="recent__block_line_side_container_right_crypto"
-                />
-              </div>
-            </div>
-            <img src={arrRight} alt="" className="recent__block_line_arr" />
-            <div className="recent__block_line_side_container">
-              <div className="recent__block_line_side_container_left">
-                <img
-                  src={tether_usdtlogo_small}
-                  alt=""
-                  className="recent__block_line_side_container_right_crypto"
-                />
-                <p className="recent__block_line_side_container_right_value">
-                  140000 UDST
-                </p>
+                <div className="recent__block_line_side_container_left_mob_text recent__block_line_side_container_left_mob_text_right">
+                  <p className="recent__block_line_side_container_right_value">
+                    140000 UDST
+                  </p>
+                  <p className="recent__block_line_side_container_right_value_under_mob">
+                    16 sec
+                  </p>
+                </div>
               </div>
               <div className="recent__block_line_side_container_left">
                 <p className="recent__block_line_side_container_left_time">
@@ -677,9 +627,14 @@ function restore() {
                 </p>
               </div>
               <div className="recent__block_line_side_container_left">
-                <p className="recent__block_line_side_container_right_value">
-                  140000 UDST
-                </p>
+                <div className="recent__block_line_side_container_left_mob_text">
+                  <p className="recent__block_line_side_container_right_value">
+                    140000 UDST
+                  </p>
+                  <p className="recent__block_line_side_container_right_value_under_mob">
+                    10 sec ago
+                  </p>
+                </div>
                 <img
                   src={tether_usdtlogo_small}
                   alt=""
@@ -695,9 +650,128 @@ function restore() {
                   alt=""
                   className="recent__block_line_side_container_right_crypto"
                 />
-                <p className="recent__block_line_side_container_right_value">
-                  140000 UDST
+                <div className="recent__block_line_side_container_left_mob_text recent__block_line_side_container_left_mob_text_right">
+                  <p className="recent__block_line_side_container_right_value">
+                    140000 UDST
+                  </p>
+                  <p className="recent__block_line_side_container_right_value_under_mob">
+                    16 sec
+                  </p>
+                </div>
+              </div>
+              <div className="recent__block_line_side_container_left">
+                <p className="recent__block_line_side_container_left_time">
+                  16 sec
                 </p>
+                <img
+                  src={infoSuccess}
+                  alt=""
+                  className="recent__block_line_side_container_right_success"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="recent__block_line blue_footer">
+            <div className="recent__block_line_side_container">
+              <div className="recent__block_line_side_container_left">
+                <img
+                  src={arrowUpDown}
+                  alt=""
+                  className="recent__block_line_side_container_left_arrUpDown"
+                />
+                <p className="recent__block_line_side_container_left_time">
+                  a few seconds ago
+                </p>
+              </div>
+              <div className="recent__block_line_side_container_left">
+                <div className="recent__block_line_side_container_left_mob_text">
+                  <p className="recent__block_line_side_container_right_value">
+                    140000 UDST
+                  </p>
+                  <p className="recent__block_line_side_container_right_value_under_mob">
+                    10 sec ago
+                  </p>
+                </div>
+                <img
+                  src={tether_usdtlogo_small}
+                  alt=""
+                  className="recent__block_line_side_container_right_crypto"
+                />
+              </div>
+            </div>
+            <img src={arrRight} alt="" className="recent__block_line_arr" />
+            <div className="recent__block_line_side_container">
+              <div className="recent__block_line_side_container_left">
+                <img
+                  src={tether_usdtlogo_small}
+                  alt=""
+                  className="recent__block_line_side_container_right_crypto"
+                />
+                <div className="recent__block_line_side_container_left_mob_text recent__block_line_side_container_left_mob_text_right">
+                  <p className="recent__block_line_side_container_right_value">
+                    140000 UDST
+                  </p>
+                  <p className="recent__block_line_side_container_right_value_under_mob">
+                    16 sec
+                  </p>
+                </div>
+              </div>
+              <div className="recent__block_line_side_container_left">
+                <p className="recent__block_line_side_container_left_time">
+                  16 sec
+                </p>
+                <img
+                  src={infoSuccess}
+                  alt=""
+                  className="recent__block_line_side_container_right_success"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="recent__block_line">
+            <div className="recent__block_line_side_container">
+              <div className="recent__block_line_side_container_left">
+                <img
+                  src={arrowUpDown}
+                  alt=""
+                  className="recent__block_line_side_container_left_arrUpDown"
+                />
+                <p className="recent__block_line_side_container_left_time">
+                  a few seconds ago
+                </p>
+              </div>
+              <div className="recent__block_line_side_container_left">
+                <div className="recent__block_line_side_container_left_mob_text">
+                  <p className="recent__block_line_side_container_right_value">
+                    140000 UDST
+                  </p>
+                  <p className="recent__block_line_side_container_right_value_under_mob">
+                    10 sec ago
+                  </p>
+                </div>
+                <img
+                  src={tether_usdtlogo_small}
+                  alt=""
+                  className="recent__block_line_side_container_right_crypto"
+                />
+              </div>
+            </div>
+            <img src={arrRight} alt="" className="recent__block_line_arr" />
+            <div className="recent__block_line_side_container">
+              <div className="recent__block_line_side_container_left">
+                <img
+                  src={tether_usdtlogo_small}
+                  alt=""
+                  className="recent__block_line_side_container_right_crypto"
+                />
+                <div className="recent__block_line_side_container_left_mob_text recent__block_line_side_container_left_mob_text_right">
+                  <p className="recent__block_line_side_container_right_value">
+                    140000 UDST
+                  </p>
+                  <p className="recent__block_line_side_container_right_value_under_mob">
+                    16 sec
+                  </p>
+                </div>
               </div>
               <div className="recent__block_line_side_container_left">
                 <p className="recent__block_line_side_container_left_time">
