@@ -26,6 +26,8 @@ import graph from "../assets/img/graph.svg";
 import azerbaijan from "../assets/img/flags/azerbaijan.svg";
 
 import mouse1 from "../assets/img/mouse1.png";
+import mouse2 from "../assets/img/mouse2.png";
+import mouse3 from "../assets/img/mouse3.png";
 import arrRight from "../assets/img/arrRight.svg";
 import arrowUpDown from "../assets/img/arrowUpDown.svg";
 import infoSuccess from "../assets/img/infoSuccess.svg";
@@ -478,7 +480,7 @@ function restore() {
             </div>
           </figure>
           <figure className="since_mousePic">
-            <img src={mouse1} alt="" className="since_mouse" />
+            <img src={mouse2} alt="" className="since_mouse" />
             <div className="since__mouse_txt">
               <h5 className="since__mouse_h5">Экономьте время</h5>
               <p className="since__mouse_p">
@@ -487,7 +489,7 @@ function restore() {
             </div>
           </figure>
           <figure className="since_mousePic">
-            <img src={mouse1} alt="" className="since_mouse" />
+            <img src={mouse3} alt="" className="since_mouse" />
             <div className="since__mouse_txt">
               <h5 className="since__mouse_h5">Экономьте время</h5>
               <p className="since__mouse_p">
