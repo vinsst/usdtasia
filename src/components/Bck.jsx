@@ -1,7 +1,7 @@
 import React from "react";
 import bck from "../assets/img/bck.png";
 
-function BckHome() {
+function Bck() {
   return (
     <>
       <img src={bck} alt="" className="bckOther" />
@@ -9,4 +9,4 @@ function BckHome() {
   );
 }
 
-export default BckHome;
+export default Bck;

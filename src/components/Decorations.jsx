@@ -21,6 +21,7 @@ function decorations() {
       <Routes>
         <Route path="/" element={<BckHome />} />
         <Route path="/zayavka" element={<Bck />} />
+        <Route path="/zayavka2" element={<Bck />} />
       </Routes>
     </div>
   );
