@@ -6,6 +6,7 @@ import Decorations from "./components/Decorations";
 import Home from "./pages/Home";
 import Zayavka from "./pages/Zayavka";
 import Zayavka2 from "./pages/Zayavka2";
+import History from "./pages/History";
 
 function App() {
   return (
@@ -17,8 +18,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/zayavka" element={<Zayavka />} />
           <Route path="/zayavka2" element={<Zayavka2 />} />
-          {/*<Route path="/restore" element={<Restore />} />
-          <Route path="/my-services/add-service" element={<AddService />} />
+          <Route path="/history" element={<History />} />
+          {/*<Route path="/my-services/add-service" element={<AddService />} />
           <Route path="/my-services/view-service" element={<ViewService />} />
           <Route path="/tasks" element={<Tasks />} />
           <Route path="/calendar" element={<Calendar />} />
