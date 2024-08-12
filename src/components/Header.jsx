@@ -8,6 +8,7 @@ import Registration from "./Registration";
 
 function Header() {
   const [login, setLogin] = useState(false);
+  const [registr, setRegistr] = useState(false);
 
   const handleLoginClick = () => {
     setLogin(!login);
@@ -18,9 +19,19 @@ function Header() {
     }
   };
 
+  const handleRegistrClick = () => {
+    setRegistr(!registr);
+    if (!registr) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+  };
+
   return (
     <header>
-      {login ? <Registration /> : <></>}
+      {login ? <Login /> : <></>}
+      {registr ? <Registration /> : <></>}
       <div className="header_container container">
         <img src={menuHamburger} alt="" className="header_burger" />
         <div className="header_logo">
@@ -46,7 +57,12 @@ function Header() {
             >
               Sign in
             </button>
-            <button className="group2__registration_up">Sign up</button>
+            <button
+              className="group2__registration_up"
+              onClick={handleRegistrClick}
+            >
+              Sign up
+            </button>
           </div>
         </div>
         <img src={profile} alt="" className="header_profile" />
