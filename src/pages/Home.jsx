@@ -194,7 +194,7 @@ function restore() {
             <p className="currency__el_abr">BNB</p>
           </div>
         </div>
-        <div className="rates_currency_container_mob">
+        {/* <div className="rates_currency_container_mob">
           <div className="rates__curr_el rates__current_curr">
             <img
               src={tether_usdtlogo_small}
@@ -207,7 +207,7 @@ function restore() {
           <img src={EthereumMob} alt="" className="rates__mobile_img" />
           <img src={SOLMob} alt="" className="rates__mobile_img" />
           <img src={WBNBMob} alt="" className="rates__mobile_img" />
-        </div>
+        </div> */}
       </section>
       <section className="countryToUsdt">
         <div className="countryToUsdt_block">

@@ -1,12 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import GB from "../assets/img/flags/GB.svg";
 import arrow_down from "../assets/img/arrow_down.svg";
 import menuHamburger from "../assets/img/menuHamburger.svg";
 import profile from "../assets/img/profile.svg";
+import Login from "./Login";
+import Registration from "./Registration";
 
 function Header() {
+  const [login, setLogin] = useState(false);
+
+  const handleLoginClick = () => {
+    setLogin(!login);
+    if (!login) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+  };
+
   return (
     <header>
+      {login ? <Registration /> : <></>}
       <div className="header_container container">
         <img src={menuHamburger} alt="" className="header_burger" />
         <div className="header_logo">
@@ -26,7 +40,12 @@ function Header() {
             <img src={arrow_down} alt="" className="group2__lang_arr" />
           </div>
           <div className="group2_registration">
-            <button className="group2__registration_in">Sign in</button>
+            <button
+              className="group2__registration_in"
+              onClick={handleLoginClick}
+            >
+              Sign in
+            </button>
             <button className="group2__registration_up">Sign up</button>
           </div>
         </div>

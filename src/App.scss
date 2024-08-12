@@ -348,6 +348,7 @@ body {
   color: #82b6d3;
   padding: 16px 24px;
   background: none;
+  cursor: pointer;
 }
 
 .group2__registration_up {
@@ -362,6 +363,7 @@ body {
   background: linear-gradient(117.47deg, #ff038b -26.66%, #326cff 137.6%);
   min-width: 116px;
   min-height: 55px;
+  cursor: pointer;
 }
 
 .decorations {
@@ -1294,11 +1296,6 @@ footer {
     font-weight: 700;
   }
 }
-@media (max-width: 1200px) {
-  .rates_currency_container {
-    display: none;
-  }
-}
 
 @media (max-width: 1200px) {
   .rates {
@@ -1625,12 +1622,6 @@ footer {
   font-weight: 600;
   margin-bottom: 17px;
   color: #fff;
-}
-
-@media (min-width: 1201px) {
-  .rates_currency_container_mob {
-    display: none;
-  }
 }
 
 @media (min-width: 1401px) {
@@ -2495,4 +2486,112 @@ footer {
 
 .history__green_font {
   color: #56ff2b;
+}
+.login_container {
+  height: 100vh;
+  width: 100vw;
+  backdrop-filter: blur(20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 100;
+}
+
+.login_content {
+  background: #344ea5;
+  color: #b2cfe0;
+  border-radius: 32px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 413px;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.login__word_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.loginInput_withIcon {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #1e377999;
+  border-radius: 100px;
+  padding: 10px 20px;
+}
+
+.loginInput_icon {
+  width: 24px;
+  height: 24px;
+}
+
+.loginInput_input {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  width: 100%;
+  height: 44px;
+  font-size: 15px;
+}
+
+.login_rememberMe {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.login_word {
+  font-family: Open Sans Hebrew Condensed;
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.loginInput__login_word {
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.loginInput_chooseAuth {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login_loginInput {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.done_rect {
+  min-width: 25px;
+  min-height: 25px;
+  border-radius: 6px;
+  background: #27408b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 630px) {
+  .rates_currency_container {
+    max-width: 90%;
+    overflow-x: auto;
+  }
 }
