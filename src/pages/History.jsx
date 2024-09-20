@@ -1,4 +1,5 @@
 import React from "react";
+import HistoryLine from "../components/history/HistoryLine";
 
 function History() {
   return (
@@ -20,146 +21,32 @@ function History() {
               <p className="table__static_line_el">СУММА</p>
               <p className="table__static_line_el">СТАТУС</p>
             </div>
-            <div className="table__content_line">
-              <p className="table__content_line_el">28.04.2022 12:01</p>
-              <p className="table__content_line_el history__blue_font">
-                Bitcoin BTC
-              </p>
-              <p className="table__content_line_el">1 BTC</p>
-              <p className="table__content_line_el history__blue_font">
-                Наличные USD
-              </p>
-              <p className="table__content_line_el">39041.66</p>
-              <p className="table__content_line_el  history__green_font">
-                Выполнена
-              </p>
-            </div>
-            <div className="table__content_line history__table_darker_bck">
-              <p className="table__content_line_el">28.04.2022 12:01</p>
-              <p className="table__content_line_el history__blue_font">
-                Bitcoin BTC
-              </p>
-              <p className="table__content_line_el">1 BTC</p>
-              <p className="table__content_line_el history__blue_font">
-                Наличные USD
-              </p>
-              <p className="table__content_line_el">39041.66</p>
-              <p className="table__content_line_el history__green_font">
-                Выполнена
-              </p>
-            </div>
-            <div className="table__content_line">
-              <p className="table__content_line_el">28.04.2022 12:01</p>
-              <p className="table__content_line_el history__blue_font">
-                Bitcoin BTC
-              </p>
-              <p className="table__content_line_el">1 BTC</p>
-              <p className="table__content_line_el history__blue_font">
-                Наличные USD
-              </p>
-              <p className="table__content_line_el">39041.66</p>
-              <p className="table__content_line_el  history__green_font">
-                Выполнена
-              </p>
-            </div>
-            <div className="table__content_line history__table_darker_bck">
-              <p className="table__content_line_el">28.04.2022 12:01</p>
-              <p className="table__content_line_el history__blue_font">
-                Bitcoin BTC
-              </p>
-              <p className="table__content_line_el">1 BTC</p>
-              <p className="table__content_line_el history__blue_font">
-                Наличные USD
-              </p>
-              <p className="table__content_line_el">39041.66</p>
-              <p className="table__content_line_el history__green_font">
-                Выполнена
-              </p>
-            </div>
-            <div className="table__content_line">
-              <p className="table__content_line_el">28.04.2022 12:01</p>
-              <p className="table__content_line_el history__blue_font">
-                Bitcoin BTC
-              </p>
-              <p className="table__content_line_el">1 BTC</p>
-              <p className="table__content_line_el history__blue_font">
-                Наличные USD
-              </p>
-              <p className="table__content_line_el">39041.66</p>
-              <p className="table__content_line_el  history__green_font">
-                Выполнена
-              </p>
-            </div>
-            <div className="table__content_line history__table_darker_bck">
-              <p className="table__content_line_el">28.04.2022 12:01</p>
-              <p className="table__content_line_el history__blue_font">
-                Bitcoin BTC
-              </p>
-              <p className="table__content_line_el">1 BTC</p>
-              <p className="table__content_line_el history__blue_font">
-                Наличные USD
-              </p>
-              <p className="table__content_line_el">39041.66</p>
-              <p className="table__content_line_el history__green_font">
-                Выполнена
-              </p>
-            </div>
-            <div className="table__content_line">
-              <p className="table__content_line_el">28.04.2022 12:01</p>
-              <p className="table__content_line_el history__blue_font">
-                Bitcoin BTC
-              </p>
-              <p className="table__content_line_el">1 BTC</p>
-              <p className="table__content_line_el history__blue_font">
-                Наличные USD
-              </p>
-              <p className="table__content_line_el">39041.66</p>
-              <p className="table__content_line_el  history__green_font">
-                Выполнена
-              </p>
-            </div>
-            <div className="table__content_line history__table_darker_bck">
-              <p className="table__content_line_el">28.04.2022 12:01</p>
-              <p className="table__content_line_el history__blue_font">
-                Bitcoin BTC
-              </p>
-              <p className="table__content_line_el">1 BTC</p>
-              <p className="table__content_line_el history__blue_font">
-                Наличные USD
-              </p>
-              <p className="table__content_line_el">39041.66</p>
-              <p className="table__content_line_el history__green_font">
-                Выполнена
-              </p>
-            </div>
-            <div className="table__content_line">
-              <p className="table__content_line_el">28.04.2022 12:01</p>
-              <p className="table__content_line_el history__blue_font">
-                Bitcoin BTC
-              </p>
-              <p className="table__content_line_el">1 BTC</p>
-              <p className="table__content_line_el history__blue_font">
-                Наличные USD
-              </p>
-              <p className="table__content_line_el">39041.66</p>
-              <p className="table__content_line_el  history__green_font">
-                Выполнена
-              </p>
-            </div>
-            <div className="table__content_line history__table_darker_bck">
-              <p className="table__content_line_el">28.04.2022 12:01</p>
-              <p className="table__content_line_el history__blue_font">
-                Bitcoin BTC
-              </p>
-              <p className="table__content_line_el">1 BTC</p>
-              <p className="table__content_line_el history__blue_font">
-                Наличные USD
-              </p>
-              <p className="table__content_line_el">39041.66</p>
-              <p className="table__content_line_el history__green_font">
-                Выполнена
-              </p>
-            </div>
+            <HistoryLine />
+            <HistoryLine darker="history__table_darker_bck" />
+            <HistoryLine />
+            <HistoryLine darker="history__table_darker_bck" />
+            <HistoryLine />
+            <HistoryLine darker="history__table_darker_bck" />
+            <HistoryLine />
+            <HistoryLine darker="history__table_darker_bck" />
+            <HistoryLine />
+            <HistoryLine darker="history__table_darker_bck" />
+            <HistoryLine />
+            <HistoryLine darker="history__table_darker_bck" />
+            <HistoryLine />
+            <HistoryLine darker="history__table_darker_bck" />
+            <HistoryLine />
+            <HistoryLine darker="history__table_darker_bck" />
+            <HistoryLine />
+            <HistoryLine darker="history__table_darker_bck" />
+            <HistoryLine />
+            <HistoryLine darker="history__table_darker_bck" />
+            <HistoryLine />
+            <HistoryLine darker="history__table_darker_bck" />
+            <HistoryLine />
+            <HistoryLine darker="history__table_darker_bck" />
+            <HistoryLine />
+            <HistoryLine darker="history__table_darker_bck" />
           </section>
         </div>
       </div>
