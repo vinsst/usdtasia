@@ -1,16 +1,16 @@
 import React from "react";
-import done from "../assets/img/done.svg";
-import hrestik from "../assets/img/hrestik.svg";
-import login_profile from "../assets/img/login_profile.svg";
-import login_lock from "../assets/img/login_lock.svg";
+import done from "../../assets/img/done.svg";
+import hrestik from "../../assets/img/hrestik.svg";
+import login_profile from "../../assets/img/login_profile.svg";
+import login_lock from "../../assets/img/login_lock.svg";
 
-function Login() {
+function Login({ loginRef, close }) {
   return (
     <div className="login_container">
-      <section className="login_content">
+      <section className="login_content" ref={loginRef}>
         <div className="login__word_container">
           <p className="login_word">LOGIN</p>
-          <img src={hrestik} alt="" className="login_hrestik" />
+          <img src={hrestik} alt="" className="login_hrestik" onClick={close} />
         </div>
         <div className="login_loginInput">
           <div className="loginInput_chooseAuth">

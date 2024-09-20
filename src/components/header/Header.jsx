@@ -1,17 +1,21 @@
-import React, { useState } from "react";
-import GB from "../assets/img/flags/GB.svg";
-import arrow_down from "../assets/img/arrow_down.svg";
-import menuHamburger from "../assets/img/menuHamburger.svg";
-import profile from "../assets/img/profile.svg";
+import React, { useState, useEffect, useRef } from "react";
+import GB from "../../assets/img/flags/GB.svg";
+import arrow_down from "../../assets/img/arrow_down.svg";
+import menuHamburger from "../../assets/img/menuHamburger.svg";
+import profile from "../../assets/img/profile.svg";
 import Login from "./Login";
 import Registration from "./Registration";
+import Burger from "./Burger";
 
 function Header() {
   const [login, setLogin] = useState(false);
   const [registr, setRegistr] = useState(false);
+  const loginRef = useRef(null);
+  const registrRef = useRef(null);
 
   const handleLoginClick = () => {
     setLogin(!login);
+    setRegistr(false);
     if (!login) {
       document.body.classList.add("no-scroll");
     } else {
@@ -21,6 +25,7 @@ function Header() {
 
   const handleRegistrClick = () => {
     setRegistr(!registr);
+    setLogin(false);
     if (!registr) {
       document.body.classList.add("no-scroll");
     } else {
@@ -28,12 +33,55 @@ function Header() {
     }
   };
 
+  const handleCloseModals = () => {
+    setLogin(false);
+    setRegistr(false);
+    document.body.classList.remove("no-scroll");
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        login &&
+        loginRef.current &&
+        !loginRef.current.contains(event.target)
+      ) {
+        handleCloseModals();
+      }
+      if (
+        registr &&
+        registrRef.current &&
+        !registrRef.current.contains(event.target)
+      ) {
+        handleCloseModals();
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [login, registr]);
+
+  const [burger, setBurger] = useState(false);
+
+  const showBurger = () => {
+    setBurger(!burger);
+  };
+
   return (
     <header>
-      {login ? <Login /> : <></>}
-      {registr ? <Registration /> : <></>}
+      {login ? <Login loginRef={loginRef} close={handleCloseModals} /> : null}
+      {registr ? (
+        <Registration registrRef={registrRef} close={handleCloseModals} />
+      ) : null}
       <div className="header_container container">
-        <img src={menuHamburger} alt="" className="header_burger" />
+        <img
+          src={menuHamburger}
+          alt=""
+          className="header_burger"
+          onClick={showBurger}
+        />
         <div className="header_logo">
           USDT<span className="header_logo2">ASIA</span>
         </div>
@@ -67,6 +115,7 @@ function Header() {
         </div>
         <img src={profile} alt="" className="header_profile" />
       </div>
+      {burger ? <Burger showBurger={showBurger} /> : <></>}
     </header>
   );
 }

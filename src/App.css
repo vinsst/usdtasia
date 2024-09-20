@@ -333,6 +333,17 @@ body {
   }
 }
 
+.header_burger {
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+}
+
+.header_group2 {
+  position: relative;
+  z-index: 10;
+}
+
 .group2__registration_in {
   font-family: Roboto;
   font-size: 20px;
@@ -829,6 +840,7 @@ footer {
   line-height: 25.78px;
   text-align: left;
   width: 45%;
+  align-items: center;
 }
 
 .quick__curency_box_currency_init {
@@ -1101,6 +1113,7 @@ footer {
   width: 100%;
   justify-content: space-between;
   align-items: center;
+  overflow-y: hidden;
 }
 
 .since_mousePic {
@@ -1930,7 +1943,7 @@ footer {
 }
 .wrapper {
   position: relative;
-  overflow: hidden; /* Приховує частини картинки, що виходять за межі */
+  overflow: hidden;
 }
 
 .content {
@@ -2478,7 +2491,7 @@ footer {
   align-items: center;
   justify-content: center;
   position: absolute;
-  z-index: 100;
+  z-index: 105;
 }
 
 .login_content {
@@ -2577,4 +2590,123 @@ footer {
     max-width: 90%;
     overflow-x: auto;
   }
+}
+
+.burgerActive {
+  width: 80vw;
+  height: 100%;
+  background: #25306d;
+  z-index: 100;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.burgerActive_effects {
+  width: 100vw;
+  backdrop-filter: blur(20px) brightness(0.6);
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  z-index: 100;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.burgerShow_nav {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0;
+}
+
+.burger__login_container {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  text-wrap: nowrap;
+}
+
+.burger_signIn {
+  padding: 0 24px 0 0;
+}
+
+.burger_flag {
+  display: flex;
+  gap: 8px;
+  margin-top: 20px;
+}
+.hidden {
+  display: none;
+}
+
+.quick__curency_box_currency_value_input {
+  background: none;
+  outline: none;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 25.78px;
+  text-align: right;
+  color: #fff;
+  max-width: 70%;
+}
+
+.quick__curency_box_currency_value_input::-webkit-inner-spin-button,
+.quick__curency_box_currency_value_input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.quick__curency_box_currency_value_input {
+  -moz-appearance: textfield;
+}
+
+@media (max-width: 1200px) {
+  .quick__curency_box_currency_value_input {
+    max-width: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .quick__curency_box_currency_value_input {
+    max-width: 100px;
+  }
+}
+
+.quick__curency_dropdown {
+  position: absolute;
+  background-color: #1e3779;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  display: none;
+  width: 100%;
+  top: 47px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.quick__curency_dropdown_item {
+  padding: 10px 15px;
+  color: #82b6d3;
+  cursor: pointer;
+}
+
+.quick__curency_dropdown_item:hover {
+  background-color: #2a4f8d;
+}
+
+.quick__curency_box_side1 {
+  position: relative;
 }

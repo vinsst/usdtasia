@@ -1,17 +1,17 @@
 import React from "react";
-import done from "../assets/img/done.svg";
-import hrestik from "../assets/img/hrestik.svg";
-import login_profile from "../assets/img/login_profile.svg";
-import login_lock from "../assets/img/login_lock.svg";
-import alternate_email from "../assets/img/alternate_email.svg";
+import done from "../../assets/img/done.svg";
+import hrestik from "../../assets/img/hrestik.svg";
+import login_profile from "../../assets/img/login_profile.svg";
+import login_lock from "../../assets/img/login_lock.svg";
+import alternate_email from "../../assets/img/alternate_email.svg";
 
-function Login() {
+function Registration({ registrRef, close }) {
   return (
     <div className="login_container">
-      <section className="login_content">
+      <section className="login_content" ref={registrRef}>
         <div className="login__word_container">
           <p className="login_word">REGISTRATION</p>
-          <img src={hrestik} alt="" className="login_hrestik" />
+          <img src={hrestik} alt="" className="login_hrestik" onClick={close} />
         </div>
         <div className="login_loginInput">
           <div className="loginInput_chooseAuth">
@@ -83,4 +83,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Registration;
