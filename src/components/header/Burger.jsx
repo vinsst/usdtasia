@@ -1,10 +1,9 @@
 import React from "react";
-
 import menuHamburger from "../../assets/img/menuHamburger.svg";
 import GB from "../../assets/img/flags/GB.svg";
 import arr_down from "../../assets/img/arrow_down.svg";
 
-function Burger({ showBurger }) {
+function Burger({ showBurger, handleLoginClick, handleRegistrClick }) {
   return (
     <div className="burgerActive_effects">
       <nav className="burgerActive">
@@ -33,10 +32,18 @@ function Burger({ showBurger }) {
           <img src={arr_down} alt="" className="group2__lang_arr" />
         </div>
         <div className="burger__login_container">
-          <button className="group2__registration_in burger_signIn">
+          <button
+            className="group2__registration_in burger_signIn"
+            onClick={handleLoginClick}
+          >
             Sign in
           </button>
-          <button className="group2__registration_up">Sign up</button>
+          <button
+            className="group2__registration_up"
+            onClick={handleRegistrClick}
+          >
+            Sign up
+          </button>
         </div>
       </nav>
     </div>

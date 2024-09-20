@@ -10,33 +10,35 @@ import Burger from "./Burger";
 function Header() {
   const [login, setLogin] = useState(false);
   const [registr, setRegistr] = useState(false);
+  const [burger, setBurger] = useState(false);
+
   const loginRef = useRef(null);
   const registrRef = useRef(null);
 
   const handleLoginClick = () => {
-    setLogin(!login);
+    setLogin(true);
     setRegistr(false);
-    if (!login) {
-      document.body.classList.add("no-scroll");
-    } else {
-      document.body.classList.remove("no-scroll");
-    }
+    setBurger(false);
+    document.body.classList.add("no-scroll");
   };
 
   const handleRegistrClick = () => {
-    setRegistr(!registr);
+    setRegistr(true);
     setLogin(false);
-    if (!registr) {
-      document.body.classList.add("no-scroll");
-    } else {
-      document.body.classList.remove("no-scroll");
-    }
+    setBurger(false);
+    document.body.classList.add("no-scroll");
   };
 
   const handleCloseModals = () => {
     setLogin(false);
     setRegistr(false);
     document.body.classList.remove("no-scroll");
+  };
+
+  const showBurger = () => {
+    setBurger(!burger);
+    setLogin(false);
+    setRegistr(false);
   };
 
   useEffect(() => {
@@ -61,13 +63,7 @@ function Header() {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [login, registr]);
-
-  const [burger, setBurger] = useState(false);
-
-  const showBurger = () => {
-    setBurger(!burger);
-  };
+  }, [login, registr, burger]);
 
   return (
     <header>
@@ -115,7 +111,13 @@ function Header() {
         </div>
         <img src={profile} alt="" className="header_profile" />
       </div>
-      {burger ? <Burger showBurger={showBurger} /> : <></>}
+      {burger ? (
+        <Burger
+          showBurger={showBurger}
+          handleLoginClick={handleLoginClick}
+          handleRegistrClick={handleRegistrClick}
+        />
+      ) : null}
     </header>
   );
 }
