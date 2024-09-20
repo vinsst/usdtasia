@@ -19,11 +19,6 @@ function App() {
           <Route path="/zayavka" element={<Zayavka />} />
           <Route path="/zayavka2" element={<Zayavka2 />} />
           <Route path="/history" element={<History />} />
-          {/*<Route path="/my-services/add-service" element={<AddService />} />
-          <Route path="/my-services/view-service" element={<ViewService />} />
-          <Route path="/tasks" element={<Tasks />} />
-          <Route path="/calendar" element={<Calendar />} />
-          <Route path="/calendar/add-calendar" element={<AddCalendar />} /> */}
         </Routes>
         <Footer />
       </div>

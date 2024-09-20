@@ -248,12 +248,6 @@ body {
   align-items: center;
 }
 
-// @media (max-width: 1400px) {
-//   .header_container {
-//     padding: 16px 8px;
-//   }
-// }
-
 @media (max-width: 1400px) {
   .header_container {
     padding: 32px 32px;
@@ -1314,12 +1308,6 @@ footer {
   }
 }
 
-// @media (max-width: 700px) {
-//   .homeMain {
-//     align-items: start;
-//   }
-// }
-
 @media (max-width: 700px) {
   .since_h2 {
     font-family: "Open Sans Hebrew Condensed";
@@ -1882,11 +1870,6 @@ footer {
   margin-bottom: 62px;
 }
 
-// .order__quick_exchange_container {
-//   height: auto;
-//   z-index: 1;
-// }
-
 .order_instruction {
   width: 100%;
   display: flex;
@@ -2427,7 +2410,7 @@ footer {
     margin-bottom: 40px;
   }
 }
-// 402
+
 .history_padding {
   padding: 15px;
   border-radius: 32px;
