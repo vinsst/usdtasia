@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import autorenew from "../../assets/img/autorenew.svg";
 import autorenew2 from "../../assets/img/autorenew2.svg";
 import tCurr from "../../assets/img/tCurr.svg";
@@ -10,6 +10,12 @@ import CurrChoose from "./CurrChoose";
 import Bitcoin from "../../assets/img/Bitcoin.svg";
 
 function ExchangeContainer() {
+  const [checked, setChecked] = useState(false);
+
+  const handleCheckboxChange = () => {
+    setChecked(!checked);
+  };
+
   return (
     <div className="exchange_container">
       <section className="quick__exchange_container">
@@ -20,7 +26,7 @@ function ExchangeContainer() {
           <CurrChoose
             img={Bitcoin}
             txt="Bitcoin BTC"
-            number="0.01689025"
+            input={true}
             symb="BTC"
             status="Send"
           />
@@ -74,8 +80,13 @@ function ExchangeContainer() {
           </div>
         </section>
         <section className="quick__exchange_done">
-          <div className="quick__exchange_done_rect">
-            <img src={done} alt="" className="quick__exchange_img" />
+          <div
+            className="quick__exchange_done_rect"
+            onClick={handleCheckboxChange}
+          >
+            {checked && (
+              <img src={done} alt="" className="quick__exchange_img" />
+            )}
           </div>
           <span className="quick__exchange_span">
             Используя сайт и создавая обмен, вы соглашаетесь с{" "}
@@ -89,7 +100,13 @@ function ExchangeContainer() {
           </span>
         </section>
         <section className="exchange_btn">
-          <button className="quick__exchange_btn">EXCHANGER NOW</button>
+          <button
+            className={`quick__exchange_btn ${
+              !checked && "quick__exchange_btn_nonActive"
+            }`}
+          >
+            EXCHANGER NOW
+          </button>
         </section>
       </div>
     </div>

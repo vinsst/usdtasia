@@ -14,6 +14,7 @@ function Header() {
 
   const loginRef = useRef(null);
   const registrRef = useRef(null);
+  const burgerContentRef = useRef(null);
 
   const handleLoginClick = () => {
     setLogin(true);
@@ -32,6 +33,7 @@ function Header() {
   const handleCloseModals = () => {
     setLogin(false);
     setRegistr(false);
+    setBurger(false);
     document.body.classList.remove("no-scroll");
   };
 
@@ -54,6 +56,13 @@ function Header() {
         registr &&
         registrRef.current &&
         !registrRef.current.contains(event.target)
+      ) {
+        handleCloseModals();
+      }
+      if (
+        burger &&
+        burgerContentRef.current &&
+        !burgerContentRef.current.contains(event.target)
       ) {
         handleCloseModals();
       }
@@ -116,6 +125,7 @@ function Header() {
           showBurger={showBurger}
           handleLoginClick={handleLoginClick}
           handleRegistrClick={handleRegistrClick}
+          burgerContentRef={burgerContentRef}
         />
       ) : null}
     </header>

@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import done from "../../assets/img/done.svg";
 import hrestik from "../../assets/img/hrestik.svg";
 import login_profile from "../../assets/img/login_profile.svg";
 import login_lock from "../../assets/img/login_lock.svg";
 
 function Login({ loginRef, close }) {
+  const [checked, setChecked] = useState(false);
+
+  const handleCheckboxChange = () => {
+    setChecked(!checked);
+  };
   return (
     <div className="login_container">
       <section className="login_content" ref={loginRef}>
@@ -41,7 +46,14 @@ function Login({ loginRef, close }) {
           </div>
         </div>
         <div className="login_rememberMe">
-          <img src={done} alt="" className="rememberMe_imgDone" />
+          <div
+            className="quick__exchange_done_rect quick__exchange_done_rect_login"
+            onClick={handleCheckboxChange}
+          >
+            {checked && (
+              <img src={done} alt="" className="quick__exchange_img" />
+            )}
+          </div>
           <p className="rememberMe_p">Запомнить меня</p>
         </div>
         <section className="exchange_btn">

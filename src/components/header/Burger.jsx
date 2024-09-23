@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useRef } from "react";
 import menuHamburger from "../../assets/img/menuHamburger.svg";
 import GB from "../../assets/img/flags/GB.svg";
 import arr_down from "../../assets/img/arrow_down.svg";
 
-function Burger({ showBurger, handleLoginClick, handleRegistrClick }) {
+function Burger({
+  showBurger,
+  handleLoginClick,
+  handleRegistrClick,
+  burgerContentRef,
+}) {
   return (
     <div className="burgerActive_effects">
-      <nav className="burgerActive">
+      <nav className="burgerActive" ref={burgerContentRef}>
         <div className="flex">
           <img
             src={menuHamburger}
