@@ -1,11 +1,11 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import telega from "../assets/img/telega.svg";
-import insta from "../assets/img/insta.svg";
-import redit from "../assets/img/redit.svg";
-import facebook from "../assets/img/facebook.svg";
-import twit from "../assets/img/twit.svg";
-import google from "../assets/img/google.svg";
+import telega from "../../assets/img/telega.svg";
+import insta from "../../assets/img/insta.svg";
+import redit from "../../assets/img/redit.svg";
+import facebook from "../../assets/img/facebook.svg";
+import twit from "../../assets/img/twit.svg";
+import google from "../../assets/img/google.svg";
 import AskedQuestions from "./AskedQuestions";
 
 function Footer() {
