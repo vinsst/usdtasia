@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import autorenew from "../../assets/img/autorenew.svg";
 import autorenew2 from "../../assets/img/autorenew2.svg";
 import tCurr from "../../assets/img/tCurr.svg";
-import wallet from "../../assets/img/wallet.svg";
-import content_copy from "../../assets/img/content_copy.svg";
-import qr_code from "../../assets/img/qr_code.svg";
 import done from "../../assets/img/done.svg";
 import CurrChoose from "./CurrChoose";
 import Bitcoin from "../../assets/img/Bitcoin.svg";
+import Wallet from "./Wallet";
+import { Link } from "react-router-dom";
 
 function ExchangeContainer() {
   const [checked, setChecked] = useState(false);
@@ -65,20 +64,7 @@ function ExchangeContainer() {
             </div>
           </div>
         </section>
-        <section className="quick__exchange_trcAdress_container">
-          <div className="trcAdress_wallet">
-            <img src={wallet} alt="" className="wallet_img" />
-            <input
-              type="text"
-              className="wallet_input"
-              placeholder="Your Tether (TRC20) address"
-            />
-          </div>
-          <div className="trcAdress_imgs">
-            <img src={content_copy} alt="" className="trcAdress_imgs_img" />
-            <img src={qr_code} alt="" className="trcAdress_imgs_img" />
-          </div>
-        </section>
+        <Wallet />
         <section className="quick__exchange_done">
           <div
             className="quick__exchange_done_rect"
@@ -99,15 +85,21 @@ function ExchangeContainer() {
             </span>
           </span>
         </section>
-        <section className="exchange_btn">
-          <button
-            className={`quick__exchange_btn ${
-              !checked && "quick__exchange_btn_nonActive"
-            }`}
-          >
-            EXCHANGER NOW
-          </button>
-        </section>
+
+        {checked ? (
+          <Link to="/zayavka" className="exchange_btn">
+            <button className="quick__exchange_btn">EXCHANGER NOW</button>
+          </Link>
+        ) : (
+          <section className="exchange_btn">
+            <button
+              className="quick__exchange_btn 
+              quick__exchange_btn_nonActive"
+            >
+              EXCHANGER NOW
+            </button>
+          </section>
+        )}
       </div>
     </div>
   );

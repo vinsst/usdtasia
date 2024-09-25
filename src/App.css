@@ -184,7 +184,17 @@ body {
   src: url("./assets/fonts/OpenSansHebrewCondensed-Regular.ttf")
     format("truetype");
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
+a:hover,
+a:active,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
 /*---------------------*/
 body {
   margin: 0;
@@ -2741,4 +2751,27 @@ footer {
 .quick__exchange_done_rect_login {
   min-width: 26px;
   min-height: 26px;
+}
+
+.mailNameTelega_container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 24px;
+  margin-bottom: 28px;
+  margin-top: -29px;
+}
+
+.mailNameTelega_container > * {
+  background: #1e377999;
+  border-radius: 150px;
+  flex: 1;
+  gap: 11px;
+  padding: 15px 23px;
+  display: flex;
+  align-items: center;
+}
+
+.groupNav_el {
+  cursor: pointer;
 }

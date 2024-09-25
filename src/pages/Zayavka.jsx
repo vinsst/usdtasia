@@ -8,6 +8,7 @@ import calendar from "../assets/img/calendar.svg";
 import Bitcoin from "../assets/img/Bitcoin.svg";
 import tCurr from "../assets/img/tCurr.svg";
 import arrRight from "../assets/img/arrRight.svg";
+import { Link } from "react-router-dom";
 
 function Zayavka() {
   return (
@@ -163,11 +164,11 @@ function Zayavka() {
               </div>
             </div>
           </section>
-          <section className="exchange_btn">
+          <Link to="/zayavka2" className="exchange_btn">
             <button className="quick__exchange_btn order_btn">
               ОПЛАТИТЬ ЗАЯВКУ
             </button>
-          </section>
+          </Link>
         </div>
       </div>
     </main>

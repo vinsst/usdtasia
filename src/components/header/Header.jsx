@@ -6,6 +6,7 @@ import profile from "../../assets/img/profile.svg";
 import Login from "./Login";
 import Registration from "./Registration";
 import Burger from "./Burger";
+import { Link } from "react-router-dom";
 
 function Header() {
   const [login, setLogin] = useState(false);
@@ -87,11 +88,17 @@ function Header() {
           className="header_burger"
           onClick={showBurger}
         />
-        <div className="header_logo">
+        <Link
+          to="/
+  "
+          className="header_logo"
+        >
           USDT<span className="header_logo2">ASIA</span>
-        </div>
+        </Link>
         <nav className="header_groupNav">
-          <p className="groupNav_el">Home</p>
+          <Link to="/" className="groupNav_el">
+            Home
+          </Link>
           <p className="groupNav_el">About</p>
           <p className="groupNav_el">Blog</p>
           <p className="groupNav_el">FAQ</p>
