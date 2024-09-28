@@ -2775,3 +2775,28 @@ footer {
 .groupNav_el {
   cursor: pointer;
 }
+
+@media (max-width: 700px) {
+  .mailNameTelega_container {
+    margin-top: 0;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 700px) {
+  .mailNameTelega_container > * {
+    width: 100%;
+  }
+}
+
+.wallet__img_3inps {
+  display: block;
+}
+
+.mailNameTelega__mail_container {
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.mailNameTelega__mail_container.highlight {
+  box-shadow: 0 0 10px #ddc143;
+}

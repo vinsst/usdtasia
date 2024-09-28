@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import autorenew from "../../assets/img/autorenew.svg";
 import autorenew2 from "../../assets/img/autorenew2.svg";
 import tCurr from "../../assets/img/tCurr.svg";
@@ -7,13 +7,34 @@ import CurrChoose from "./CurrChoose";
 import Bitcoin from "../../assets/img/Bitcoin.svg";
 import Wallet from "./Wallet";
 import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { addHighlight, removeHighlight } from "../../redux/actions";
 
 function ExchangeContainer() {
+  const dispatch = useDispatch();
+
+  const handleInactiveButton = () => {
+    dispatch(addHighlight());
+  };
+
   const [checked, setChecked] = useState(false);
 
   const handleCheckboxChange = () => {
     setChecked(!checked);
   };
+  const email = useSelector((state) => state.contactsReducer.email);
+  const name = useSelector((state) => state.contactsReducer.name);
+  const telega = useSelector((state) => state.contactsReducer.telega);
+
+  const highlight = useSelector((state) => state.highlightReducer.highlight);
+
+  useEffect(() => {
+    if (highlight) {
+      setTimeout(() => {
+        dispatch(removeHighlight());
+      }, 500);
+    }
+  }, [dispatch, highlight]);
 
   return (
     <div className="exchange_container">
@@ -67,7 +88,9 @@ function ExchangeContainer() {
         <Wallet />
         <section className="quick__exchange_done">
           <div
-            className="quick__exchange_done_rect"
+            className={`quick__exchange_done_rect mailNameTelega__mail_container ${
+              highlight ? "highlight" : ""
+            }`}
             onClick={handleCheckboxChange}
           >
             {checked && (
@@ -86,7 +109,7 @@ function ExchangeContainer() {
           </span>
         </section>
 
-        {checked ? (
+        {checked && email.length > 0 && name.length > 0 && telega.length > 0 ? (
           <Link to="/zayavka" className="exchange_btn">
             <button className="quick__exchange_btn">EXCHANGER NOW</button>
           </Link>
@@ -95,6 +118,7 @@ function ExchangeContainer() {
             <button
               className="quick__exchange_btn 
               quick__exchange_btn_nonActive"
+              onClick={handleInactiveButton}
             >
               EXCHANGER NOW
             </button>
