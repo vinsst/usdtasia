@@ -1,14 +1,26 @@
 import React, { useState, useEffect } from "react";
 import autorenew from "../../assets/img/autorenew.svg";
 import autorenew2 from "../../assets/img/autorenew2.svg";
-import tCurr from "../../assets/img/tCurr.svg";
+
 import done from "../../assets/img/done.svg";
 import CurrChoose from "./CurrChoose";
-import Bitcoin from "../../assets/img/Bitcoin.svg";
 import Wallet from "./Wallet";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { addHighlight, removeHighlight } from "../../redux/actions";
+
+// all crypto
+
+import Bitcoin from "../../assets/img/Bitcoin.svg";
+import tCurr from "../../assets/img/tCurr.svg";
+import Ethereum from "../../assets/img/Ethereum.svg";
+import WrappedBNB from "../../assets/img/WrappedBNB.svg";
+
+// all countries
+import hrn from "../../assets/img/hrn.svg";
+import kzt from "../../assets/img/kzt.svg";
+import amd from "../../assets/img/amd.svg";
+import azn from "../../assets/img/azn.svg";
 
 function ExchangeContainer() {
   const dispatch = useDispatch();
