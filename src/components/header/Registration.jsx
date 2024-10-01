@@ -32,7 +32,7 @@ function Registration({ registrRef, close }) {
       const registrationData = { login, password, password2, email };
       try {
         const response = await axios.post(
-          "https://dummyjson.com/auth/registration",
+          "https://usdtasia-back-8a0cb4592177.herokuapp.com/user/auth/registration",
           registrationData
         );
 

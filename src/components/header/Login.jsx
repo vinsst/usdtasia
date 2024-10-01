@@ -3,6 +3,7 @@ import done from "../../assets/img/done.svg";
 import hrestik from "../../assets/img/hrestik.svg";
 import login_profile from "../../assets/img/login_profile.svg";
 import login_lock from "../../assets/img/login_lock.svg";
+import { jwtDecode } from "jwt-decode";
 
 import axios from "axios";
 
@@ -21,12 +22,28 @@ function Login({ loginRef, close }) {
     const loginData = { login, password };
     try {
       const response = await axios.post(
-        "https://dummyjson.com/auth/login",
+        "https://usdtasia-back-8a0cb4592177.herokuapp.com/user/auth/login",
         loginData
       );
 
       if (response.status === 200) {
+        const token = response.data;
+        localStorage.setItem("authToken", token);
         console.log("Login successful:", response.data);
+
+        const decodedToken = jwtDecode(token);
+        const userId = decodedToken.id;
+
+        const userResponse = await axios.get(
+          `https://usdtasia-back-8a0cb4592177.herokuapp.com/user/${userId}`,
+          {
+            headers: { Authorization: `Bearer ${token}` },
+          }
+        );
+
+        if (userResponse.status === 200) {
+          console.log("User data:", userResponse.data);
+        }
       }
     } catch (error) {
       console.log(error);
