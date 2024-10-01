@@ -2800,3 +2800,11 @@ footer {
 .mailNameTelega__mail_container.highlight {
   box-shadow: 0 0 10px #ddc143;
 }
+
+.invalidLogin {
+  color: rgba(255, 3, 139, 1);
+}
+
+.loginTxtHeader {
+  font-size: 24px;
+}

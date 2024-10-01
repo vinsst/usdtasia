@@ -7,6 +7,7 @@ import Login from "./Login";
 import Registration from "./Registration";
 import Burger from "./Burger";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function Header() {
   const [login, setLogin] = useState(false);
@@ -75,6 +76,8 @@ function Header() {
     };
   }, [login, registr, burger]);
 
+  const loginTxt = useSelector((state) => state.loginReducer.login);
+  console.log(loginTxt);
   return (
     <header>
       {login ? <Login loginRef={loginRef} close={handleCloseModals} /> : null}
@@ -110,20 +113,28 @@ function Header() {
             <img src={GB} alt="" className="group2__lang_flag" />
             <img src={arrow_down} alt="" className="group2__lang_arr" />
           </div>
-          <div className="group2_registration">
-            <button
-              className="group2__registration_in"
-              onClick={handleLoginClick}
-            >
-              Sign in
-            </button>
-            <button
-              className="group2__registration_up"
-              onClick={handleRegistrClick}
-            >
-              Sign up
-            </button>
-          </div>
+          {loginTxt ? (
+            <div className="group2_lang">
+              <div className="loginTxtHeader">{loginTxt}</div>
+
+              <img src={arrow_down} alt="" className="group2__lang_arr" />
+            </div>
+          ) : (
+            <div className="group2_registration">
+              <button
+                className="group2__registration_in"
+                onClick={handleLoginClick}
+              >
+                Sign in
+              </button>
+              <button
+                className="group2__registration_up"
+                onClick={handleRegistrClick}
+              >
+                Sign up
+              </button>
+            </div>
+          )}
         </div>
         <img src={profile} alt="" className="header_profile" />
       </div>

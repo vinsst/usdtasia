@@ -20,3 +20,12 @@ export const addHighlight = () => ({
 export const removeHighlight = () => ({
   type: "REMOVE_HIGHLIGHT",
 });
+
+export const addLogin = (login) => ({
+  type: "ADD_LOGIN",
+  payload: login,
+});
+
+export const removeLogin = () => ({
+  type: "REMOVE_LOGIN",
+});

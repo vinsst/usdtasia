@@ -7,7 +7,11 @@ import { jwtDecode } from "jwt-decode";
 
 import axios from "axios";
 
+import { useDispatch } from "react-redux";
+import { addLogin } from "../../redux/actions";
+
 function Login({ loginRef, close }) {
+  const dispatch = useDispatch();
   const [checked, setChecked] = useState(false);
 
   const handleCheckboxChange = () => {
@@ -16,6 +20,7 @@ function Login({ loginRef, close }) {
 
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -28,6 +33,7 @@ function Login({ loginRef, close }) {
 
       if (response.status === 200) {
         const token = response.data;
+
         localStorage.setItem("authToken", token);
         console.log("Login successful:", response.data);
 
@@ -40,13 +46,17 @@ function Login({ loginRef, close }) {
             headers: { Authorization: `Bearer ${token}` },
           }
         );
-
+        const userData = userResponse.data;
+        console.log(userData.login);
         if (userResponse.status === 200) {
-          console.log("User data:", userResponse.data);
+          console.log("User data:", userData);
         }
+        dispatch(addLogin(userData.login));
       }
+      setError(false);
+      close();
     } catch (error) {
-      console.log(error);
+      setError(true);
     }
   };
 
@@ -98,7 +108,10 @@ function Login({ loginRef, close }) {
           </div>
           <p className="rememberMe_p">Запомнить меня</p>
         </div>
-        {checked && login.length > 0 && password.length > 0 ? (
+        {error && (
+          <span className="invalidLogin">Неправильные логин или пароль</span>
+        )}
+        {login.length > 0 && password.length > 0 ? (
           <section className="exchange_btn">
             <button className="quick__exchange_btn order_btn" type="submit">
               ВОЙТИ
