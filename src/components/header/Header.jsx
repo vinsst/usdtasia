@@ -8,6 +8,12 @@ import Registration from "./Registration";
 import Burger from "./Burger";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { jwtDecode } from "jwt-decode";
+
+import axios from "axios";
+
+import { useDispatch } from "react-redux";
+import { addLogin, removeLogin } from "../../redux/actions";
 
 function Header() {
   const [login, setLogin] = useState(false);
@@ -78,6 +84,52 @@ function Header() {
 
   const loginTxt = useSelector((state) => state.loginReducer.login);
   console.log(loginTxt);
+
+  // логіка для сесії логіну (при оновлені ст, щоб логін вже був виконан)
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const token =
+      localStorage.getItem("authToken") || sessionStorage.getItem("authToken");
+
+    if (token) {
+      const decodedToken = jwtDecode(token);
+      const userId = decodedToken.id;
+
+      axios
+        .get(
+          `https://usdtasia-back-8a0cb4592177.herokuapp.com/user/${userId}`,
+          {
+            headers: { Authorization: `Bearer ${token}` },
+          }
+        )
+        .then((response) => {
+          if (response.status === 200) {
+            const userData = response.data;
+            dispatch(addLogin(userData.login));
+          }
+        })
+        .catch((error) => {
+          console.error("Failed to fetch user data:", error);
+        });
+    }
+  }, [dispatch]);
+
+  const logout = () => {
+    localStorage.removeItem("authToken");
+    sessionStorage.removeItem("authToken");
+
+    dispatch(removeLogin());
+  };
+
+  // dropdown
+
+  const [dropdown, setDropdown] = useState(false);
+  const showDropdown = () => {
+    setDropdown(!dropdown);
+  };
+
   return (
     <header>
       {login ? <Login loginRef={loginRef} close={handleCloseModals} /> : null}
@@ -114,10 +166,23 @@ function Header() {
             <img src={arrow_down} alt="" className="group2__lang_arr" />
           </div>
           {loginTxt ? (
-            <div className="group2_lang">
-              <div className="loginTxtHeader">{loginTxt}</div>
+            <div
+              className="loginTxtHeader_conyForDropdown"
+              onClick={showDropdown}
+            >
+              <div className="group2_lang loginHeaderTxt_container">
+                <div className="loginTxtHeader">{loginTxt}</div>
 
-              <img src={arrow_down} alt="" className="group2__lang_arr" />
+                <img src={arrow_down} alt="" className="group2__lang_arr" />
+                {dropdown && (
+                  <div
+                    className="quick__curency_dropdown quick__curency_dropdown_header"
+                    onClick={logout}
+                  >
+                    <div className="quick__curency_dropdown_item">Log out</div>
+                  </div>
+                )}
+              </div>
             </div>
           ) : (
             <div className="group2_registration">

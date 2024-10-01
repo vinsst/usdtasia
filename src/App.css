@@ -2808,3 +2808,17 @@ footer {
 .loginTxtHeader {
   font-size: 24px;
 }
+
+.loginTxtHeader_conyForDropdown {
+  cursor: pointer;
+  position: relative;
+}
+
+.quick__curency_dropdown_header {
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 28px;
+  font-size: 18px;
+}

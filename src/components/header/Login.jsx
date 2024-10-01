@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import done from "../../assets/img/done.svg";
 import hrestik from "../../assets/img/hrestik.svg";
 import login_profile from "../../assets/img/login_profile.svg";
@@ -34,7 +34,12 @@ function Login({ loginRef, close }) {
       if (response.status === 200) {
         const token = response.data;
 
-        localStorage.setItem("authToken", token);
+        if (checked) {
+          localStorage.setItem("authToken", token);
+        } else {
+          sessionStorage.setItem("authToken", token);
+        }
+
         console.log("Login successful:", response.data);
 
         const decodedToken = jwtDecode(token);
@@ -59,6 +64,33 @@ function Login({ loginRef, close }) {
       setError(true);
     }
   };
+
+  useEffect(() => {
+    const token =
+      localStorage.getItem("authToken") || sessionStorage.getItem("authToken");
+
+    if (token) {
+      const decodedToken = jwtDecode(token);
+      const userId = decodedToken.id;
+
+      axios
+        .get(
+          `https://usdtasia-back-8a0cb4592177.herokuapp.com/user/${userId}`,
+          {
+            headers: { Authorization: `Bearer ${token}` },
+          }
+        )
+        .then((response) => {
+          if (response.status === 200) {
+            const userData = response.data;
+            dispatch(addLogin(userData.login));
+          }
+        })
+        .catch((error) => {
+          console.error("Failed to fetch user data:", error);
+        });
+    }
+  }, [dispatch]);
 
   return (
     <div className="login_container">
