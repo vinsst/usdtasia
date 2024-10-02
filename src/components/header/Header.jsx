@@ -83,7 +83,6 @@ function Header() {
   }, [login, registr, burger]);
 
   const loginTxt = useSelector((state) => state.loginReducer.login);
-  console.log(loginTxt);
 
   // логіка для сесії логіну (при оновлені ст, щоб логін вже був виконан)
 

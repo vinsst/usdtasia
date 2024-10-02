@@ -52,7 +52,6 @@ function Login({ loginRef, close }) {
           }
         );
         const userData = userResponse.data;
-        console.log(userData.login);
         if (userResponse.status === 200) {
           console.log("User data:", userData);
         }
