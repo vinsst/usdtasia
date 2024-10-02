@@ -48,6 +48,21 @@ function ExchangeContainer() {
     }
   }, [dispatch, highlight]);
 
+  // checking if logged in + btn thx changing
+
+  const loginTxt = useSelector((state) => state.loginReducer.login);
+
+  const [buttonText, setButtonText] = useState("EXCHANGER NOW");
+
+  const handleBtnClick = () => {
+    if (loginTxt === false) {
+      setButtonText("SIGN IN, PLEASE");
+      setTimeout(() => {
+        setButtonText("EXCHANGER NOW");
+      }, 2000);
+    }
+  };
+
   return (
     <div className="exchange_container">
       <section className="quick__exchange_container">
@@ -121,7 +136,11 @@ function ExchangeContainer() {
           </span>
         </section>
 
-        {checked && email.length > 0 && name.length > 0 && telega.length > 0 ? (
+        {loginTxt.length > 0 &&
+        checked &&
+        email.length > 0 &&
+        name.length > 0 &&
+        telega.length > 0 ? (
           <Link to="/zayavka" className="exchange_btn">
             <button className="quick__exchange_btn">EXCHANGER NOW</button>
           </Link>
@@ -130,9 +149,12 @@ function ExchangeContainer() {
             <button
               className="quick__exchange_btn 
               quick__exchange_btn_nonActive"
-              onClick={handleInactiveButton}
+              onClick={() => {
+                handleInactiveButton();
+                handleBtnClick();
+              }}
             >
-              EXCHANGER NOW
+              {buttonText}
             </button>
           </section>
         )}

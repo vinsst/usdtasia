@@ -2822,3 +2822,13 @@ footer {
   right: 28px;
   font-size: 18px;
 }
+
+.loginHeaderTxt_container_burger {
+  padding-left: 0;
+  width: auto;
+}
+
+.quick__curency_dropdown_header_burger {
+  left: 0;
+  max-width: 100px;
+}

@@ -1,7 +1,9 @@
-import React, { useRef } from "react";
+import React, { useState } from "react";
 import menuHamburger from "../../assets/img/menuHamburger.svg";
 import GB from "../../assets/img/flags/GB.svg";
 import arr_down from "../../assets/img/arrow_down.svg";
+import { useSelector, useDispatch } from "react-redux";
+import { removeLogin } from "../../redux/actions";
 
 function Burger({
   showBurger,
@@ -9,6 +11,21 @@ function Burger({
   handleRegistrClick,
   burgerContentRef,
 }) {
+  // checking if logged in
+
+  const loginTxt = useSelector((state) => state.loginReducer.login);
+  const dispatch = useDispatch();
+  const logout = () => {
+    localStorage.removeItem("authToken");
+    sessionStorage.removeItem("authToken");
+
+    dispatch(removeLogin());
+  }; // dropdown
+
+  const [dropdown, setDropdown] = useState(false);
+  const showDropdown = () => {
+    setDropdown(!dropdown);
+  };
   return (
     <div className="burgerActive_effects">
       <nav className="burgerActive" ref={burgerContentRef}>
@@ -36,20 +53,41 @@ function Burger({
           <img src={GB} alt="" className="group2__lang_flag" />
           <img src={arr_down} alt="" className="group2__lang_arr" />
         </div>
-        <div className="burger__login_container">
-          <button
-            className="group2__registration_in burger_signIn"
-            onClick={handleLoginClick}
+        {loginTxt ? (
+          <div
+            className="loginTxtHeader_conyForDropdown"
+            onClick={showDropdown}
           >
-            Sign in
-          </button>
-          <button
-            className="group2__registration_up"
-            onClick={handleRegistrClick}
-          >
-            Sign up
-          </button>
-        </div>
+            <div className="group2_lang loginHeaderTxt_container loginHeaderTxt_container_burger">
+              <div className="loginTxtHeader">{loginTxt}</div>
+
+              <img src={arr_down} alt="" className="group2__lang_arr" />
+              {dropdown && (
+                <div
+                  className="quick__curency_dropdown quick__curency_dropdown_header quick__curency_dropdown_header_burger"
+                  onClick={logout}
+                >
+                  <div className="quick__curency_dropdown_item">Log out</div>
+                </div>
+              )}
+            </div>
+          </div>
+        ) : (
+          <div className="burger__login_container">
+            <button
+              className="group2__registration_in burger_signIn"
+              onClick={handleLoginClick}
+            >
+              Sign in
+            </button>
+            <button
+              className="group2__registration_up"
+              onClick={handleRegistrClick}
+            >
+              Sign up
+            </button>
+          </div>
+        )}
       </nav>
     </div>
   );
