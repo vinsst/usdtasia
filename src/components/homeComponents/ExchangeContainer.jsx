@@ -7,7 +7,14 @@ import CurrChoose from "./CurrChoose";
 import Wallet from "./Wallet";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { addHighlight, removeHighlight } from "../../redux/actions";
+import {
+  addHighlight,
+  removeHighlight,
+  setCurrencies,
+  setRates,
+} from "../../redux/actions";
+
+import axios from "axios";
 
 // all crypto
 
@@ -16,14 +23,27 @@ import tCurr from "../../assets/img/tCurr.svg";
 import Ethereum from "../../assets/img/Ethereum.svg";
 import WrappedBNB from "../../assets/img/WrappedBNB.svg";
 
-// all countries
-import hrn from "../../assets/img/hrn.svg";
-import kzt from "../../assets/img/kzt.svg";
-import amd from "../../assets/img/amd.svg";
-import azn from "../../assets/img/azn.svg";
-
 function ExchangeContainer() {
   const dispatch = useDispatch();
+  useEffect(() => {
+    const fetchData = async () => {
+      const tokensResponse = await axios.get(
+        "https://usdtasia-back-8a0cb4592177.herokuapp.com/binance/exchange-tokens"
+      );
+      const ratesResponse = await axios.get(
+        "https://usdtasia-back-8a0cb4592177.herokuapp.com/binance/currencies"
+      );
+
+      dispatch(setCurrencies(tokensResponse.data));
+      dispatch(setRates(ratesResponse.data));
+    };
+
+    fetchData();
+
+    const interval = setInterval(fetchData, 900000); //15хв
+
+    return () => clearInterval(interval);
+  }, [dispatch]);
 
   const handleInactiveButton = () => {
     dispatch(addHighlight());

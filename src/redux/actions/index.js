@@ -29,3 +29,13 @@ export const addLogin = (login) => ({
 export const removeLogin = () => ({
   type: "REMOVE_LOGIN",
 });
+
+export const setCurrencies = (currencies) => ({
+  type: "SET_CURRENCIES",
+  payload: currencies,
+});
+
+export const setRates = (rates) => ({
+  type: "SET_RATES",
+  payload: rates,
+});
