@@ -2,7 +2,7 @@ import React from "react";
 import see_more from "../../assets/img/see-more-ic.svg";
 import graph from "../../assets/img/graph.svg";
 
-function CountryToCurrBlock({ flag, curr }) {
+function CountryToCurrBlock({ symbol, curr }) {
   return (
     <div className="countryToUsdt_block">
       <div className="countryToUsdt__block_side1">
@@ -12,12 +12,12 @@ function CountryToCurrBlock({ flag, curr }) {
             alt=""
             className="countryToUsdt__block_side1_left_coin"
           />
-          <p className="countryToUsdt__block_side1_left_abr">AZN</p>
-          <img
+          <p className="countryToUsdt__block_side1_left_abr">{symbol}</p>
+          {/* <img
             src={flag}
             alt=""
             className="countryToUsdt__block_side1_left_ctr"
-          />
+          /> */}
         </div>
         <div className="countryToUsdt__block_side1_right">
           <img src={see_more} alt="" className="" />
@@ -27,7 +27,7 @@ function CountryToCurrBlock({ flag, curr }) {
       <div className="countryToUsdt__block_side2">
         <div className="countryToUsdt__block_side2_txt">
           <p className="countryToUsdt__block_side2_txt1">1 USDT =</p>
-          <div className="countryToUsdt__block_side2_txt2">1,80 AZN</div>
+          <div className="countryToUsdt__block_side2_txt2">1,80 {symbol}</div>
         </div>
         <img src={graph} alt="" className="countryToUsdt__block_side2_graph" />
       </div>

@@ -39,3 +39,8 @@ export const setRates = (rates) => ({
   type: "SET_RATES",
   payload: rates,
 });
+
+export const currCrypto_rates = (cryptoName) => ({
+  type: "CURR_CRYPTO_RATES",
+  payload: cryptoName,
+});
