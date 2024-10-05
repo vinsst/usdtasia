@@ -652,6 +652,10 @@ body {
   color: #82b6d3;
 }
 
+.quick__curency_box_currency_img {
+  min-width: 42px;
+}
+
 .footer__logo {
   display: flex;
   flex-direction: column;
@@ -2831,4 +2835,9 @@ footer {
 .quick__curency_dropdown_header_burger {
   left: 0;
   max-width: 100px;
+}
+
+.quick__curency_box_currency__container {
+  padding-left: 10px;
+  flex: 1;
 }

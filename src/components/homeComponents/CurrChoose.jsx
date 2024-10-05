@@ -28,7 +28,7 @@ function CurrChoose({ img, txt, number, symb, status, input }) {
           <p className="quick__curency_box_currency_name">{txt}</p>
         </div>
         <img src={arrow_down} alt="" className="quick__curency_arr" />
-        {dropdown && <QuickCurrDrop />}
+        {dropdown && <QuickCurrDrop type={status} />}
       </div>
       <div className="quick__curency_box_line"></div>
       <div className="quick__curency_box_side2">

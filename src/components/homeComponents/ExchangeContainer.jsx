@@ -22,7 +22,9 @@ import Bitcoin from "../../assets/img/Bitcoin.svg";
 import tCurr from "../../assets/img/tCurr.svg";
 import Ethereum from "../../assets/img/Ethereum.svg";
 import WrappedBNB from "../../assets/img/WrappedBNB.svg";
+import { fiatImageMap } from "../../assets/fiatImageMap";
 
+import { currencyImageMap } from "../../assets/currencyImageMap";
 function ExchangeContainer() {
   const dispatch = useDispatch();
   useEffect(() => {
@@ -83,6 +85,19 @@ function ExchangeContainer() {
     }
   };
 
+  const sendName = useSelector(
+    (state) => state.currCryptoCurrChooseReducer.sendCurrency
+  );
+
+  const getName = useSelector(
+    (state) => state.currCryptoCurrChooseReducer.getCurrency
+  );
+
+  const imgArrays = { ...fiatImageMap, ...currencyImageMap };
+
+  const imgSrcSend = imgArrays[sendName];
+
+  const imgSrcGet = imgArrays[getName];
   return (
     <div className="exchange_container">
       <section className="quick__exchange_container">
@@ -91,10 +106,10 @@ function ExchangeContainer() {
       <div className="exchange_container_padding">
         <section className="quick__currencyChoioce_block">
           <CurrChoose
-            img={Bitcoin}
-            txt="Bitcoin BTC"
+            img={imgSrcSend}
+            txt={sendName}
             input={true}
-            symb="BTC"
+            symb={sendName}
             status="Send"
           />
           <img
@@ -109,10 +124,10 @@ function ExchangeContainer() {
           />
 
           <CurrChoose
-            img={tCurr}
-            txt="Tetcher TRC20"
+            img={imgSrcGet}
+            txt={getName}
             number="234234"
-            symb="TRC20"
+            symb={getName}
             status="Get"
           />
         </section>

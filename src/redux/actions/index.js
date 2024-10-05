@@ -44,3 +44,13 @@ export const currCrypto_rates = (cryptoName) => ({
   type: "CURR_CRYPTO_RATES",
   payload: cryptoName,
 });
+
+export const setSendCurrency = (cryptoName) => ({
+  type: "SET_SEND_CURRENCY",
+  payload: cryptoName,
+});
+
+export const setGetCurrency = (cryptoName) => ({
+  type: "SET_GET_CURRENCY",
+  payload: cryptoName,
+});
