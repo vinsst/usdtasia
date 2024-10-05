@@ -107,6 +107,12 @@ function ExchangeContainer() {
     );
     return rateObj ? rateObj.rate.toFixed(12) : "N/A";
   };
+
+  const num = useSelector((state) => state.sendNumReducer.num);
+
+  const exchangeRate = gettingPrice();
+
+  const convertedValue = (num * exchangeRate).toFixed(2);
   return (
     <div className="exchange_container">
       <section className="quick__exchange_container">
@@ -135,7 +141,7 @@ function ExchangeContainer() {
           <CurrChoose
             img={imgSrcGet}
             txt={getName}
-            number="234234"
+            number={convertedValue}
             symb={getName}
             status="Get"
           />

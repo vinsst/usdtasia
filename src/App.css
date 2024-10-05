@@ -2841,3 +2841,26 @@ footer {
   padding-left: 10px;
   flex: 1;
 }
+
+.quick__curency_box_currency_value2 {
+  max-width: 130px;
+  overflow-x: auto;
+}
+
+@media (max-width: 1200px) {
+  .quick__curency_box_currency_value2 {
+    max-width: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .quick__curency_box_currency_value2 {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 450px) {
+  .quick__curency_box_currency_value2 {
+    max-width: 100px;
+  }
+}

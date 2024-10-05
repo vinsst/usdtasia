@@ -6,6 +6,8 @@ import exchangeReducer from "./exchange";
 import currCryptoRatesReducer from "./currCryptoRates";
 import currCryptoCurrChooseReducer from "./currCryptoCurrChoose";
 
+import sendNumReducer from "./sendNum";
+
 const allReducers = combineReducers({
   contactsReducer,
   highlightReducer,
@@ -13,6 +15,7 @@ const allReducers = combineReducers({
   exchangeReducer,
   currCryptoRatesReducer,
   currCryptoCurrChooseReducer,
+  sendNumReducer,
 });
 
 export default allReducers;

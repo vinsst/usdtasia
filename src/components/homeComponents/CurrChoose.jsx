@@ -2,19 +2,24 @@ import React, { useState } from "react";
 import arrow_down from "../../assets/img/arrow_down.svg";
 import QuickCurrDrop from "./QuickCurrDrop";
 
-function CurrChoose({ img, txt, number, symb, status, input }) {
-  const [dropdown, setDropdown] = useState(false);
+import { useSelector, useDispatch } from "react-redux";
+import { setSendNum } from "../../redux/actions";
 
-  const [value, setValue] = useState("");
+function CurrChoose({ img, txt, number, symb, status, input }) {
+  const dispatch = useDispatch();
+  const [dropdown, setDropdown] = useState(false);
 
   const handleChange = (e) => {
     const inputValue = e.target.value;
     const validInput = /^\d*\.?\d*$/.test(inputValue);
 
     if (validInput) {
-      setValue(inputValue);
+      const numericValue = inputValue ? parseFloat(inputValue) : 0;
+      dispatch(setSendNum(numericValue));
     }
   };
+
+  const num = useSelector((state) => state.sendNumReducer.num);
 
   const showDropdown = () => {
     setDropdown(!dropdown);
@@ -33,7 +38,9 @@ function CurrChoose({ img, txt, number, symb, status, input }) {
       <div className="quick__curency_box_line"></div>
       <div className="quick__curency_box_side2">
         {number && (
-          <div className="quick__curency_box_currency_value">{number}</div>
+          <div className="quick__curency_box_currency_value quick__curency_box_currency_value2">
+            {number}
+          </div>
         )}
         {input && (
           <input
@@ -43,7 +50,7 @@ function CurrChoose({ img, txt, number, symb, status, input }) {
             min="0"
             step="0.01"
             onChange={handleChange}
-            value={value}
+            value={num}
           />
         )}
         &nbsp;

@@ -54,3 +54,8 @@ export const setGetCurrency = (cryptoName) => ({
   type: "SET_GET_CURRENCY",
   payload: cryptoName,
 });
+
+export const setSendNum = (num) => ({
+  type: "SET_SEND_NUM",
+  payload: num,
+});
