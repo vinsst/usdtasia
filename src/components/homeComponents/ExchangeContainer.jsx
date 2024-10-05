@@ -98,6 +98,15 @@ function ExchangeContainer() {
   const imgSrcSend = imgArrays[sendName];
 
   const imgSrcGet = imgArrays[getName];
+
+  const priceArray = useSelector((state) => state.exchangeReducer.rates);
+
+  const gettingPrice = () => {
+    const rateObj = priceArray.find(
+      (obj) => obj.from === sendName && obj.to === getName
+    );
+    return rateObj ? rateObj.rate.toFixed(12) : "N/A";
+  };
   return (
     <div className="exchange_container">
       <section className="quick__exchange_container">
@@ -134,7 +143,7 @@ function ExchangeContainer() {
         <section className="quick__exchange_currenct_span">
           <div className="quick__exchange_currenct_span_1 quick__exchange_currenct_span_1_1_isInMobile">
             <div className="quick__exchange_currenct_span_1_1">
-              Курс обмена: 1 BTC ≈ 63513.537 USDT
+              Курс обмена: 1 {sendName} ≈ {gettingPrice()} {getName}
             </div>
             <div className="quick__exchange_currenct_span_1_2">Min:10 BTC</div>
           </div>
