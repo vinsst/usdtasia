@@ -17,6 +17,20 @@ function CountryToCurrBlock({ symbol, curr }) {
     return rateObj ? rateObj.rate.toFixed(2) : "N/A";
   };
 
+  const gettingPercent = () => {
+    const percentObj = priceArray.find(
+      (obj) => obj.from === selectedCurrency && obj.to === symbol
+    );
+    return percentObj ? percentObj.percent : "N/A";
+  };
+
+  const exchangePercent = gettingPercent();
+  const exchangePercentNum = exchangePercent / 100 + 1;
+
+  const exchangeRate = gettingPrice();
+
+  const convertedValue = (exchangeRate * exchangePercentNum).toFixed(2);
+
   return (
     <div className="countryToUsdt_block">
       <div className="countryToUsdt__block_side1">
@@ -39,7 +53,7 @@ function CountryToCurrBlock({ symbol, curr }) {
             1 {selectedCurrency} =
           </p>
           <div className="countryToUsdt__block_side2_txt2">
-            {gettingPrice()} {symbol}
+            {convertedValue} {symbol}
           </div>
         </div>
         <img src={graph} alt="" className="countryToUsdt__block_side2_graph" />

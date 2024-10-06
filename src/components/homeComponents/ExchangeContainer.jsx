@@ -108,11 +108,21 @@ function ExchangeContainer() {
     return rateObj ? rateObj.rate.toFixed(12) : "N/A";
   };
 
+  const gettingPercent = () => {
+    const percentObj = priceArray.find(
+      (obj) => obj.from === sendName && obj.to === getName
+    );
+    return percentObj ? percentObj.percent : "N/A";
+  };
+
   const num = useSelector((state) => state.sendNumReducer.num);
+
+  const exchangePercent = gettingPercent();
+  const exchangePercentNum = exchangePercent / 100 + 1;
 
   const exchangeRate = gettingPrice();
 
-  const convertedValue = (num * exchangeRate).toFixed(2);
+  const convertedValue = (num * exchangeRate * exchangePercentNum).toFixed(2);
   return (
     <div className="exchange_container">
       <section className="quick__exchange_container">

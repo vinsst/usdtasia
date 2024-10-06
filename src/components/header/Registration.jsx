@@ -39,6 +39,7 @@ function Registration({ registrRef, close }) {
         if (response.status === 200) {
           console.log("Login successful:", response.data);
         }
+        close();
       } catch (error) {
         console.log(error);
       }
