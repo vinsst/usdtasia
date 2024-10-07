@@ -12,6 +12,7 @@ import {
   setName,
   setTelega,
   removeHighlight,
+  setWallet,
 } from "../../redux/actions";
 
 function Wallet() {
@@ -27,9 +28,14 @@ function Wallet() {
     dispatch(setTelega(e.target.value));
   };
 
+  const handleWalletChange = (e) => {
+    dispatch(setWallet(e.target.value));
+  };
+
   const email = useSelector((state) => state.contactsReducer.email);
   const name = useSelector((state) => state.contactsReducer.name);
   const telega = useSelector((state) => state.contactsReducer.telega);
+  const wallet = useSelector((state) => state.contactsReducer.wallet);
 
   const highlight = useSelector((state) => state.highlightReducer.highlight);
 
@@ -41,13 +47,7 @@ function Wallet() {
     }
   }, [dispatch, highlight]);
 
-  const [inputValue, setInputValue] = useState("");
-
-  const handleInput = (e) => {
-    setInputValue(e.target.value);
-  };
-
-  const hasValue = inputValue.length > 0;
+  const hasValue = wallet.length > 0;
 
   return (
     <>
@@ -62,7 +62,8 @@ function Wallet() {
             type="text"
             className="wallet_input"
             placeholder="Your Tether (TRC20) address"
-            onChange={handleInput}
+            onChange={handleWalletChange}
+            value={wallet}
           />
         </div>
         <div className="trcAdress_imgs">

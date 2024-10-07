@@ -13,7 +13,7 @@ import { jwtDecode } from "jwt-decode";
 import axios from "axios";
 
 import { useDispatch } from "react-redux";
-import { addLogin, removeLogin } from "../../redux/actions";
+import { addLogin, removeLogin, setToken } from "../../redux/actions";
 
 function Header() {
   const [login, setLogin] = useState(false);
@@ -95,6 +95,8 @@ function Header() {
     if (token) {
       const decodedToken = jwtDecode(token);
       const userId = decodedToken.id;
+
+      dispatch(setToken(token));
 
       axios
         .get(

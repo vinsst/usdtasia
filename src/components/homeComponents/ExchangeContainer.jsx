@@ -59,6 +59,8 @@ function ExchangeContainer() {
   const email = useSelector((state) => state.contactsReducer.email);
   const name = useSelector((state) => state.contactsReducer.name);
   const telega = useSelector((state) => state.contactsReducer.telega);
+  const token = useSelector((state) => state.tokenReducer.token);
+  const wallet = useSelector((state) => state.contactsReducer.wallet);
 
   const highlight = useSelector((state) => state.highlightReducer.highlight);
 
@@ -122,7 +124,39 @@ function ExchangeContainer() {
 
   const exchangeRate = gettingPrice();
 
-  const convertedValue = (num * exchangeRate * exchangePercentNum).toFixed(2);
+  const convertedValue = num * exchangeRate * exchangePercentNum;
+
+  const telegram = telega;
+
+  const creatingTransaction = async (e) => {
+    const transactionData = {
+      wallet,
+      from: {
+        name: sendName,
+        value: num,
+      },
+      to: {
+        name: getName,
+        value: convertedValue,
+      },
+      email,
+      name,
+      telegram,
+    };
+
+    try {
+      await axios.post(
+        "https://usdtasia-back-8a0cb4592177.herokuapp.com/transaction",
+        transactionData,
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      );
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <div className="exchange_container">
       <section className="quick__exchange_container">
@@ -151,7 +185,7 @@ function ExchangeContainer() {
           <CurrChoose
             img={imgSrcGet}
             txt={getName}
-            number={convertedValue}
+            number={convertedValue.toFixed(5)}
             symb={getName}
             status="Get"
           />
@@ -202,7 +236,12 @@ function ExchangeContainer() {
         name.length > 0 &&
         telega.length > 0 ? (
           <Link to="/zayavka" className="exchange_btn">
-            <button className="quick__exchange_btn">EXCHANGER NOW</button>
+            <button
+              className="quick__exchange_btn"
+              onClick={creatingTransaction}
+            >
+              EXCHANGER NOW
+            </button>
           </Link>
         ) : (
           <section className="exchange_btn">

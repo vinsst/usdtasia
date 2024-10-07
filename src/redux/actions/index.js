@@ -13,6 +13,11 @@ export const setTelega = (telega) => ({
   payload: telega,
 });
 
+export const setWallet = (wallet) => ({
+  type: "SET_WALLET",
+  payload: wallet,
+});
+
 export const addHighlight = () => ({
   type: "ADD_HIGHLIGHT",
 });
@@ -58,4 +63,9 @@ export const setGetCurrency = (cryptoName) => ({
 export const setSendNum = (num) => ({
   type: "SET_SEND_NUM",
   payload: num,
+});
+
+export const setToken = (token) => ({
+  type: "SET_TOKEN",
+  payload: token,
 });

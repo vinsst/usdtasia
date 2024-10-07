@@ -2,6 +2,7 @@ const initialState = {
   name: "",
   telega: "",
   email: "",
+  wallet: "",
 };
 
 const contactsReducer = (state = initialState, action) => {
@@ -20,6 +21,11 @@ const contactsReducer = (state = initialState, action) => {
       return {
         ...state,
         email: action.payload,
+      };
+    case "SET_WALLET":
+      return {
+        ...state,
+        wallet: action.payload,
       };
     default:
       return state;
