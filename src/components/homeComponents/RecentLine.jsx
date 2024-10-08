@@ -4,7 +4,11 @@ import arrRight from "../../assets/img/arrRight.svg";
 import arrowUpDown from "../../assets/img/arrowUpDown.svg";
 import infoSuccess from "../../assets/img/infoSuccess.svg";
 
-function RecentLine({ img1, img2, blue }) {
+import { formatDistanceToNow } from "date-fns";
+function RecentLine({ img1, img2, blue, from, to, createdAt }) {
+  const formattedTime = formatDistanceToNow(new Date(createdAt), {
+    addSuffix: true,
+  });
   return (
     <div className={`recent__block_line ${blue}`}>
       <div className="recent__block_line_side_container">
@@ -15,16 +19,16 @@ function RecentLine({ img1, img2, blue }) {
             className="recent__block_line_side_container_left_arrUpDown"
           />
           <p className="recent__block_line_side_container_left_time">
-            a few seconds ago
+            {formattedTime}
           </p>
         </div>
         <div className="recent__block_line_side_container_left">
           <div className="recent__block_line_side_container_left_mob_text">
             <p className="recent__block_line_side_container_right_value">
-              140000 UDST
+              {from.value} {from.name}
             </p>
             <p className="recent__block_line_side_container_right_value_under_mob">
-              10 sec ago
+              {formattedTime}
             </p>
           </div>
           <img
@@ -44,15 +48,11 @@ function RecentLine({ img1, img2, blue }) {
           />
           <div className="recent__block_line_side_container_left_mob_text recent__block_line_side_container_left_mob_text_right">
             <p className="recent__block_line_side_container_right_value">
-              140000 UDST
-            </p>
-            <p className="recent__block_line_side_container_right_value_under_mob">
-              16 sec
+              {to.value} {to.name}
             </p>
           </div>
         </div>
         <div className="recent__block_line_side_container_left">
-          <p className="recent__block_line_side_container_left_time">16 sec</p>
           <img
             src={infoSuccess}
             alt=""

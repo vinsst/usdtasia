@@ -775,10 +775,6 @@ footer {
   color: #ffffff;
 }
 
-.blue_footer {
-  background: #1f3e83;
-}
-
 .askedQuestions_plus {
   border: 2px solid #90a7e2;
   min-width: 20px;
@@ -1226,6 +1222,14 @@ footer {
   font-size: 16px;
   font-weight: 400;
   color: #82b6d3;
+}
+
+.blue_footer {
+  background: #1f3e83;
+}
+
+.recent_block .recent__block_line.blue_footer:last-child {
+  border-radius: 0 0 24px 24px;
 }
 
 .recent__block_line_side_container {

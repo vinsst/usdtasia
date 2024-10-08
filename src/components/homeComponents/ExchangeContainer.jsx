@@ -25,6 +25,7 @@ import WrappedBNB from "../../assets/img/WrappedBNB.svg";
 import { fiatImageMap } from "../../assets/fiatImageMap";
 
 import { currencyImageMap } from "../../assets/currencyImageMap";
+import { jwtDecode } from "jwt-decode";
 function ExchangeContainer() {
   const dispatch = useDispatch();
   useEffect(() => {
@@ -107,7 +108,7 @@ function ExchangeContainer() {
     const rateObj = priceArray.find(
       (obj) => obj.from === sendName && obj.to === getName
     );
-    return rateObj ? rateObj.rate.toFixed(12) : "N/A";
+    return rateObj ? rateObj.rate.toFixed(12) : "N/A"; //toFixed(12) after обчислень
   };
 
   const gettingPercent = () => {

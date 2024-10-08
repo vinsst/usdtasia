@@ -97,6 +97,9 @@ function Header() {
       const userId = decodedToken.id;
 
       dispatch(setToken(token));
+      axios.get(
+        "https://usdtasia-back-8a0cb4592177.herokuapp.com/admin/transaction"
+      );
 
       axios
         .get(
