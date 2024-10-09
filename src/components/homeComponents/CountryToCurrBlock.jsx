@@ -3,7 +3,7 @@ import see_more from "../../assets/img/see-more-ic.svg";
 import graph from "../../assets/img/graph.svg";
 
 import { useSelector } from "react-redux";
-function CountryToCurrBlock({ symbol, curr }) {
+function CountryToCurrBlock({ symbol, curr, flag }) {
   const selectedCurrency = useSelector(
     (state) => state.currCryptoRatesReducer.crypto
   );
@@ -41,6 +41,11 @@ function CountryToCurrBlock({ symbol, curr }) {
             className="countryToUsdt__block_side1_left_coin"
           />
           <p className="countryToUsdt__block_side1_left_abr">{symbol}</p>
+          <img
+            src={flag}
+            alt=""
+            className="countryToUsdt__block_side1_left_ctr"
+          />
         </div>
         <div className="countryToUsdt__block_side1_right">
           <img src={see_more} alt="" className="" />
@@ -56,7 +61,13 @@ function CountryToCurrBlock({ symbol, curr }) {
             {convertedValue} {symbol}
           </div>
         </div>
-        <img src={graph} alt="" className="countryToUsdt__block_side2_graph" />
+        <div className="countryToUsdt__block_side2_graph_graphRelative">
+          <img
+            src={graph}
+            alt=""
+            className="countryToUsdt__block_side2_graph"
+          />
+        </div>
       </div>
     </div>
   );

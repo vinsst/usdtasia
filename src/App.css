@@ -2912,3 +2912,13 @@ footer {
 .header_profile {
   cursor: pointer;
 }
+
+.countryToUsdt__block_side2_graph_graphRelative {
+  position: relative;
+}
+
+.countryToUsdt__block_side2_graph {
+  position: absolute;
+  top: -25px;
+  left: -105px;
+}
