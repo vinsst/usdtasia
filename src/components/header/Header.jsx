@@ -13,7 +13,7 @@ import { jwtDecode } from "jwt-decode";
 import axios from "axios";
 
 import { useDispatch } from "react-redux";
-import { addLogin, removeLogin, setToken } from "../../redux/actions";
+import { addLogin, removeLogin } from "../../redux/actions";
 
 function Header() {
   const [login, setLogin] = useState(false);
@@ -88,18 +88,12 @@ function Header() {
 
   const dispatch = useDispatch();
 
+  const token =
+    localStorage.getItem("authToken") || sessionStorage.getItem("authToken");
   useEffect(() => {
-    const token =
-      localStorage.getItem("authToken") || sessionStorage.getItem("authToken");
-
     if (token) {
       const decodedToken = jwtDecode(token);
       const userId = decodedToken.id;
-
-      dispatch(setToken(token));
-      axios.get(
-        "https://usdtasia-back-8a0cb4592177.herokuapp.com/admin/transaction"
-      );
 
       axios
         .get(
@@ -158,8 +152,16 @@ function Header() {
           <Link to="/" className="groupNav_el">
             Home
           </Link>
-          <p className="groupNav_el">About</p>
           <p className="groupNav_el">Blog</p>
+          {token ? (
+            <Link to="/history" className="groupNav_el">
+              History
+            </Link>
+          ) : (
+            <p className="groupNav_el" onClick={handleLoginClick}>
+              History
+            </p>
+          )}
           <p className="groupNav_el">FAQ</p>
           <p className="groupNav_el">API</p>
           <p className="groupNav_el">Support</p>

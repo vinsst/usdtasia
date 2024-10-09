@@ -1,7 +1,42 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import HistoryLine from "../components/history/HistoryLine";
 
+import axios from "axios";
+import { jwtDecode } from "jwt-decode";
+
 function History() {
+  const [transactions, setTransactions] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  const token =
+    localStorage.getItem("authToken") || sessionStorage.getItem("authToken");
+  useEffect(() => {
+    const fetchData = async () => {
+      if (token) {
+        const decodedToken = jwtDecode(token);
+        const id = decodedToken.id;
+
+        try {
+          const response = await axios.get(
+            `https://usdtasia-back-8a0cb4592177.herokuapp.com/transaction/${id}?Page=1`,
+            {
+              headers: { Authorization: `Bearer ${token}` },
+            }
+          );
+          setTransactions(response.data.transactions);
+        } catch (error) {
+          console.error("Error fetching data:", error);
+        } finally {
+          setLoading(false);
+        }
+      }
+    };
+
+    fetchData();
+  }, [token]);
+
+  if (loading) return <div>Loading...</div>;
+
   return (
     <main className="homeMain home_container container other_container">
       <div className="zayavka__h1_container">
@@ -21,32 +56,16 @@ function History() {
               <p className="table__static_line_el">СУММА</p>
               <p className="table__static_line_el">СТАТУС</p>
             </div>
-            <HistoryLine />
-            <HistoryLine darker="history__table_darker_bck" />
-            <HistoryLine />
-            <HistoryLine darker="history__table_darker_bck" />
-            <HistoryLine />
-            <HistoryLine darker="history__table_darker_bck" />
-            <HistoryLine />
-            <HistoryLine darker="history__table_darker_bck" />
-            <HistoryLine />
-            <HistoryLine darker="history__table_darker_bck" />
-            <HistoryLine />
-            <HistoryLine darker="history__table_darker_bck" />
-            <HistoryLine />
-            <HistoryLine darker="history__table_darker_bck" />
-            <HistoryLine />
-            <HistoryLine darker="history__table_darker_bck" />
-            <HistoryLine />
-            <HistoryLine darker="history__table_darker_bck" />
-            <HistoryLine />
-            <HistoryLine darker="history__table_darker_bck" />
-            <HistoryLine />
-            <HistoryLine darker="history__table_darker_bck" />
-            <HistoryLine />
-            <HistoryLine darker="history__table_darker_bck" />
-            <HistoryLine />
-            <HistoryLine darker="history__table_darker_bck" />
+            {transactions.map((transaction, index) => {
+              const isEven = index % 2 === 1;
+              return (
+                <HistoryLine
+                  key={transaction.id}
+                  {...transaction}
+                  darker={isEven ? "history__table_darker_bck" : ""}
+                />
+              );
+            })}
           </section>
         </div>
       </div>

@@ -64,8 +64,3 @@ export const setSendNum = (num) => ({
   type: "SET_SEND_NUM",
   payload: num,
 });
-
-export const setToken = (token) => ({
-  type: "SET_TOKEN",
-  payload: token,
-});

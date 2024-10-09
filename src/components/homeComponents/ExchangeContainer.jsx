@@ -60,7 +60,8 @@ function ExchangeContainer() {
   const email = useSelector((state) => state.contactsReducer.email);
   const name = useSelector((state) => state.contactsReducer.name);
   const telega = useSelector((state) => state.contactsReducer.telega);
-  const token = useSelector((state) => state.tokenReducer.token);
+  const token =
+    localStorage.getItem("authToken") || sessionStorage.getItem("authToken");
   const wallet = useSelector((state) => state.contactsReducer.wallet);
 
   const highlight = useSelector((state) => state.highlightReducer.highlight);

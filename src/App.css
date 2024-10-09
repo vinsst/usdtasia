@@ -2922,3 +2922,19 @@ footer {
   top: -25px;
   left: -105px;
 }
+
+.created {
+  color: #ffd50b;
+}
+
+.pending {
+  color: #ffd50b;
+}
+
+.success {
+  color: #56ff2b;
+}
+
+.cancelled {
+  color: #ff9090;
+}
