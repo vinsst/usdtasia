@@ -15,7 +15,7 @@ import {
   setWallet,
 } from "../../redux/actions";
 
-function Wallet() {
+function Wallet({ isEmailValid }) {
   const dispatch = useDispatch();
 
   const handleEmailChange = (e) => {
@@ -76,7 +76,7 @@ function Wallet() {
           <div
             className={`mailNameTelega__mail_container ${
               highlight ? "highlight" : ""
-            }`}
+            }${!isEmailValid ? "inputErrorEmail" : ""}`}
           >
             <img
               src={mailHome}
@@ -90,6 +90,7 @@ function Wallet() {
               onChange={handleEmailChange}
               value={email}
             />
+            {!isEmailValid && <p className="errorTextEmail">invalid email</p>}
           </div>
           <div
             className={`mailNameTelega__mail_container ${

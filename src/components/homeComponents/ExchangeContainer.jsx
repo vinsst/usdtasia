@@ -79,6 +79,19 @@ function ExchangeContainer() {
 
   const [buttonText, setButtonText] = useState("EXCHANGER NOW");
 
+  // checking if email is valid
+
+  const [isEmailValid, setIsEmailValid] = useState(false);
+
+  useEffect(() => {
+    validateEmail(email);
+  }, [email]);
+
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    setIsEmailValid(emailRegex.test(email));
+  };
+
   const handleBtnClick = () => {
     if (loginTxt === false) {
       setButtonText("SIGN IN, PLEASE");
@@ -209,7 +222,7 @@ function ExchangeContainer() {
             </div>
           </div>
         </section>
-        <Wallet />
+        <Wallet isEmailValid={isEmailValid} />
         <section className="quick__exchange_done">
           <div
             className={`quick__exchange_done_rect mailNameTelega__mail_container ${
@@ -237,7 +250,8 @@ function ExchangeContainer() {
         checked &&
         email.length > 0 &&
         name.length > 0 &&
-        telega.length > 0 ? (
+        telega.length > 0 &&
+        isEmailValid ? (
           <Link to="/zayavka" className="exchange_btn">
             <button
               className="quick__exchange_btn"

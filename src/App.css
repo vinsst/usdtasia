@@ -2810,6 +2810,16 @@ footer {
   box-shadow: 0 0 10px #ddc143;
 }
 
+.inputErrorEmail {
+  box-shadow: 0 0 10px #ff038b;
+}
+
+.errorTextEmail {
+  color: #fff;
+  font-size: 14px;
+  text-wrap: nowrap;
+}
+
 .invalidLogin {
   color: rgba(255, 3, 139, 1);
 }
