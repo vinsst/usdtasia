@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import wallet from "../../assets/img/wallet.svg";
+import walletImg from "../../assets/img/wallet.svg";
 import mailHome from "../../assets/img/mailHome.svg";
 import profileHome from "../../assets/img/profileHome.svg";
 import telegaHome from "../../assets/img/telegaHome.svg";
@@ -57,7 +57,7 @@ function Wallet() {
         }`}
       >
         <div className="trcAdress_wallet">
-          <img src={wallet} alt="" className="wallet_img" />
+          <img src={walletImg} alt="" className="wallet_img" />
           <input
             type="text"
             className="wallet_input"

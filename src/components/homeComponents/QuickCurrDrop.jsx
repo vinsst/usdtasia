@@ -4,6 +4,7 @@ import QuickCurrDropItem from "./QuickCurrDropItem";
 import { useSelector, useDispatch } from "react-redux";
 import { setSendCurrency, setGetCurrency } from "../../redux/actions";
 import { fiatImageMap } from "../../assets/fiatImageMap";
+import { currencyImageMap } from "../../assets/currencyImageMap";
 
 function QuickCurrDrop({ type }) {
   const dispatch = useDispatch();
@@ -24,15 +25,18 @@ function QuickCurrDrop({ type }) {
       dispatch(setGetCurrency(currValue));
     }
   };
+  const imgArrays = { ...fiatImageMap, ...currencyImageMap };
 
   return (
     <div className="quick__curency_dropdown">
       {allCurrencies.map((currency, index) => {
+        const imgSrc = imgArrays[currency.value];
         return (
           <QuickCurrDropItem
             key={index}
             name={currency.value}
             onClick={() => handleClick(currency.value)}
+            imgSrc={imgSrc}
           />
         );
       })}

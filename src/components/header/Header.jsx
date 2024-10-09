@@ -205,7 +205,12 @@ function Header() {
             </div>
           )}
         </div>
-        <img src={profile} alt="" className="header_profile" />
+        <img
+          src={profile}
+          alt=""
+          className="header_profile"
+          onClick={showBurger}
+        />
       </div>
       {burger ? (
         <Burger

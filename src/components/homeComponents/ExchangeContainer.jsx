@@ -108,7 +108,7 @@ function ExchangeContainer() {
     const rateObj = priceArray.find(
       (obj) => obj.from === sendName && obj.to === getName
     );
-    return rateObj ? rateObj.rate.toFixed(12) : "N/A"; //toFixed(12) after обчислень
+    return rateObj ? rateObj.rate : "N/A";
   };
 
   const gettingPercent = () => {
@@ -194,7 +194,9 @@ function ExchangeContainer() {
         <section className="quick__exchange_currenct_span">
           <div className="quick__exchange_currenct_span_1 quick__exchange_currenct_span_1_1_isInMobile">
             <div className="quick__exchange_currenct_span_1_1">
-              Курс обмена: 1 {sendName} ≈ {gettingPrice()} {getName}
+              Курс обмена: 1 {sendName} ≈{" "}
+              {parseFloat(gettingPrice()).toFixed(2)}
+              {getName}
             </div>
             <div className="quick__exchange_currenct_span_1_2">Min:10 BTC</div>
           </div>

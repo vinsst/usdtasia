@@ -2888,3 +2888,17 @@ footer {
     max-width: 100px;
   }
 }
+
+.quick__curency_dropdown_item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quick__curency_dropdown_item_img {
+  width: 24px;
+}
+
+.header_profile {
+  cursor: pointer;
+}
