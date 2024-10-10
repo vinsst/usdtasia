@@ -2942,3 +2942,59 @@ footer {
 .quick__exchange_currenct_span_1_2_high {
   color: #ddc143;
 }
+
+.loading_history {
+  font-family: "Open Sans Hebrew Condensed";
+  font-size: 68px;
+  font-weight: 700;
+  line-height: 92.6px;
+  color: #ffffff;
+}
+
+.pageScroller_left {
+  transform: rotate(180deg);
+}
+
+.table_pageScroller {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 400;
+  color: #b2cfe0;
+}
+
+.pageScroller_number {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.pageScroller_number_active {
+  color: #57b7ee;
+}
+
+.pageScroller_arr {
+  width: 30px;
+  cursor: pointer;
+}
+
+.table_zeroTransactions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.table_zeroTransactions_p {
+  font-size: 32px;
+  font-weight: 200;
+  line-height: 92.6px;
+  color: #ffffff;
+}
