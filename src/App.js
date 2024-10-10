@@ -16,7 +16,7 @@ function App() {
         <Decorations />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/zayavka" element={<Zayavka />} />
+          <Route path="/zayavka/:transactionId" element={<Zayavka />} />
           <Route path="/zayavka2" element={<Zayavka2 />} />
           <Route path="/history" element={<History />} />
         </Routes>

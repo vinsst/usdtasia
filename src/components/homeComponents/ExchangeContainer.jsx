@@ -5,7 +5,7 @@ import autorenew2 from "../../assets/img/autorenew2.svg";
 import done from "../../assets/img/done.svg";
 import CurrChoose from "./CurrChoose";
 import Wallet from "./Wallet";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import {
   addHighlight,
@@ -27,18 +27,22 @@ import { fiatImageMap } from "../../assets/fiatImageMap";
 import { currencyImageMap } from "../../assets/currencyImageMap";
 import { jwtDecode } from "jwt-decode";
 function ExchangeContainer() {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   useEffect(() => {
     const fetchData = async () => {
-      const tokensResponse = await axios.get(
-        "https://usdtasia-back-8a0cb4592177.herokuapp.com/binance/exchange-tokens"
-      );
-      const ratesResponse = await axios.get(
-        "https://usdtasia-back-8a0cb4592177.herokuapp.com/binance/currencies"
-      );
-
-      dispatch(setCurrencies(tokensResponse.data));
-      dispatch(setRates(ratesResponse.data));
+      try {
+        const tokensResponse = await axios.get(
+          "https://usdtasia-back-8a0cb4592177.herokuapp.com/binance/exchange-tokens"
+        );
+        const ratesResponse = await axios.get(
+          "https://usdtasia-back-8a0cb4592177.herokuapp.com/binance/currencies"
+        );
+        dispatch(setCurrencies(tokensResponse.data));
+        dispatch(setRates(ratesResponse.data));
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
     };
 
     fetchData();
@@ -166,13 +170,14 @@ function ExchangeContainer() {
     };
 
     try {
-      await axios.post(
+      const response = await axios.post(
         "https://usdtasia-back-8a0cb4592177.herokuapp.com/transaction",
         transactionData,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
       );
+      navigate(`/zayavka/${response.data.transactionId}`);
     } catch (error) {
       console.error(error);
     }
@@ -283,14 +288,14 @@ function ExchangeContainer() {
         isEmailValid &&
         num > minSend &&
         convertedValue > minGet ? (
-          <Link to="/zayavka" className="exchange_btn">
+          <div className="exchange_btn">
             <button
               className="quick__exchange_btn"
               onClick={creatingTransaction}
             >
               EXCHANGER NOW
             </button>
-          </Link>
+          </div>
         ) : (
           <section className="exchange_btn">
             <button

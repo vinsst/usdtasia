@@ -1,14 +1,80 @@
-import React from "react";
-import time_line from "../assets/img/time_line.svg";
-import time_graph from "../assets/img/time_graph.svg";
-import calendar from "../assets/img/calendar.svg";
-import Bitcoin from "../assets/img/Bitcoin.svg";
-import tCurr from "../assets/img/tCurr.svg";
-import arrRight from "../assets/img/arrRight.svg";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
 import PersonalInfo from "../components/zayavka/PersonalInfo";
+import { useSelector } from "react-redux";
+import axios from "axios";
+import { jwtDecode } from "jwt-decode";
+import QuickExchangeTime from "../components/zayavka/QuickExchangeTime";
+import OrderCurrencySend from "../components/zayavka/OrderCurrencySend";
+import OrderCurrencyGet from "../components/zayavka/OrderCurrencyGet";
+import OrderCurrencyMobile from "../components/zayavka/OrderCurrencyMobile";
 
 function Zayavka() {
+  const { transactionId } = useParams();
+  const [transactionData, setTransactionData] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  const loginTxt = useSelector((state) => state.loginReducer.login);
+  const token =
+    localStorage.getItem("authToken") || sessionStorage.getItem("authToken");
+
+  useEffect(() => {
+    const fetchData = async () => {
+      if (token) {
+        const decodedToken = jwtDecode(token);
+        const id = decodedToken.id;
+
+        try {
+          let allTransactions = [];
+          let totalPages = 1;
+          let currentPage = 1;
+
+          do {
+            const response = await axios.get(
+              `https://usdtasia-back-8a0cb4592177.herokuapp.com/transaction/${id}?Page=${currentPage}`,
+              {
+                headers: { Authorization: `Bearer ${token}` },
+              }
+            );
+
+            allTransactions = [
+              ...allTransactions,
+              ...response.data.transactions,
+            ];
+            totalPages = response.data.pages;
+            currentPage += 1;
+          } while (currentPage <= totalPages);
+
+          const foundTransaction = allTransactions.find(
+            (transaction) => transaction.id.toString() === transactionId
+          );
+
+          setTransactionData(foundTransaction);
+        } catch (error) {
+          console.error("Error fetching data:", error);
+        } finally {
+          setLoading(false);
+        }
+      } else {
+        setLoading(true);
+      }
+    };
+
+    fetchData();
+  }, [transactionId, token, loginTxt]);
+
+  if (loading)
+    return (
+      <main className="homeMain home_container container other_container">
+        <p className="loading_history">Loading...</p>
+        <p className="loading_history logInPlz_history">
+          You may not be signed in to your account
+        </p>
+      </main>
+    );
+
+  console.log(transactionData);
+
   return (
     <main className="homeMain home_container container other_container">
       <div className="zayavka__h1_container">
@@ -19,80 +85,12 @@ function Zayavka() {
           <div className="quick__exchange_border"></div>
         </section>
         <div className="exchange_container_padding order_padding">
-          <section className="quick__exchange_time">
-            <div className="exchange__time_el">
-              <img src={calendar} alt="" className="exchange__time_img" />
-              <p className="exchange__time_span">
-                <span className="order_blue">Дата заявки:&nbsp;</span>{" "}
-                28.05.2022,11:03 (GMT+03)
-              </p>
-            </div>
-            <img src={time_line} alt="" className="time_line" />
-            <div className="exchange__time_el">
-              <img src={time_graph} alt="" className="exchange__time_img" />
-              <p className="exchange__time_span">
-                <span className="order_blue">Курс обмена:&nbsp;</span> 1 BTC =
-                28856 USD
-              </p>
-            </div>
-          </section>
+          <QuickExchangeTime />
           <section className="quick__exchange_curr order_exch_curr">
-            <div className="order_currency">
-              <div className="order__currency_left">
-                <img
-                  src={tCurr}
-                  alt=""
-                  className="order__currency_left_currImg"
-                />
-                <div className="order__currency_left_txt">
-                  <p className="order__currency_left_txt_p_send">Send</p>
-                  <p className="order__currency_left_txt_p">Tetcher TRC20</p>
-                </div>
-              </div>
-              <div className="order__currency_left_txt order__curr_end">
-                <p className="order__currency_left_txt_p_send">Сумма:</p>
-                <p className="order__currency_left_txt_p">10.000 USDT</p>
-              </div>
-            </div>
-            <div className="order_currency">
-              <div className="order__currency_left">
-                <img
-                  src={Bitcoin}
-                  alt=""
-                  className="order__currency_left_currImg"
-                />
-                <div className="order__currency_left_txt">
-                  <p className="order__currency_left_txt_p_send">Send</p>
-                  <p className="order__currency_left_txt_p">Tetcher TRC20</p>
-                </div>
-              </div>
-              <div className="order__currency_left_txt order__curr_end">
-                <p className="order__currency_left_txt_p_send">Сумма:</p>
-                <p className="order__currency_left_txt_p">10.000 USDT</p>
-              </div>
-            </div>
+            <OrderCurrencySend />
+            <OrderCurrencyGet />
           </section>
-          <section className="quick__exchange_curr_mob">
-            <div className="order_currency_mob">
-              <div className="order_currency_mob_txt">
-                <p className="order_currency_mob_txt_up">1400.00 USDT</p>
-                <p className="order_currency_mob_txt_down">Tetcher Trc20</p>
-              </div>
-              <img src={tCurr} alt="" className="order_currency_mob_img" />
-            </div>
-            <img
-              src={arrRight}
-              alt=""
-              className="order_currency_arr_right_mob"
-            />
-            <div className="order_currency_mob order_currency_mob_right">
-              <img src={tCurr} alt="" className="order_currency_mob_img" />
-              <div className="order_currency_mob_txt">
-                <p className="order_currency_mob_txt_up">1400.00 USDT</p>
-                <p className="order_currency_mob_txt_down">Tetcher Trc20</p>
-              </div>
-            </div>
-          </section>
+          <OrderCurrencyMobile />
           <PersonalInfo />
           <section className="order_status">
             <p className="order__status_p">

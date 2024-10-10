@@ -38,6 +38,8 @@ function History() {
         } finally {
           setLoading(false);
         }
+      } else {
+        return setLoading(true);
       }
     };
 
@@ -48,6 +50,9 @@ function History() {
     return (
       <main className="homeMain home_container container other_container">
         <p className="loading_history">Loading...</p>
+        <p className="loading_history logInPlz_history">
+          You may not be signed in to your account
+        </p>
       </main>
     );
 
