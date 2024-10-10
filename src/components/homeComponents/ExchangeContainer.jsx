@@ -100,6 +100,12 @@ function ExchangeContainer() {
         setButtonText("EXCHANGER NOW");
       }, 2000);
     }
+    if (num < minSend || convertedValue < minGet) {
+      setButtonText("Сумма обмена меньше минимума");
+      setTimeout(() => {
+        setButtonText("EXCHANGER NOW");
+      }, 2000);
+    }
   };
 
   const sendName = useSelector(
@@ -120,14 +126,14 @@ function ExchangeContainer() {
 
   const gettingPrice = () => {
     const rateObj = priceArray.find(
-      (obj) => obj.from === sendName && obj.to === getName
+      (obj) => obj.from.name === sendName && obj.to.name === getName
     );
     return rateObj ? rateObj.rate : "N/A";
   };
 
   const gettingPercent = () => {
     const percentObj = priceArray.find(
-      (obj) => obj.from === sendName && obj.to === getName
+      (obj) => obj.from.name === sendName && obj.to.name === getName
     );
     return percentObj ? percentObj.percent : "N/A";
   };
@@ -172,6 +178,19 @@ function ExchangeContainer() {
     }
   };
 
+  const [minSend, setMinSend] = useState(null);
+  const [minGet, setMinGet] = useState(null);
+
+  useEffect(() => {
+    const rateObj = priceArray.find(
+      (obj) => obj.from.name === sendName && obj.to.name === getName
+    );
+    if (rateObj) {
+      setMinSend(rateObj.from.minCount);
+      setMinGet(rateObj.to.minCount);
+    }
+  }, [priceArray, sendName, getName]);
+
   return (
     <div className="exchange_container">
       <section className="quick__exchange_container">
@@ -209,17 +228,26 @@ function ExchangeContainer() {
           <div className="quick__exchange_currenct_span_1 quick__exchange_currenct_span_1_1_isInMobile">
             <div className="quick__exchange_currenct_span_1_1">
               Курс обмена: 1 {sendName} ≈{" "}
-              {parseFloat(gettingPrice()).toFixed(2)}
+              {parseFloat(gettingPrice() * exchangePercentNum).toFixed(2)}{" "}
               {getName}
             </div>
-            <div className="quick__exchange_currenct_span_1_2">Min:10 BTC</div>
+            <div
+              className={`quick__exchange_currenct_span_1_2 ${
+                highlight ? "quick__exchange_currenct_span_1_2_high" : ""
+              }`}
+            >
+              Min: {minSend} {sendName}
+            </div>
           </div>
           <div className="quick__exchange_currenct_span_1">
-            <div className="quick__exchange_currenct_span_1_1">
-              Резерв: 635 13.537 USDT
-            </div>
-            <div className="quick__exchange_currenct_span_1_2">
-              Min: 1006.04 USDT
+            <div className="quick__exchange_currenct_span_1_1"></div>
+            {/* резерв:n */}
+            <div
+              className={`quick__exchange_currenct_span_1_2 ${
+                highlight ? "quick__exchange_currenct_span_1_2_high" : ""
+              }`}
+            >
+              Min: {minGet} {getName}
             </div>
           </div>
         </section>
@@ -252,7 +280,9 @@ function ExchangeContainer() {
         email.length > 0 &&
         name.length > 0 &&
         telega.length > 0 &&
-        isEmailValid ? (
+        isEmailValid &&
+        num > minSend &&
+        convertedValue > minGet ? (
           <Link to="/zayavka" className="exchange_btn">
             <button
               className="quick__exchange_btn"

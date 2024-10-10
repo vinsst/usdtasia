@@ -15,8 +15,14 @@ import {
   setWallet,
 } from "../../redux/actions";
 
+import { networkArr } from "../../assets/networkArr";
+
 function Wallet({ isEmailValid }) {
   const dispatch = useDispatch();
+
+  const getName = useSelector(
+    (state) => state.currCryptoCurrChooseReducer.getCurrency
+  );
 
   const handleEmailChange = (e) => {
     dispatch(setEmail(e.target.value));
@@ -49,6 +55,8 @@ function Wallet({ isEmailValid }) {
 
   const hasValue = wallet.length > 0;
 
+  const addressName = networkArr[getName];
+
   return (
     <>
       <section
@@ -61,7 +69,7 @@ function Wallet({ isEmailValid }) {
           <input
             type="text"
             className="wallet_input"
-            placeholder="Your Tether (TRC20) address"
+            placeholder={`Your ${addressName} address`}
             onChange={handleWalletChange}
             value={wallet}
           />

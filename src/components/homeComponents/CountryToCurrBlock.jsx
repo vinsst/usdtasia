@@ -12,14 +12,14 @@ function CountryToCurrBlock({ symbol, curr, flag }) {
 
   const gettingPrice = () => {
     const rateObj = priceArray.find(
-      (obj) => obj.from === selectedCurrency && obj.to === symbol
+      (obj) => obj.from.name === selectedCurrency && obj.to.name === symbol
     );
     return rateObj ? rateObj.rate.toFixed(2) : "N/A";
   };
 
   const gettingPercent = () => {
     const percentObj = priceArray.find(
-      (obj) => obj.from === selectedCurrency && obj.to === symbol
+      (obj) => obj.from.name === selectedCurrency && obj.to.name === symbol
     );
     return percentObj ? percentObj.percent : "N/A";
   };
