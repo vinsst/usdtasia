@@ -17,7 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/zayavka/:transactionId" element={<Zayavka />} />
-          <Route path="/zayavka2" element={<Zayavka2 />} />
+          <Route path="/zayavka2/:transactionId" element={<Zayavka2 />} />
           <Route path="/history" element={<History />} />
         </Routes>
         <Footer />

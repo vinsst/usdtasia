@@ -18,6 +18,7 @@ function Zayavka() {
   const imgArrays = { ...fiatImageMap, ...currencyImageMap };
   const { transactionId } = useParams();
   const [transactionData, setTransactionData] = useState(null);
+  const [error, setError] = useState(true);
 
   const loginTxt = useSelector((state) => state.loginReducer.login);
   const token =
@@ -32,10 +33,11 @@ function Zayavka() {
             headers: { Authorization: `Bearer ${token}` },
           }
         );
-
+        setError(false);
         setTransactionData(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);
+        setError(true);
       }
     };
 
@@ -52,7 +54,15 @@ function Zayavka() {
       </main>
     );
 
-  console.log(transactionData);
+  if (error)
+    return (
+      <main className="homeMain home_container container other_container">
+        <p className="loading_history">Loading...</p>
+        <p className="loading_history logInPlz_history">
+          It can be a transaction of another user
+        </p>
+      </main>
+    );
 
   const formattedDate = format(
     new Date(transactionData.createdAt),
@@ -165,7 +175,7 @@ function Zayavka() {
               </div>
             </div>
           </section>
-          <Link to="/zayavka2" className="exchange_btn">
+          <Link to={`/zayavka2/${transactionId}`} className="exchange_btn">
             <button className="quick__exchange_btn order_btn">
               ОПЛАТИТЬ ЗАЯВКУ
             </button>

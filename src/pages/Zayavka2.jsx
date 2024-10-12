@@ -1,13 +1,64 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
+import axios from "axios";
 
 import time_line from "../assets/img/time_line.svg";
 import pay_qr from "../assets/img/pay_qr.png";
 
 function Zayavka2() {
+  const { transactionId } = useParams();
+  const [transactionData, setTransactionData] = useState(null);
+  const [error, setError] = useState(true);
+
+  const loginTxt = useSelector((state) => state.loginReducer.login);
+  const token =
+    localStorage.getItem("authToken") || sessionStorage.getItem("authToken");
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          `https://usdtasia-back-8a0cb4592177.herokuapp.com/transaction/${transactionId}`,
+          {
+            headers: { Authorization: `Bearer ${token}` },
+          }
+        );
+        setError(false);
+        setTransactionData(response.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+        setError(true);
+      }
+    };
+
+    fetchData();
+  }, [transactionId, token, loginTxt]);
+
+  if (!transactionData)
+    return (
+      <main className="homeMain home_container container other_container">
+        <p className="loading_history">Loading...</p>
+        <p className="loading_history logInPlz_history">
+          It can be a transaction of another user
+        </p>
+      </main>
+    );
+
+  if (error)
+    return (
+      <main className="homeMain home_container container other_container">
+        <p className="loading_history">Loading...</p>
+        <p className="loading_history logInPlz_history">
+          It can be a transaction of another user
+        </p>
+      </main>
+    );
+
   return (
     <main className="homeMain home_container container other_container">
       <div className="zayavka__h1_container">
-        <h1 className="zayavka_h1">PAY ORDER #R905868061</h1>
+        <h1 className="zayavka_h1">PAY ORDER #{transactionData.id}</h1>
       </div>
       <div className="exchange_container order_exchange">
         <section className="quick__exchange_container quick__exchange_container_order">
@@ -20,8 +71,10 @@ function Zayavka2() {
               следующие шаги
             </h5>
             <p className="txt__top_p">
-              Для совершения операции #W972785022 на сумму: 1. BTC Вам
-              потребуется выполнить следующие действия:
+              Для совершения операции #{transactionData.id} на сумму:{" "}
+              {transactionData.from.value.toFixed(2)}.{" "}
+              {transactionData.from.name} Вам потребуется выполнить следующие
+              действия:
             </p>
           </section>
           <section className="pay_instruction">
@@ -62,17 +115,21 @@ function Zayavka2() {
             <div className="qrSection_content">
               <img src={pay_qr} alt="" className="qrSection_qrImg" />
               <div className="qrSection_txt">
-                <p className="qrSection_value white">1.00000 BTC</p>
+                <p className="qrSection_value white">
+                  {transactionData.from.value} {transactionData.from.name}
+                </p>
                 <div className="qrSection_valuta">
                   <p className="qrSection__valuta_word white">Валюта:&nbsp;</p>
-                  <p className="qrSection__valuta_name">Bitcoin</p>
+                  <p className="qrSection__valuta_name">
+                    {transactionData.from.name}
+                  </p>
                 </div>
                 <div className="qrSection_reqizity">
                   <p className="qrSection__reqizity_word white">
                     Реквезиты:&nbsp;
                   </p>
                   <p className="qrSection__reqizity_code">
-                    bc1qykx7amh4frgugv5vet6zmg3nq2mfcs7ncl08gw
+                    {transactionData.wallet}
                   </p>
                 </div>
                 <p className="qrSection_copyAddress">Копировать адресс</p>
@@ -104,9 +161,11 @@ function Zayavka2() {
             <button className="quick__exchange_btn order_btn pay__btnCancel pay_btn">
               ОТМЕНИТЬ ЗАЯВКУ
             </button>
-            <button className="quick__exchange_btn order_btn pay_btn">
-              Я ОПЛАТИЛ(А) ЗАЯВКУ
-            </button>
+            <Link to={loginTxt > 0 ? "/history" : "/"}>
+              <button className="quick__exchange_btn order_btn pay_btn">
+                Я ОПЛАТИЛ(А) ЗАЯВКУ
+              </button>
+            </Link>
           </section>
         </div>
       </div>
