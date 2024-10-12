@@ -85,6 +85,11 @@ function Zayavka2() {
     }
   };
 
+  const handleCopyAddress = () => {
+    const addressText = transactionData.wallet;
+    navigator.clipboard.writeText(addressText);
+  };
+
   return (
     <main className="homeMain home_container container other_container">
       <div className="zayavka__h1_container">
@@ -162,7 +167,12 @@ function Zayavka2() {
                     {transactionData.wallet}
                   </p>
                 </div>
-                <p className="qrSection_copyAddress">Копировать адресс</p>
+                <p
+                  className="qrSection_copyAddress"
+                  onClick={handleCopyAddress}
+                >
+                  Копировать адресс
+                </p>
               </div>
             </div>
           </section>

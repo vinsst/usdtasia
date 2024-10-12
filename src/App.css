@@ -2324,6 +2324,7 @@ footer {
   font-family: Roboto;
   font-size: 15px;
   font-weight: 700;
+  cursor: pointer;
 }
 
 .pay__txt_bottom_container {
