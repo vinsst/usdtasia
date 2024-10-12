@@ -55,6 +55,36 @@ function Zayavka2() {
       </main>
     );
 
+  const statusCancelled = async () => {
+    try {
+      const response = await axios.put(
+        `https://usdtasia-back-8a0cb4592177.herokuapp.com/transaction/${transactionId}/change-status`,
+        { status: 2 },
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      );
+      console.log("Status updated successfully:", response.data);
+    } catch (error) {
+      console.error("Error updating status:", error);
+    }
+  };
+
+  const statusPaid = async () => {
+    try {
+      const response = await axios.put(
+        `https://usdtasia-back-8a0cb4592177.herokuapp.com/transaction/${transactionId}/change-status`,
+        { status: 4 },
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      );
+      console.log("Status updated successfully:", response.data);
+    } catch (error) {
+      console.error("Error updating status:", error);
+    }
+  };
+
   return (
     <main className="homeMain home_container container other_container">
       <div className="zayavka__h1_container">
@@ -158,11 +188,19 @@ function Zayavka2() {
             </p>
           </section>
           <section className="exchange_btn pay_btn_container">
-            <button className="quick__exchange_btn order_btn pay__btnCancel pay_btn">
-              ОТМЕНИТЬ ЗАЯВКУ
-            </button>
+            <Link to="/">
+              <button
+                className="quick__exchange_btn order_btn pay__btnCancel pay_btn"
+                onClick={statusCancelled}
+              >
+                ОТМЕНИТЬ ЗАЯВКУ
+              </button>
+            </Link>
             <Link to={loginTxt > 0 ? "/history" : "/"}>
-              <button className="quick__exchange_btn order_btn pay_btn">
+              <button
+                className="quick__exchange_btn order_btn pay_btn"
+                onClick={statusPaid}
+              >
                 Я ОПЛАТИЛ(А) ЗАЯВКУ
               </button>
             </Link>

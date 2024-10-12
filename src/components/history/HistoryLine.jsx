@@ -8,6 +8,7 @@ function HistoryLine({ createdAt, from, to, status, darker }) {
     1: "pending",
     2: "cancelled",
     3: "success",
+    4: "paid",
   };
   return (
     <div className={`table__content_line ${darker}`}>

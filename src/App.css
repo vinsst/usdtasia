@@ -2935,6 +2935,10 @@ footer {
   color: #56ff2b;
 }
 
+.paid {
+  color: #56ff2b;
+}
+
 .cancelled {
   color: #ff9090;
 }

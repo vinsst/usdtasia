@@ -4,6 +4,7 @@ import GB from "../../assets/img/flags/GB.svg";
 import arr_down from "../../assets/img/arrow_down.svg";
 import { useSelector, useDispatch } from "react-redux";
 import { removeLogin } from "../../redux/actions";
+import { Link } from "react-router-dom";
 
 function Burger({
   showBurger,
@@ -26,6 +27,9 @@ function Burger({
   const showDropdown = () => {
     setDropdown(!dropdown);
   };
+
+  const token =
+    localStorage.getItem("authToken") || sessionStorage.getItem("authToken");
   return (
     <div className="burgerActive_effects">
       <nav className="burgerActive" ref={burgerContentRef}>
@@ -42,8 +46,18 @@ function Burger({
           </div>
         </div>
         <nav className="header_groupNav burgerShow_nav">
-          <p className="groupNav_el">Home</p>
-          <p className="groupNav_el">About</p>
+          <Link to="/" className="groupNav_el">
+            Home
+          </Link>
+          {token ? (
+            <Link to="/history" className="groupNav_el">
+              History
+            </Link>
+          ) : (
+            <p className="groupNav_el" onClick={handleLoginClick}>
+              History
+            </p>
+          )}
           <p className="groupNav_el">Blog</p>
           <p className="groupNav_el">FAQ</p>
           <p className="groupNav_el">API</p>
