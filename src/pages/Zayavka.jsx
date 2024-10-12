@@ -18,7 +18,6 @@ function Zayavka() {
   const imgArrays = { ...fiatImageMap, ...currencyImageMap };
   const { transactionId } = useParams();
   const [transactionData, setTransactionData] = useState(null);
-  const [loading, setLoading] = useState(true);
 
   const loginTxt = useSelector((state) => state.loginReducer.login);
   const token =
@@ -26,38 +25,22 @@ function Zayavka() {
 
   useEffect(() => {
     const fetchData = async () => {
-      if (token) {
-        try {
-          const response = await axios.get(
-            `https://usdtasia-back-8a0cb4592177.herokuapp.com/transaction/${transactionId}`,
-            {
-              headers: { Authorization: `Bearer ${token}` },
-            }
-          );
+      try {
+        const response = await axios.get(
+          `https://usdtasia-back-8a0cb4592177.herokuapp.com/transaction/${transactionId}`,
+          {
+            headers: { Authorization: `Bearer ${token}` },
+          }
+        );
 
-          setTransactionData(response.data);
-        } catch (error) {
-          console.error("Error fetching data:", error);
-        } finally {
-          setLoading(false);
-        }
-      } else {
-        setLoading(true);
+        setTransactionData(response.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
       }
     };
 
     fetchData();
   }, [transactionId, token, loginTxt]);
-
-  if (loading)
-    return (
-      <main className="homeMain home_container container other_container">
-        <p className="loading_history">Loading...</p>
-        <p className="loading_history logInPlz_history">
-          You may not be signed in to your account
-        </p>
-      </main>
-    );
 
   if (!transactionData)
     return (

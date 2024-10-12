@@ -280,8 +280,7 @@ function ExchangeContainer() {
           </span>
         </section>
 
-        {loginTxt.length > 0 &&
-        checked &&
+        {checked &&
         email.length > 0 &&
         name.length > 0 &&
         telega.length > 0 &&
