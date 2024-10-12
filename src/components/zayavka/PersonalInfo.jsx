@@ -2,13 +2,8 @@ import React from "react";
 import order_contact from "../../assets/img/order_contact.svg";
 import order_email from "../../assets/img/order_email.svg";
 import order_telegram from "../../assets/img/order_telegram.svg";
-import { useSelector } from "react-redux";
 
-function PersonalInfo() {
-  const email = useSelector((state) => state.contactsReducer.email);
-  const name = useSelector((state) => state.contactsReducer.name);
-  const telega = useSelector((state) => state.contactsReducer.telega);
-
+function PersonalInfo({ name, email, telega }) {
   return (
     <section className="order_persInfo">
       <h3 className="order__persInfo_h3">Personal information</h3>

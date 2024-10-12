@@ -177,7 +177,7 @@ function ExchangeContainer() {
           headers: { Authorization: `Bearer ${token}` },
         }
       );
-      navigate(`/zayavka/${response.data.transactionId}`);
+      navigate(`/zayavka/${response.data}`);
     } catch (error) {
       console.error(error);
     }

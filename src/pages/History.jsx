@@ -26,7 +26,7 @@ function History() {
 
         try {
           const response = await axios.get(
-            `https://usdtasia-back-8a0cb4592177.herokuapp.com/transaction/${id}?Page=${page}`,
+            `https://usdtasia-back-8a0cb4592177.herokuapp.com/user/${id}/transactions?Page=${page}`,
             {
               headers: { Authorization: `Bearer ${token}` },
             }
