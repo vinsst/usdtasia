@@ -158,8 +158,12 @@ function Zayavka() {
             <p className="order__status_p order__status_p_mob">
               Статус заявки {transactionData.id}
             </p>
-            <p className="order__status_p order__status_p_mob mob_oplachena">
-              Оплачена
+            <p
+              className={`order__status_p order__status_p_mob mob_oplachena ${
+                statusMap[transactionData.status]
+              }`}
+            >
+              {statusMap[transactionData.status]}
             </p>
           </section>
           <section className="order_instruction">
