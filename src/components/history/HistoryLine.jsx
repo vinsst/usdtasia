@@ -1,7 +1,8 @@
 import React from "react";
 import { format } from "date-fns";
+import { Link } from "react-router-dom";
 
-function HistoryLine({ createdAt, from, to, status, darker }) {
+function HistoryLine({ createdAt, from, to, status, darker, transactionId }) {
   const formattedDate = format(new Date(createdAt), "dd.MM.yyyy HH:mm");
   const statusMap = {
     0: "created",
@@ -11,7 +12,10 @@ function HistoryLine({ createdAt, from, to, status, darker }) {
     4: "paid",
   };
   return (
-    <div className={`table__content_line ${darker}`}>
+    <Link
+      to={`/zayavka2/${transactionId}`}
+      className={`table__content_line ${darker}`}
+    >
       <p className="table__content_line_el">{formattedDate}</p>
       <p className="table__content_line_el history__blue_font">{from.name}</p>
       <p className="table__content_line_el">{from.value.toFixed(2)}</p>
@@ -22,7 +26,7 @@ function HistoryLine({ createdAt, from, to, status, darker }) {
       >
         {statusMap[status]}
       </p>
-    </div>
+    </Link>
   );
 }
 

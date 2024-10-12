@@ -94,6 +94,7 @@ function History() {
                   key={transaction.id}
                   {...transaction}
                   darker={isEven ? "history__table_darker_bck" : ""}
+                  transactionId={transaction.id}
                 />
               );
             })}
