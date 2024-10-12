@@ -48,7 +48,7 @@ function RecentLine({ img1, img2, blue, from, to, createdAt }) {
           />
           <div className="recent__block_line_side_container_left_mob_text recent__block_line_side_container_left_mob_text_right">
             <p className="recent__block_line_side_container_right_value">
-              {to.value} {to.name}
+              {to.value.toFixed(2)} {to.name}
             </p>
           </div>
         </div>
