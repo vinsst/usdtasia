@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import walletImg from "../../assets/img/wallet.svg";
+import walletCardImg from "../../assets/img/walletCard.svg";
 import mailHome from "../../assets/img/mailHome.svg";
 import profileHome from "../../assets/img/profileHome.svg";
 import telegaHome from "../../assets/img/telegaHome.svg";
@@ -20,6 +21,8 @@ import { networkArr } from "../../assets/networkArr";
 function Wallet({ isEmailValid }) {
   const dispatch = useDispatch();
 
+  const [isFiat, setIsFiat] = useState(false);
+
   const getName = useSelector(
     (state) => state.currCryptoCurrChooseReducer.getCurrency
   );
@@ -35,6 +38,7 @@ function Wallet({ isEmailValid }) {
   };
 
   const handleWalletChange = (e) => {
+    if (isFiat && e.target.value.length > 16) return;
     dispatch(setWallet(e.target.value));
   };
 
@@ -53,9 +57,13 @@ function Wallet({ isEmailValid }) {
     }
   }, [dispatch, highlight]);
 
-  const hasValue = wallet.length > 0;
-
   const addressName = networkArr[getName];
+  useEffect(() => {
+    setIsFiat(addressName === undefined);
+  }, [addressName]);
+
+  const hasValue =
+    wallet.length > 0 && (!isFiat || (isFiat && wallet.length === 16));
 
   return (
     <>
@@ -65,20 +73,33 @@ function Wallet({ isEmailValid }) {
         }`}
       >
         <div className="trcAdress_wallet">
-          <img src={walletImg} alt="" className="wallet_img" />
+          <img
+            src={isFiat ? walletCardImg : walletImg}
+            alt=""
+            className="wallet_img"
+          />
           <input
             type="text"
             className="wallet_input"
-            placeholder={`Your ${addressName} address`}
+            placeholder={
+              isFiat ? "Your card number" : `Your ${addressName} address`
+            }
             onChange={handleWalletChange}
             value={wallet}
+            maxLength={isFiat ? 16 : undefined}
           />
         </div>
+
         <div className="trcAdress_imgs">
           <img src={content_copy} alt="" className="trcAdress_imgs_img" />
           <img src={qr_code} alt="" className="trcAdress_imgs_img" />
         </div>
       </section>
+      {!hasValue && isFiat ? (
+        <p className="inputCardAlert">input must contain exactly 16 digits</p>
+      ) : (
+        <></>
+      )}
       {hasValue && (
         <section className="mailNameTelega_container">
           <div

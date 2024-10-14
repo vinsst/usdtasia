@@ -224,7 +224,7 @@ function ExchangeContainer() {
           <CurrChoose
             img={imgSrcGet}
             txt={getName}
-            number={convertedValue.toFixed(5)}
+            number={convertedValue.toFixed(2)}
             symb={getName}
             status="Get"
           />

@@ -85,21 +85,6 @@ function Zayavka() {
 
   const rate = getRate();
 
-  const statusPending = async () => {
-    try {
-      const response = await axios.put(
-        `https://usdtasia-back-8a0cb4592177.herokuapp.com/transaction/${transactionId}/change-status`,
-        { status: 1 },
-        {
-          headers: { Authorization: `Bearer ${token}` },
-        }
-      );
-      console.log("Status updated successfully:", response.data);
-    } catch (error) {
-      console.error("Error updating status:", error);
-    }
-  };
-
   return (
     <main className="homeMain home_container container other_container">
       <div className="zayavka__h1_container">
@@ -196,10 +181,7 @@ function Zayavka() {
             </div>
           </section>
           <Link to={`/zayavka2/${transactionId}`} className="exchange_btn">
-            <button
-              className="quick__exchange_btn order_btn"
-              onClick={statusPending}
-            >
+            <button className="quick__exchange_btn order_btn">
               ОПЛАТИТЬ ЗАЯВКУ
             </button>
           </Link>

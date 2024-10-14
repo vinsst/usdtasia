@@ -13,7 +13,7 @@ function OrderCurrencyGet({ toName, value, img }) {
       <div className="order__currency_left_txt order__curr_end">
         <p className="order__currency_left_txt_p_send">Сумма:</p>
         <p className="order__currency_left_txt_p">
-          {value} {toName}
+          {value.toFixed(2)} {toName}
         </p>
       </div>
     </div>

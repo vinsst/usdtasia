@@ -1420,6 +1420,11 @@ footer {
     font-weight: 400;
   }
 }
+
+.wallet_img {
+  width: 31px;
+}
+
 @media (max-width: 700px) {
   .wallet_img {
     display: none;
@@ -2819,6 +2824,20 @@ footer {
   color: #fff;
   font-size: 14px;
   text-wrap: nowrap;
+}
+
+.inputCardAlert {
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  margin-top: -15px;
+  margin-bottom: 25px;
+}
+
+@media (min-width: 701px) {
+  .inputCardAlert {
+    margin-top: -40px;
+  }
 }
 
 .invalidLogin {

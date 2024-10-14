@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import axios from "axios";
 
 import time_line from "../assets/img/time_line.svg";
-import pay_qr from "../assets/img/pay_qr.png";
+import { QRCodeSVG } from "qrcode.react";
 
 function Zayavka2() {
   const { transactionId } = useParams();
@@ -70,11 +70,11 @@ function Zayavka2() {
     }
   };
 
-  const statusPaid = async () => {
+  const statusPending = async () => {
     try {
       const response = await axios.put(
         `https://usdtasia-back-8a0cb4592177.herokuapp.com/transaction/${transactionId}/change-status`,
-        { status: 4 },
+        { status: 1 },
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -148,7 +148,7 @@ function Zayavka2() {
           </section>
           <section className="qrSection">
             <div className="qrSection_content">
-              <img src={pay_qr} alt="" className="qrSection_qrImg" />
+              <QRCodeSVG value={transactionData.wallet} size={193} />
               <div className="qrSection_txt">
                 <p className="qrSection_value white">
                   {transactionData.from.value} {transactionData.from.name}
@@ -209,7 +209,7 @@ function Zayavka2() {
             <Link to={loginTxt > 0 ? "/history" : "/"}>
               <button
                 className="quick__exchange_btn order_btn pay_btn"
-                onClick={statusPaid}
+                onClick={statusPending}
               >
                 Я ОПЛАТИЛ(А) ЗАЯВКУ
               </button>
