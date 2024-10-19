@@ -6,6 +6,9 @@ import { useSelector, useDispatch } from "react-redux";
 import { removeLogin } from "../../redux/actions";
 import { Link } from "react-router-dom";
 import TruncateText from "./TruncateText";
+import { languages } from "../../assets/languages";
+import LangDrop from "./LangDrop";
+import { useTranslation } from "react-i18next";
 
 function Burger({
   showBurger,
@@ -13,6 +16,8 @@ function Burger({
   handleRegistrClick,
   burgerContentRef,
 }) {
+  const { t } = useTranslation();
+
   // checking if logged in
 
   const loginTxt = useSelector((state) => state.loginReducer.login);
@@ -31,6 +36,20 @@ function Burger({
 
   const token =
     localStorage.getItem("authToken") || sessionStorage.getItem("authToken");
+
+  // lang
+
+  const [langDrop, setLangDrop] = useState(false);
+
+  const showDropLang = () => {
+    setLangDrop(!langDrop);
+  };
+
+  const savedLanguage = localStorage.getItem("selectedLanguage") || "en";
+
+  const savedFlag = Object.values(languages).find(
+    (lang) => lang.code === savedLanguage
+  )?.flag;
   return (
     <div className="burgerActive_effects">
       <nav className="burgerActive" ref={burgerContentRef}>
@@ -64,9 +83,10 @@ function Burger({
           <p className="groupNav_el">API</p>
           <p className="groupNav_el">Support</p>
         </nav>
-        <div className="burger_flag">
-          <img src={GB} alt="" className="group2__lang_flag" />
+        <div className="burger_flag" onClick={showDropLang}>
+          <img src={savedFlag} alt="" className="group2__lang_flag" />
           <img src={arr_down} alt="" className="group2__lang_arr" />
+          {langDrop && <LangDrop />}
         </div>
         {loginTxt ? (
           <div
@@ -95,13 +115,13 @@ function Burger({
               className="group2__registration_in burger_signIn"
               onClick={handleLoginClick}
             >
-              Sign in
+              {t("SignIn")}
             </button>
             <button
               className="group2__registration_up"
               onClick={handleRegistrClick}
             >
-              Sign up
+              {t("SignUp")}
             </button>
           </div>
         )}

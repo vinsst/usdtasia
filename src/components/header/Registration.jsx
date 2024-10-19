@@ -27,8 +27,9 @@ function Registration({ registrRef, close, handleLogin }) {
   const [email, setEmail] = useState("");
 
   const handleSubmit = async (e) => {
+    e.preventDefault();
+
     if (password === password2) {
-      e.preventDefault();
       const registrationData = { login, password, email };
       try {
         const response = await axios.post(
@@ -39,8 +40,8 @@ function Registration({ registrRef, close, handleLogin }) {
         if (response.status === 200) {
           console.log("Registration successful:", response.data);
           await handleLogin(login, password);
+          close();
         }
-        close();
       } catch (error) {
         console.log(error);
         alert("The account already exists or you entered invalid data");

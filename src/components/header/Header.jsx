@@ -17,6 +17,7 @@ import { useDispatch } from "react-redux";
 import { addLogin, removeLogin } from "../../redux/actions";
 import LangDrop from "./LangDrop";
 import { useTranslation } from "react-i18next";
+import { languages } from "../../assets/languages";
 
 function Header() {
   const { t } = useTranslation();
@@ -166,6 +167,12 @@ function Header() {
     setLangDrop(!langDrop);
   };
 
+  const savedLanguage = localStorage.getItem("selectedLanguage") || "en";
+
+  const savedFlag = Object.values(languages).find(
+    (lang) => lang.code === savedLanguage
+  )?.flag;
+
   return (
     <header>
       {login ? (
@@ -216,7 +223,7 @@ function Header() {
         </nav>
         <div className="header_group2">
           <div className="group2_lang" onClick={showDropLang}>
-            <img src={GB} alt="" className="group2__lang_flag" />
+            <img src={savedFlag} alt="" className="group2__lang_flag" />
             <img src={arrow_down} alt="" className="group2__lang_arr" />
             {langDrop && <LangDrop />}
           </div>

@@ -2727,6 +2727,8 @@ footer {
   display: flex;
   gap: 8px;
   margin-top: 20px;
+  cursor: pointer;
+  position: relative;
 }
 .hidden {
   display: none;
@@ -3066,9 +3068,5 @@ footer {
 }
 
 .loginInput__registr_word {
-  cursor: pointer;
-}
-
-.burger_flag {
   cursor: pointer;
 }

@@ -22,10 +22,12 @@ const resources = {
   },
 };
 
+const savedLanguage = localStorage.getItem("selectedLanguage") || "en";
+
 i18n.use(initReactI18next).init({
   resources,
   fallbackLng: "en",
-  lng: "en",
+  lng: savedLanguage,
   interpolation: {
     escapeValue: false,
   },
