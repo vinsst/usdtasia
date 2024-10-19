@@ -64,3 +64,7 @@ export const setSendNum = (num) => ({
   type: "SET_SEND_NUM",
   payload: num,
 });
+
+export const swapSendGet = () => ({
+  type: "SWAP_SEND_GET",
+});

@@ -7,7 +7,7 @@ import alternate_email from "../../assets/img/alternate_email.svg";
 
 import axios from "axios";
 
-function Registration({ registrRef, close }) {
+function Registration({ registrRef, close, handleLogin }) {
   const [checked, setChecked] = useState(false);
 
   const handleCheckboxChange = () => {
@@ -29,7 +29,7 @@ function Registration({ registrRef, close }) {
   const handleSubmit = async (e) => {
     if (password === password2) {
       e.preventDefault();
-      const registrationData = { login, password, password2, email };
+      const registrationData = { login, password, email };
       try {
         const response = await axios.post(
           "https://usdtasia-back-8a0cb4592177.herokuapp.com/user/auth/registration",
@@ -37,14 +37,16 @@ function Registration({ registrRef, close }) {
         );
 
         if (response.status === 200) {
-          console.log("Login successful:", response.data);
+          console.log("Registration successful:", response.data);
+          await handleLogin(login, password);
         }
         close();
       } catch (error) {
         console.log(error);
+        alert("The account already exists or you entered invalid data");
       }
     } else {
-      alert("passwords do not match");
+      alert("Passwords do not match");
     }
   };
 

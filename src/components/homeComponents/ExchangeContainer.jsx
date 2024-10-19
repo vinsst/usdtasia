@@ -12,6 +12,7 @@ import {
   removeHighlight,
   setCurrencies,
   setRates,
+  swapSendGet,
 } from "../../redux/actions";
 
 import axios from "axios";
@@ -196,6 +197,10 @@ function ExchangeContainer() {
     }
   }, [priceArray, sendName, getName]);
 
+  const swapping = () => {
+    dispatch(swapSendGet());
+  };
+
   return (
     <div className="exchange_container">
       <section className="quick__exchange_container">
@@ -214,11 +219,13 @@ function ExchangeContainer() {
             src={autorenew}
             alt=""
             className="quick__currencyChoioce_autorenew"
+            onClick={swapping}
           />
           <img
             src={autorenew2}
             alt=""
             className="quick__currencyChoioce_autorenewMobile_img"
+            onClick={swapping}
           />
 
           <CurrChoose

@@ -5,6 +5,7 @@ import arr_down from "../../assets/img/arrow_down.svg";
 import { useSelector, useDispatch } from "react-redux";
 import { removeLogin } from "../../redux/actions";
 import { Link } from "react-router-dom";
+import TruncateText from "./TruncateText";
 
 function Burger({
   showBurger,
@@ -73,7 +74,9 @@ function Burger({
             onClick={showDropdown}
           >
             <div className="group2_lang loginHeaderTxt_container loginHeaderTxt_container_burger">
-              <div className="loginTxtHeader">{loginTxt}</div>
+              <div className="loginTxtHeader">
+                <TruncateText text={loginTxt} maxLength={7} />
+              </div>
 
               <img src={arr_down} alt="" className="group2__lang_arr" />
               {dropdown && (

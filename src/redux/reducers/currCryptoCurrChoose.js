@@ -9,6 +9,12 @@ const currCryptoCurrChooseReducer = (state = initialState, action) => {
       return { ...state, sendCurrency: action.payload };
     case "SET_GET_CURRENCY":
       return { ...state, getCurrency: action.payload };
+    case "SWAP_SEND_GET":
+      return {
+        ...state,
+        getCurrency: state.sendCurrency,
+        sendCurrency: state.getCurrency,
+      };
     default:
       return state;
   }

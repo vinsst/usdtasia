@@ -10,7 +10,7 @@ import axios from "axios";
 import { useDispatch } from "react-redux";
 import { addLogin } from "../../redux/actions";
 
-function Login({ loginRef, close }) {
+function Login({ loginRef, close, handleRegistrClick }) {
   const dispatch = useDispatch();
   const [checked, setChecked] = useState(false);
 
@@ -101,7 +101,12 @@ function Login({ loginRef, close }) {
         <div className="login_loginInput">
           <div className="loginInput_chooseAuth">
             <p className="loginInput__login_word">Логин</p>
-            <p className="loginInput__registr_word">Регистрация</p>
+            <p
+              className="loginInput__registr_word"
+              onClick={handleRegistrClick}
+            >
+              Регистрация
+            </p>
           </div>
           <div className="loginInput_withIcon">
             <img src={login_profile} alt="" className="loginInput_icon" />
