@@ -99,12 +99,6 @@ function ExchangeContainer() {
   };
 
   const handleBtnClick = () => {
-    if (loginTxt === false) {
-      setButtonText("SIGN IN, PLEASE");
-      setTimeout(() => {
-        setButtonText("EXCHANGER NOW");
-      }, 2000);
-    }
     if (num < minSend || convertedValue < minGet) {
       setButtonText("Сумма обмена меньше минимума");
       setTimeout(() => {
