@@ -19,7 +19,7 @@ function Zayavka2() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://103.13.210.234:5001/transaction/${transactionId}`,
+          `${process.env.REACT_APP_SERVER_URL}/transaction/${transactionId}`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -58,7 +58,7 @@ function Zayavka2() {
   const statusCancelled = async () => {
     try {
       const response = await axios.put(
-        `http://103.13.210.234:5001/transaction/${transactionId}/change-status`,
+        `${process.env.REACT_APP_SERVER_URL}/transaction/${transactionId}/change-status`,
         { status: 2 },
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -73,7 +73,7 @@ function Zayavka2() {
   const statusPending = async () => {
     try {
       const response = await axios.put(
-        `http://103.13.210.234:5001/transaction/${transactionId}/change-status`,
+        `${process.env.REACT_APP_SERVER_URL}/transaction/${transactionId}/change-status`,
         { status: 1 },
         {
           headers: { Authorization: `Bearer ${token}` },

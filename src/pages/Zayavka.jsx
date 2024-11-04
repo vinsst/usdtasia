@@ -28,7 +28,7 @@ function Zayavka() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://103.13.210.234:5001/transaction/${transactionId}`,
+          `${process.env.REACT_APP_SERVER_URL}/transaction/${transactionId}`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }

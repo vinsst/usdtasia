@@ -17,7 +17,7 @@ function Recent() {
     async function fetchTransactions() {
       try {
         const response = await axios.get(
-          "http://103.13.210.234:5001/transaction"
+          `${process.env.REACT_APP_SERVER_URL}/transaction`
         );
 
         const sortedTransactions = response.data.sort(

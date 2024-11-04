@@ -26,7 +26,7 @@ function History() {
 
         try {
           const response = await axios.get(
-            `http://103.13.210.234:5001/user/${id}/transactions?Page=${page}`,
+            `${process.env.REACT_APP_SERVER_URL}/user/${id}/transactions?Page=${page}`,
             {
               headers: { Authorization: `Bearer ${token}` },
             }

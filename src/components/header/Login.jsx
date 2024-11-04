@@ -27,7 +27,7 @@ function Login({ loginRef, close, handleRegistrClick }) {
     const loginData = { login, password };
     try {
       const response = await axios.post(
-        "http://103.13.210.234:5001/user/auth/login",
+        `${process.env.REACT_APP_SERVER_URL}/user/auth/login`,
         loginData
       );
 
@@ -46,7 +46,7 @@ function Login({ loginRef, close, handleRegistrClick }) {
         const userId = decodedToken.id;
 
         const userResponse = await axios.get(
-          `http://103.13.210.234:5001/user/${userId}`,
+          `${process.env.REACT_APP_SERVER_URL}/user/${userId}`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -73,7 +73,7 @@ function Login({ loginRef, close, handleRegistrClick }) {
       const userId = decodedToken.id;
 
       axios
-        .get(`http://103.13.210.234:5001/user/${userId}`, {
+        .get(`${process.env.REACT_APP_SERVER_URL}/user/${userId}`, {
           headers: { Authorization: `Bearer ${token}` },
         })
         .then((response) => {

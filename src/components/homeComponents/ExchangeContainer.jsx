@@ -34,10 +34,10 @@ function ExchangeContainer() {
     const fetchData = async () => {
       try {
         const tokensResponse = await axios.get(
-          "http://103.13.210.234:5001/binance/exchange-tokens"
+          `${process.env.REACT_APP_SERVER_URL}/binance/exchange-tokens`
         );
         const ratesResponse = await axios.get(
-          "http://103.13.210.234:5001/binance/currencies"
+          `${process.env.REACT_APP_SERVER_URL}/binance/currencies`
         );
         dispatch(setCurrencies(tokensResponse.data));
         dispatch(setRates(ratesResponse.data));
@@ -172,7 +172,7 @@ function ExchangeContainer() {
 
     try {
       const response = await axios.post(
-        "http://103.13.210.234:5001/transaction",
+        `${process.env.REACT_APP_SERVER_URL}/transaction`,
         transactionData,
         {
           headers: { Authorization: `Bearer ${token}` },
