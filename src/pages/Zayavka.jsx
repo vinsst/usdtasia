@@ -28,7 +28,7 @@ function Zayavka() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `https://usdtasia-back-8a0cb4592177.herokuapp.com/transaction/${transactionId}`,
+          `http://103.13.210.234:5001/transaction/${transactionId}`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }

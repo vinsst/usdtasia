@@ -34,10 +34,10 @@ function ExchangeContainer() {
     const fetchData = async () => {
       try {
         const tokensResponse = await axios.get(
-          "https://usdtasia-back-8a0cb4592177.herokuapp.com/binance/exchange-tokens"
+          "http://103.13.210.234:5001/binance/exchange-tokens"
         );
         const ratesResponse = await axios.get(
-          "https://usdtasia-back-8a0cb4592177.herokuapp.com/binance/currencies"
+          "http://103.13.210.234:5001/binance/currencies"
         );
         dispatch(setCurrencies(tokensResponse.data));
         dispatch(setRates(ratesResponse.data));
@@ -172,7 +172,7 @@ function ExchangeContainer() {
 
     try {
       const response = await axios.post(
-        "https://usdtasia-back-8a0cb4592177.herokuapp.com/transaction",
+        "http://103.13.210.234:5001/transaction",
         transactionData,
         {
           headers: { Authorization: `Bearer ${token}` },

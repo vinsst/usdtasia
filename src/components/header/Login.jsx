@@ -27,7 +27,7 @@ function Login({ loginRef, close, handleRegistrClick }) {
     const loginData = { login, password };
     try {
       const response = await axios.post(
-        "https://usdtasia-back-8a0cb4592177.herokuapp.com/user/auth/login",
+        "http://103.13.210.234:5001/user/auth/login",
         loginData
       );
 
@@ -46,7 +46,7 @@ function Login({ loginRef, close, handleRegistrClick }) {
         const userId = decodedToken.id;
 
         const userResponse = await axios.get(
-          `https://usdtasia-back-8a0cb4592177.herokuapp.com/user/${userId}`,
+          `http://103.13.210.234:5001/user/${userId}`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -73,12 +73,9 @@ function Login({ loginRef, close, handleRegistrClick }) {
       const userId = decodedToken.id;
 
       axios
-        .get(
-          `https://usdtasia-back-8a0cb4592177.herokuapp.com/user/${userId}`,
-          {
-            headers: { Authorization: `Bearer ${token}` },
-          }
-        )
+        .get(`http://103.13.210.234:5001/user/${userId}`, {
+          headers: { Authorization: `Bearer ${token}` },
+        })
         .then((response) => {
           if (response.status === 200) {
             const userData = response.data;

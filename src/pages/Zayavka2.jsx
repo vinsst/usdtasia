@@ -19,7 +19,7 @@ function Zayavka2() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `https://usdtasia-back-8a0cb4592177.herokuapp.com/transaction/${transactionId}`,
+          `http://103.13.210.234:5001/transaction/${transactionId}`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -58,7 +58,7 @@ function Zayavka2() {
   const statusCancelled = async () => {
     try {
       const response = await axios.put(
-        `https://usdtasia-back-8a0cb4592177.herokuapp.com/transaction/${transactionId}/change-status`,
+        `http://103.13.210.234:5001/transaction/${transactionId}/change-status`,
         { status: 2 },
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -73,7 +73,7 @@ function Zayavka2() {
   const statusPending = async () => {
     try {
       const response = await axios.put(
-        `https://usdtasia-back-8a0cb4592177.herokuapp.com/transaction/${transactionId}/change-status`,
+        `http://103.13.210.234:5001/transaction/${transactionId}/change-status`,
         { status: 1 },
         {
           headers: { Authorization: `Bearer ${token}` },

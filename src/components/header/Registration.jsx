@@ -33,7 +33,7 @@ function Registration({ registrRef, close, handleLogin }) {
       const registrationData = { login, password, email };
       try {
         const response = await axios.post(
-          "https://usdtasia-back-8a0cb4592177.herokuapp.com/user/auth/registration",
+          "http://103.13.210.234:5001/user/auth/registration",
           registrationData
         );
 

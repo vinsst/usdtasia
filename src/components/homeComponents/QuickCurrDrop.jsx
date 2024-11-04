@@ -8,15 +8,7 @@ import { currencyImageMap } from "../../assets/currencyImageMap";
 
 function QuickCurrDrop({ type }) {
   const dispatch = useDispatch();
-  const selectedCurrency = useSelector(
-    (state) => state.exchangeReducer.currencies
-  );
-  const fiatCurrencies = Object.keys(fiatImageMap).map((fiat) => ({
-    value: fiat,
-    type: "fiat",
-  }));
-
-  const allCurrencies = [...selectedCurrency, ...fiatCurrencies];
+  const currencies = useSelector((state) => state.exchangeReducer.currencies);
 
   const handleClick = (currValue) => {
     if (type === "Send") {
@@ -29,7 +21,7 @@ function QuickCurrDrop({ type }) {
 
   return (
     <div className="quick__curency_dropdown">
-      {allCurrencies.map((currency, index) => {
+      {currencies.map((currency, index) => {
         const imgSrc = imgArrays[currency.value];
         return (
           <QuickCurrDropItem

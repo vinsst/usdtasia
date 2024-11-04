@@ -8,8 +8,18 @@ import { fiatImageMap } from "../../assets/fiatImageMap";
 
 import { flags } from "../../assets/flags.js";
 
+import { useSelector } from "react-redux";
+
 function CountryToUsdt() {
-  const fiatArr = Object.entries(fiatImageMap);
+  const currencies = useSelector((state) => state.exchangeReducer.currencies);
+
+  const fiat = currencies.filter((currency) => currency.type === 1);
+
+  const fiatSymbols = fiat.map((currency) => currency.value);
+
+  const filteredFiatArr = Object.entries(fiatImageMap).filter(([symbol]) =>
+    fiatSymbols.includes(symbol)
+  );
   return (
     <section className="countryToUsdt">
       {/* <CountryToCurrBlock flag={azerbaijan} curr={coin1} />
@@ -20,7 +30,7 @@ function CountryToUsdt() {
       <CountryToCurrBlock flag={azerbaijan} curr={coin1} />
       <CountryToCurrBlock flag={azerbaijan} curr={coin1} />
       <CountryToCurrBlock flag={azerbaijan} curr={coin1} /> */}
-      {fiatArr.map(([symbol, imgSrc]) => {
+      {filteredFiatArr.map(([symbol, imgSrc]) => {
         const flagSrc = flags[symbol];
         return (
           <CountryToCurrBlock

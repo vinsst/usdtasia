@@ -13,6 +13,8 @@ function Rates() {
   );
   const currencies = useSelector((state) => state.exchangeReducer.currencies);
 
+  const tokens = currencies.filter((currency) => currency.type === 0);
+
   const handleClick = (currValue) => {
     dispatch(currCrypto_rates(currValue));
   };
@@ -31,7 +33,7 @@ function Rates() {
         <RatesCurrEl img={Ethereum} symbol="ETH" />
         <RatesCurrEl img={SOL} symbol="SOLAN" />
         <RatesCurrEl img={WrappedBNB} symbol="BNB" /> */}
-        {currencies.map((currency) => {
+        {tokens.map((currency) => {
           const imgSrc = currencyImageMap[currency.value];
           return (
             <RatesCurrEl

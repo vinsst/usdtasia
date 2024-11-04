@@ -17,7 +17,7 @@ function Recent() {
     async function fetchTransactions() {
       try {
         const response = await axios.get(
-          "https://usdtasia-back-8a0cb4592177.herokuapp.com/transaction"
+          "http://103.13.210.234:5001/transaction"
         );
 
         const sortedTransactions = response.data.sort(
