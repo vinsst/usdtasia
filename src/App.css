@@ -3070,3 +3070,7 @@ footer {
 .loginInput__registr_word {
   cursor: pointer;
 }
+
+.countryToUsdt__block_side1_left_coin {
+  max-width: 48px;
+}
