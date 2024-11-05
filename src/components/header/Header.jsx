@@ -14,7 +14,7 @@ import { jwtDecode } from "jwt-decode";
 import axios from "axios";
 
 import { useDispatch } from "react-redux";
-import { addLogin, removeLogin } from "../../redux/actions";
+import { addLogin, removeLogin, setCurrencyImages } from "../../redux/actions";
 import LangDrop from "./LangDrop";
 import { useTranslation } from "react-i18next";
 import { languages } from "../../assets/languages";
@@ -169,6 +169,38 @@ function Header() {
   const savedFlag = Object.values(languages).find(
     (lang) => lang.code === savedLanguage
   )?.flag;
+
+  //currImgsAdd
+
+  const currencies = useSelector((state) => state.exchangeReducer.currencies);
+
+  useEffect(() => {
+    const fetchCurrencyImages = async () => {
+      const imageUrls = {};
+
+      for (const currency of currencies) {
+        if (currency.icon) {
+          try {
+            const response = await axios.get(
+              `${process.env.REACT_APP_SERVER_URL}/file/`,
+              {
+                params: { Url: currency.icon },
+                responseType: "blob",
+              }
+            );
+            const imageUrl = URL.createObjectURL(response.data);
+            imageUrls[currency.value] = imageUrl;
+          } catch (error) {
+            console.error(`Error fetching image for ${currency.value}:`, error);
+          }
+        }
+      }
+
+      dispatch(setCurrencyImages(imageUrls));
+    };
+
+    fetchCurrencyImages();
+  }, [currencies]);
 
   return (
     <header>

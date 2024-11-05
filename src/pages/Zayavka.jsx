@@ -15,7 +15,10 @@ import { fiatImageMap } from "../assets/fiatImageMap";
 import { currencyImageMap } from "../assets/currencyImageMap";
 
 function Zayavka() {
-  const imgArrays = { ...fiatImageMap, ...currencyImageMap };
+  const currencyImages = useSelector(
+    (state) => state.currencyImageReducer.currencyImages
+  );
+  const imgArrays = { ...fiatImageMap, ...currencyImageMap, ...currencyImages };
   const { transactionId } = useParams();
   const [transactionData, setTransactionData] = useState(null);
   const [error, setError] = useState(true);

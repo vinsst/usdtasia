@@ -18,11 +18,14 @@ function QuickCurrDrop({ type }) {
     }
   };
   const imgArrays = { ...fiatImageMap, ...currencyImageMap };
-
+  const currencyImages = useSelector(
+    (state) => state.currencyImageReducer.currencyImages
+  );
   return (
     <div className="quick__curency_dropdown">
       {currencies.map((currency, index) => {
-        const imgSrc = imgArrays[currency.value];
+        const imgSrc =
+          currencyImages[currency.value] || imgArrays[currency.value];
         return (
           <QuickCurrDropItem
             key={index}

@@ -6,11 +6,15 @@ import tether_usdtlogo_small from "../../assets/img/tether_usdtlogo_small.svg";
 import RecentLine from "./RecentLine";
 import axios from "axios";
 import { fiatImageMap } from "../../assets/fiatImageMap";
+import { useSelector } from "react-redux";
 
 import { currencyImageMap } from "../../assets/currencyImageMap";
 
 function Recent() {
-  const imgArrays = { ...fiatImageMap, ...currencyImageMap };
+  const currencyImages = useSelector(
+    (state) => state.currencyImageReducer.currencyImages
+  );
+  const imgArrays = { ...fiatImageMap, ...currencyImageMap, ...currencyImages };
 
   const [transactions, setTransactions] = useState([]);
   useEffect(() => {

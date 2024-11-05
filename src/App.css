@@ -688,6 +688,7 @@ body {
 
 .quick__curency_box_currency_img {
   min-width: 42px;
+  max-width: 42px;
 }
 
 .footer__logo {
@@ -1520,7 +1521,7 @@ footer {
 
 @media (max-width: 1200px) {
   .quick__curency_box_currency_img {
-    width: 32px;
+    max-width: 32px;
     margin-right: 5px;
   }
 }

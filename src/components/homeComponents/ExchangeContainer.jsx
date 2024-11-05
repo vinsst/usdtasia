@@ -28,6 +28,9 @@ import { fiatImageMap } from "../../assets/fiatImageMap";
 import { currencyImageMap } from "../../assets/currencyImageMap";
 import { jwtDecode } from "jwt-decode";
 function ExchangeContainer() {
+  const currencyImages = useSelector(
+    (state) => state.currencyImageReducer.currencyImages
+  );
   const navigate = useNavigate();
   const dispatch = useDispatch();
   useEffect(() => {
@@ -115,7 +118,7 @@ function ExchangeContainer() {
     (state) => state.currCryptoCurrChooseReducer.getCurrency
   );
 
-  const imgArrays = { ...fiatImageMap, ...currencyImageMap };
+  const imgArrays = { ...fiatImageMap, ...currencyImageMap, ...currencyImages };
 
   const imgSrcSend = imgArrays[sendName];
 

@@ -18,6 +18,9 @@ function Rates() {
   const handleClick = (currValue) => {
     dispatch(currCrypto_rates(currValue));
   };
+  const currencyImages = useSelector(
+    (state) => state.currencyImageReducer.currencyImages
+  );
 
   return (
     <section className="rates">
@@ -34,7 +37,8 @@ function Rates() {
         <RatesCurrEl img={SOL} symbol="SOLAN" />
         <RatesCurrEl img={WrappedBNB} symbol="BNB" /> */}
         {tokens.map((currency) => {
-          const imgSrc = currencyImageMap[currency.value];
+          const imgSrc =
+            currencyImages[currency.value] || currencyImageMap[currency.value];
           return (
             <RatesCurrEl
               symbol={currency.value}

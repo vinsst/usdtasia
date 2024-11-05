@@ -68,3 +68,8 @@ export const setSendNum = (num) => ({
 export const swapSendGet = () => ({
   type: "SWAP_SEND_GET",
 });
+
+export const setCurrencyImages = (images) => ({
+  type: "SET_CURRENCY_IMAGES",
+  payload: images,
+});

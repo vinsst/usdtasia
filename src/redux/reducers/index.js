@@ -6,6 +6,7 @@ import exchangeReducer from "./exchange";
 import currCryptoRatesReducer from "./currCryptoRates";
 import currCryptoCurrChooseReducer from "./currCryptoCurrChoose";
 import sendNumReducer from "./sendNum";
+import currencyImageReducer from "./currencyImage";
 
 const allReducers = combineReducers({
   contactsReducer,
@@ -15,6 +16,7 @@ const allReducers = combineReducers({
   currCryptoRatesReducer,
   currCryptoCurrChooseReducer,
   sendNumReducer,
+  currencyImageReducer,
 });
 
 export default allReducers;
