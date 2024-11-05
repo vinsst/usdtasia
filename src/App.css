@@ -3073,5 +3073,6 @@ footer {
 }
 
 .countryToUsdt__block_side1_left_coin {
+  min-width: 48px;
   max-width: 48px;
 }
