@@ -19,6 +19,7 @@ import {
 import { networkArr } from "../../assets/networkArr";
 
 function Wallet({ isEmailValid }) {
+  const currencies = useSelector((state) => state.exchangeReducer.currencies);
   const dispatch = useDispatch();
 
   const [isFiat, setIsFiat] = useState(false);
@@ -58,9 +59,13 @@ function Wallet({ isEmailValid }) {
   }, [dispatch, highlight]);
 
   const addressName = networkArr[getName];
+
   useEffect(() => {
-    setIsFiat(addressName === undefined);
-  }, [addressName]);
+    const selectedCurrency = currencies.find(
+      (currency) => currency.value === getName
+    );
+    setIsFiat(selectedCurrency ? selectedCurrency.type === 1 : false);
+  }, [currencies, getName]);
 
   const hasValue =
     wallet.length > 0 && (!isFiat || (isFiat && wallet.length === 16));
@@ -82,7 +87,9 @@ function Wallet({ isEmailValid }) {
             type="text"
             className="wallet_input"
             placeholder={
-              isFiat ? "Your card number" : `Your ${addressName} address`
+              isFiat
+                ? "Your card number"
+                : `Your ${addressName ? addressName : ""} address`
             }
             onChange={handleWalletChange}
             value={wallet}
