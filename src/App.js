@@ -7,6 +7,10 @@ import Home from "./pages/Home";
 import Zayavka from "./pages/Zayavka";
 import Zayavka2 from "./pages/Zayavka2";
 import History from "./pages/History";
+import Faq from "./pages/Faq";
+import Terms from "./pages/Terms";
+import Support from "./pages/Support";
+import Affilate from "./pages/Affilate";
 
 function App() {
   return (
@@ -19,6 +23,10 @@ function App() {
           <Route path="/zayavka/:transactionId" element={<Zayavka />} />
           <Route path="/zayavka2/:transactionId" element={<Zayavka2 />} />
           <Route path="/history" element={<History />} />
+          <Route path="/faq" element={<Faq />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/support" element={<Support />} />
+          <Route path="/affilate" element={<Affilate />} />
         </Routes>
         <Footer />
       </div>
