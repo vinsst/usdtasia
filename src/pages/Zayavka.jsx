@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 
 import PersonalInfo from "../components/zayavka/PersonalInfo";
 import QuickExchangeTime from "../components/zayavka/QuickExchangeTime";
@@ -15,6 +16,7 @@ import { fiatImageMap } from "../assets/fiatImageMap";
 import { currencyImageMap } from "../assets/currencyImageMap";
 
 function Zayavka() {
+  const { t } = useTranslation();
   const currencyImages = useSelector(
     (state) => state.currencyImageReducer.currencyImages
   );
@@ -72,11 +74,11 @@ function Zayavka() {
     "dd.MM.yyyy HH:mm"
   );
   const statusMap = {
-    0: "created",
-    1: "pending",
-    2: "cancelled",
-    3: "success",
-    4: "paid",
+    0: t("Created"),
+    1: t("Pending"),
+    2: t("Cancelled"),
+    3: t("Success"),
+    4: t("Paid"),
   };
 
   const getRate = () => {
@@ -91,7 +93,9 @@ function Zayavka() {
   return (
     <main className="homeMain home_container container other_container">
       <div className="zayavka__h1_container">
-        <h1 className="zayavka_h1">ORDER #{transactionData.id}</h1>
+        <h1 className="zayavka_h1">
+          {t("Order")} #{transactionData.id}
+        </h1>
       </div>
       <div className="exchange_container order_exchange">
         <section className="quick__exchange_container quick__exchange_container_order">
@@ -137,7 +141,15 @@ function Zayavka() {
               Статус:{" "}
               <span
                 className={`statusTransaction_zayavka ${
-                  statusMap[transactionData.status]
+                  transactionData.status === 0
+                    ? "created"
+                    : transactionData.status === 1
+                    ? "pending"
+                    : transactionData.status === 2
+                    ? "cancelled"
+                    : transactionData.status === 3
+                    ? "success"
+                    : "paid"
                 }`}
               >
                 {statusMap[transactionData.status]}
@@ -147,39 +159,40 @@ function Zayavka() {
               Статус заявки {transactionData.id}
             </p>
             <p
-              className={`order__status_p order__status_p_mob mob_oplachena ${
-                statusMap[transactionData.status]
-              }`}
+              className={`statusTransaction_zayavka      order__status_p_mob mob_oplachena 
+${
+  transactionData.status === 0
+    ? "created"
+    : transactionData.status === 1
+    ? "pending"
+    : transactionData.status === 2
+    ? "cancelled"
+    : transactionData.status === 3
+    ? "success"
+    : "paid"
+}`}
             >
               {statusMap[transactionData.status]}
             </p>
           </section>
           <section className="order_instruction">
-            <h3 className="order__instruction_h3">WHAT SHOULD BE DONE:</h3>
+            <h3 className="order__instruction_h3">{t("WhatShouldBeDone")}</h3>
             <div className="order__instruction_punkty">
               <div className="order__instruction_punkt">
                 <div className="punkt_number">1</div>
-                <p className="punkt_p">
-                  Напишите отзыв на Bestchange Сервис отправит на Ваш email
-                  ссылку для активации отзыва
-                </p>
+                <p className="punkt_p">{t("WhatShouldBeDone1")}</p>
               </div>
               <div className="order__instruction_punkt">
                 <div className="punkt_number">2</div>
-                <p className="punkt_p">Активируйте отзыв по ссылке.</p>
+                <p className="punkt_p">{t("WhatShouldBeDone2")}</p>
               </div>
               <div className="order__instruction_punkt">
                 <div className="punkt_number">3</div>
-                <p className="punkt_p">
-                  Сделайте скриншот Вашего отзыва и пришлите его в чат
-                  Оператору.
-                </p>
+                <p className="punkt_p">{t("WhatShouldBeDone3")}</p>
               </div>
               <div className="order__instruction_punkt">
                 <div className="punkt_number">4</div>
-                <p className="punkt_p">
-                  Оператор зачислит 3 BYN на Ваш счет или телефон
-                </p>
+                <p className="punkt_p">{t("WhatShouldBeDone4")}</p>
               </div>
             </div>
           </section>

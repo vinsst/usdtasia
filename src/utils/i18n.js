@@ -50,6 +50,19 @@ const resources = {
       AffilateProgram: "Сотрудничество",
       TermsOfService: "Условия обслуживания",
       PrivacyPolicy: "Политика конфиденциальности",
+      Order: "Заявка",
+      PersonalInformation: "Персональная информация",
+      Created: "Создан",
+      Pending: "В ожидании",
+      Cancelled: "Отменено",
+      Success: "Оплачена",
+      WhatShouldBeDone: "Что делать дальше",
+      WhatShouldBeDone1:
+        "Проверьте введенные данные, они будут нужны в случае возникновения вопросов с обменом.",
+      WhatShouldBeDone2:
+        "Нажмите на кнопку оплатить заявку и следуйте дальнейшим инструкциям.",
+      WhatShouldBeDone3: "После оплаты напишите оператору про оплату.",
+      WhatShouldBeDone4: "Дождитесь поступления на счет или кошелек.",
     },
   },
 };

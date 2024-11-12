@@ -2,11 +2,13 @@ import React from "react";
 import order_contact from "../../assets/img/order_contact.svg";
 import order_email from "../../assets/img/order_email.svg";
 import order_telegram from "../../assets/img/order_telegram.svg";
+import { useTranslation } from "react-i18next";
 
 function PersonalInfo({ name, email, telega }) {
+  const { t } = useTranslation();
   return (
     <section className="order_persInfo">
-      <h3 className="order__persInfo_h3">Personal information</h3>
+      <h3 className="order__persInfo_h3">{t("PersonalInformation")}</h3>
       <div className="order_persInfo_content">
         <div className="order__persInfo_el">
           <img src={order_email} alt="" className="order__persInfo_img" />
