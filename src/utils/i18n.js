@@ -8,9 +8,9 @@ const resources = {
   ru: {
     translation: {
       Home: "Домой",
-      History: "История обменов",
+      History: "История",
       FAQ: "FAQ",
-      TermsOfService: "Условия обслуживания",
+      TermsOfService: "Условия",
       Support: "Поддержка",
       SignIn: "Вход",
       SignUp: "Регистрация",
@@ -45,10 +45,8 @@ const resources = {
       HomeQuestionsBlock6: "Есть ли у вас оптовый курс обмена?",
       HomeAnswersBlock6:
         "Для обмена сумм более 10000 usd у нас действует специальные тарифы. Напишите нам в онлайн-чат. Служба поддержки USDTASIA, как и сам сервис обмена работает круглосуточно и будет рад помочь вам.",
-      Support: "Поддержка",
       AboutOurBrand: "О нас",
       AffilateProgram: "Сотрудничество",
-      TermsOfService: "Условия обслуживания",
       PrivacyPolicy: "Политика конфиденциальности",
       Order: "Заявка",
       PersonalInformation: "Персональная информация",

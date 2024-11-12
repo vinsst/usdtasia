@@ -1827,7 +1827,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Open Sans Hebrew Condensed";
+  font-family: Roboto;
   font-size: 68px;
   font-weight: 700;
   margin: 38px 0 65px 0;
@@ -1918,7 +1918,7 @@ footer {
 }
 
 .order__persInfo_h3 {
-  font-family: "Open Sans Hebrew Condensed";
+  font-family: Roboto;
   font-size: 32px;
   font-weight: 700;
 }
@@ -1974,7 +1974,7 @@ footer {
 }
 
 .order__instruction_h3 {
-  font-family: Open Sans Hebrew Condensed;
+  font-family: Roboto;
   font-size: 32px;
   font-weight: 700;
 }
@@ -2051,7 +2051,7 @@ footer {
 
 @media (max-width: 1000px) {
   .zayavka__h1_container {
-    font-family: Open Sans Hebrew Condensed;
+    font-family: Roboto;
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 38px;
@@ -2109,7 +2109,7 @@ footer {
 }
 @media (max-width: 1000px) {
   .order__persInfo_h3 {
-    font-family: Open Sans Hebrew Condensed;
+    font-family: Roboto;
     font-size: 24px;
     font-weight: 700;
   }
@@ -2151,7 +2151,7 @@ footer {
 
 @media (max-width: 1000px) {
   .order__instruction_h3 {
-    font-family: Open Sans Hebrew Condensed;
+    font-family: Roboto;
     font-size: 24px;
     font-weight: 700;
   }
