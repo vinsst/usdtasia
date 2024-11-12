@@ -234,21 +234,20 @@ function Header() {
         </Link>
         <nav className="header_groupNav">
           <Link to="/" className="groupNav_el">
-            Home
+            {t("Home")}
           </Link>
-          <p className="groupNav_el">Blog</p>
           {token ? (
             <Link to="/history" className="groupNav_el">
-              History
+              {t("History")}
             </Link>
           ) : (
             <p className="groupNav_el" onClick={handleLoginClick}>
-              History
+              {t("History")}
             </p>
           )}
-          <p className="groupNav_el">FAQ</p>
-          <p className="groupNav_el">API</p>
-          <p className="groupNav_el">Support</p>
+          <p className="groupNav_el">{t("FAQ")}</p>
+          <p className="groupNav_el">{t("TermsOfService")}</p>
+          <p className="groupNav_el">{t("Support")}</p>
         </nav>
         <div className="header_group2">
           <div className="group2_lang" onClick={showDropLang}>
@@ -271,7 +270,9 @@ function Header() {
                     className="quick__curency_dropdown quick__curency_dropdown_header"
                     onClick={logout}
                   >
-                    <div className="quick__curency_dropdown_item">Log out</div>
+                    <div className="quick__curency_dropdown_item">
+                      {t("LogOut")}
+                    </div>
                   </div>
                 )}
               </div>

@@ -1,7 +1,7 @@
-import ua from "./img/flags/ukraine.svg";
+import ru from "./img/flags/russian.svg";
 import en from "./img/flags/GB.svg";
 
 export const languages = {
-  Ukrainian: { code: "ua", flag: ua },
+  Russian: { code: "ru", flag: ru },
   English: { code: "en", flag: en },
 };

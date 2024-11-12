@@ -1,6 +1,7 @@
 import React from "react";
-import Question from "../../assets/img/Question.svg";
 import AskedQline from "./AskedQline";
+import { Trans } from "react-i18next";
+
 function AskedQuestions() {
   return (
     <section className="askedQuestions footer_container container">
@@ -9,24 +10,28 @@ function AskedQuestions() {
       </h3>
       <section className="askedQuestions_container">
         <AskedQline
-          p="Чем занимается компания USDTASIA?"
-          underTxt="Вам остается лишь выбрать самого подходящего трейдера и подписаться на него. Все его сделки будут автоматически открываться и закрываться на вашем биржевом аккаунте. В любой момент вы можете отписаться от трейдера или вывести свою прибыль"
+          p={<Trans i18nKey="HomeQuestionsBlock1" />}
+          underTxt={<Trans i18nKey="HomeAnswersBlock1" />}
         />
         <AskedQline
-          p="Я не нашел информацию по теме инвестиции в майнинг что делать?"
+          p={<Trans i18nKey="HomeQuestionsBlock2" />}
+          underTxt={
+            <Trans i18nKey="HomeAnswersBlock2" components={{ br: <br /> }} />
+          }
           blue
         />
         <AskedQline
-          p="Когда я спрашиваю гугл как дела он всегда говорить что у всех все
-хорошо"
+          p={<Trans i18nKey="HomeQuestionsBlock3" />}
+          underTxt={<Trans i18nKey="HomeAnswersBlock3" />}
         />
         <AskedQline
-          p="Навожу курсор на кнопку а она хитро угинается, как нажать?"
+          p={<Trans i18nKey="HomeQuestionsBlock4" />}
+          underTxt={<Trans i18nKey="HomeAnswersBlock4" />}
           blue
         />
         <AskedQline
-          p="Когда я спрашиваю гугл как дела он всегда говорить что у всех все
-хорошо"
+          p={<Trans i18nKey="HomeQuestionsBlock5" />}
+          underTxt={<Trans i18nKey="HomeAnswersBlock5" />}
         />
       </section>
     </section>

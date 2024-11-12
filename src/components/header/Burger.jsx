@@ -67,21 +67,20 @@ function Burger({
         </div>
         <nav className="header_groupNav burgerShow_nav">
           <Link to="/" className="groupNav_el">
-            Home
+            {t("Home")}
           </Link>
           {token ? (
             <Link to="/history" className="groupNav_el">
-              History
+              {t("History")}
             </Link>
           ) : (
             <p className="groupNav_el" onClick={handleLoginClick}>
-              History
+              {t("History")}
             </p>
           )}
-          <p className="groupNav_el">Blog</p>
-          <p className="groupNav_el">FAQ</p>
-          <p className="groupNav_el">API</p>
-          <p className="groupNav_el">Support</p>
+          <p className="groupNav_el">{t("FAQ")}</p>
+          <p className="groupNav_el">{t("TermsOfService")}</p>
+          <p className="groupNav_el">{t("Support")}</p>
         </nav>
         <div className="burger_flag" onClick={showDropLang}>
           <img src={savedFlag} alt="" className="group2__lang_flag" />
@@ -104,7 +103,9 @@ function Burger({
                   className="quick__curency_dropdown quick__curency_dropdown_header quick__curency_dropdown_header_burger"
                   onClick={logout}
                 >
-                  <div className="quick__curency_dropdown_item">Log out</div>
+                  <div className="quick__curency_dropdown_item">
+                    {t("LogOut")}
+                  </div>
                 </div>
               )}
             </div>
