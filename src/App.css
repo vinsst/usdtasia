@@ -2667,9 +2667,16 @@ footer {
   justify-content: center;
 }
 
-@media (max-width: 630px) {
+@media (max-width: 1200px) {
   .rates_currency_container {
     max-width: 90%;
+    overflow-x: auto;
+  }
+}
+
+@media (min-width: 1201px) {
+  .rates_currency_container {
+    max-width: 60%;
     overflow-x: auto;
   }
 }

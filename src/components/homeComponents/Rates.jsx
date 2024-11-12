@@ -1,8 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import RatesCurrEl from "./RatesCurrEl";
-
 import { currencyImageMap } from "../../assets/currencyImageMap";
-
 import { useSelector, useDispatch } from "react-redux";
 import { currCrypto_rates } from "../../redux/actions";
 
@@ -13,11 +11,23 @@ function Rates() {
   );
   const currencies = useSelector((state) => state.exchangeReducer.currencies);
 
-  const tokens = currencies.filter((currency) => currency.type === 0);
+  // Filter and sort tokens
+  const tokens = currencies
+    .filter((currency) => currency.type === 0)
+    .sort((a, b) => {
+      const order = ["USDT", "BTC", "ETH", "SOL", "BNB"];
+      const indexA = order.indexOf(a.value);
+      const indexB = order.indexOf(b.value);
+      if (indexA === -1 && indexB === -1) return 0;
+      if (indexA === -1) return 1;
+      if (indexB === -1) return -1;
+      return indexA - indexB;
+    });
 
   const handleClick = (currValue) => {
     dispatch(currCrypto_rates(currValue));
   };
+
   const currencyImages = useSelector(
     (state) => state.currencyImageReducer.currencyImages
   );
@@ -26,16 +36,6 @@ function Rates() {
     <section className="rates">
       <p className="rates_span">CURRENT EXCHANGE RATES</p>
       <div className="rates_currency_container">
-        {" "}
-        {/* <RatesCurrEl
-          img={tether_usdtlogo_small}
-          symbol="USDT"
-          isCurr={"rates__current_curr"}
-        />
-        <RatesCurrEl img={Bitcoin} symbol="BTC" />
-        <RatesCurrEl img={Ethereum} symbol="ETH" />
-        <RatesCurrEl img={SOL} symbol="SOLAN" />
-        <RatesCurrEl img={WrappedBNB} symbol="BNB" /> */}
         {tokens.map((currency) => {
           const imgSrc =
             currencyImages[currency.value] || currencyImageMap[currency.value];
