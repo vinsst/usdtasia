@@ -8,6 +8,7 @@ import twit from "../../assets/img/twit.svg";
 import google from "../../assets/img/google.svg";
 import AskedQuestions from "./AskedQuestions";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 function Footer() {
   const { t } = useTranslation();
@@ -24,10 +25,18 @@ function Footer() {
                 USDTASIA
               </h5>
               <nav className="footer__usdtasia_nav_mob">
-                <p className="footer__nav_p">{t("AboutOurBrand")}</p>
-                <p className="footer__nav_p">{t("AffilateProgram")}</p>
-                <p className="footer__nav_p">{t("TermsOfService")}</p>
-                <p className="footer__nav_p">{t("PrivacyPolicy")}</p>
+                <Link to="/" className="footer__nav_p">
+                  {t("AboutOurBrand")}
+                </Link>
+                <Link to="/affilate" className="footer__nav_p">
+                  {t("AffilateProgram")}
+                </Link>
+                <Link to="/terms" className="footer__nav_p">
+                  {t("TermsOfService")}
+                </Link>
+                <Link to="/terms" className="footer__nav_p">
+                  {t("PrivacyPolicy")}
+                </Link>
               </nav>
             </div>
             <div className="footer__top_txt_mob_container">
@@ -35,9 +44,15 @@ function Footer() {
                 {t("Support")}
               </h5>
               <nav className="footer__usdtasia_nav_mob">
-                <p className="footer__nav_p">FAQ</p>
-                <p className="footer__nav_p">API</p>
-                <p className="footer__nav_p">{t("Support")}</p>
+                <Link to="/faq" className="footer__nav_p">
+                  FAQ
+                </Link>
+                <Link to="/" className="footer__nav_p">
+                  API
+                </Link>
+                <Link to="/support" className="footer__nav_p">
+                  {t("Support")}
+                </Link>
               </nav>
             </div>
           </section>
@@ -63,9 +78,12 @@ function Footer() {
               <nav className="footer__usdtasia_nav footer_elements">
                 <p className="footer__usdtasia_nav_el">{t("AboutOurBrand")}</p>
                 <p className="footer__usdtasia_nav_el footer__usdtasia_nav_el_2">
-                  {t("AffilateProgram")} {t("TermsOfService")}
+                  <Link to="/affilate">{t("AffilateProgram")}</Link> <br />
+                  <Link to="/terms">{t("TermsOfService")}</Link>
                 </p>
-                <p className="footer__usdtasia_nav_el">{t("PrivacyPolicy")}</p>
+                <Link to="/terms" className="footer__usdtasia_nav_el">
+                  {t("PrivacyPolicy")}
+                </Link>
               </nav>
             </div>
           </section>
@@ -75,7 +93,10 @@ function Footer() {
             <div className="footer_support footer_section">
               <h5 className="footer__support_h5 footer_h5">{t("Support")}</h5>
               <div className="footer__support_elements footer_elements">
-                <p className="footer__support_el">FAQ {t("Support")}</p>
+                <p className="footer__support_el">
+                  <Link to="/faq">FAQ</Link>{" "}
+                  <Link to="/support">{t("Support")}</Link>
+                </p>
                 <p className="footer__support_el">API</p>
               </div>
             </div>

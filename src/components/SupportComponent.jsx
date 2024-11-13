@@ -8,41 +8,16 @@ function SupportComponent() {
       <div className="zayavka__h1_container">
         <h1 className="zayavka_h1">{t("Support")}</h1>
       </div>
-      <span className="faq_q">
-        Связь с техподдержкой сайта — это быстро и легко!
-      </span>
-      <span className="faq_a">
-        &nbsp;&nbsp;&nbsp;&nbsp; Наша команда сайта поможет вам решить любой ваш
-        вопрос, поддержка Clean Exchange опытная, квалифицированная и надёжная
-        команда. Выберите подходящий и комфортный для вас способ связи и
-        напишите нашим операторам на e-mail, telegram или в окно-чата на сайте!
-        Вы получите ответ быстро и чётко, это так просто!
-      </span>
-      <span className="faq_q">Внимание! Мы никогда не пишем первыми!</span>
-      <span className="faq_a">
-        &nbsp;&nbsp;&nbsp;&nbsp;В социальных сетях присутствует большое
-        количество мошенников, которые будут стараться присвоить ваши денежные
-        средства, притворяясь нами. Важно знать, что мы никогда не отправляем
-        заявок на добавление и не отправляем никаких вредоносных ссылок.
-        Отличным способом обезопасить себя будет добавление к нам только по
-        ссылке с сайта, а не через поиск. В противном случае мы не гарантируем,
-        что вы будете общаться с нами, а не с мошенниками, целью которых
-        является получение ваших персональных данных.
-      </span>
-      <span className="faq_q">Онлайн 24/7</span>
-      <span className="faq_a">
-        &nbsp;&nbsp;&nbsp;&nbsp; В нашем сервисе вы получаете поддержку 24/7, вы
-        можете задать любой вопрос нашим операторам, вне зависимости курс
-        биткоина на данный момент или у вас возникла техническая ошибка при
-        переводе, наши сотрудники всегда готовы вам ответить! Несмотря на всё,
-        работоспособность наших специалистов находится на высочайшем уровне. А
-        их количество позволяет организовать круглосуточную работу службы
-        поддержки – без обедов, праздников и выходных дней.
-      </span>
+      <span className="faq_q">{t("Support_q1")}</span>
+      <span className="faq_a">&nbsp;&nbsp;&nbsp;&nbsp; {t("Support_a1")}</span>
+      <span className="faq_q">{t("Support_q2")}</span>
+      <span className="faq_a">&nbsp;&nbsp;&nbsp;&nbsp;{t("Support_a2")}</span>
+      <span className="faq_q">{t("Support_q3")}</span>
+      <span className="faq_a">&nbsp;&nbsp;&nbsp;&nbsp;{t("Support_a3")}</span>
 
-      <span className="faq_a">Telegram - @usdtasia_support</span>
-      <span className="faq_a">Mail support@usdtasia (тут поставим домен)</span>
-      <span className="faq_a">24/7 – чат на сайте</span>
+      <span className="faq_a">{t("Support_a4")}</span>
+      <span className="faq_a">{t("Support_a5")}</span>
+      <span className="faq_a">{t("Support_a6")}</span>
     </div>
   );
 }

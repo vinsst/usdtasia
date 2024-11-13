@@ -78,9 +78,15 @@ function Burger({
               {t("History")}
             </p>
           )}
-          <p className="groupNav_el">{t("FAQ")}</p>
-          <p className="groupNav_el">{t("TermsOfService")}</p>
-          <p className="groupNav_el">{t("Support")}</p>
+          <Link to="/faq" className="groupNav_el">
+            {t("FAQ")}
+          </Link>
+          <Link to="/terms" className="groupNav_el">
+            {t("TermsOfService")}
+          </Link>
+          <Link to="/support" className="groupNav_el">
+            {t("Support")}
+          </Link>
         </nav>
         <div className="burger_flag" onClick={showDropLang}>
           <img src={savedFlag} alt="" className="group2__lang_flag" />

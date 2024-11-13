@@ -272,7 +272,7 @@ function ExchangeContainer() {
               <img src={done} alt="" className="quick__exchange_img" />
             )}
           </div>
-          <span className="quick__exchange_span">
+          <Link to="terms" className="quick__exchange_span">
             Используя сайт и создавая обмен, вы соглашаетесь с{" "}
             <span className="change_span_done_blue">
               Условиями обслуживания
@@ -281,7 +281,7 @@ function ExchangeContainer() {
             <span className="change_span_done_blue">
               Политикой конфиденциальности UsdtAsia.
             </span>
-          </span>
+          </Link>
         </section>
 
         {checked &&

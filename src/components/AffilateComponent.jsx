@@ -10,26 +10,14 @@ function AffilateComponent() {
         <h1 className="zayavka_h1">{t("AffilateProgram")}</h1>
       </div>
 
-      <p className="faq_a">
-        &nbsp;&nbsp;&nbsp;&nbsp;Партнёрская программа позволяет
-        зарегистрированным пользователям зарабатывать на партнерских отчислениях
-        от обменов клиентов, которые перешли на наш сайт по реферальной ссылке.
-        Участие в программе достаточно простое: Вам необходимо
-        зарегистрироваться на нашем сайте и написать в техподдержку, чтобы
-        получить вашу персональную ссылку для обмена.
-      </p>
-
-      <p className="faq_a">
-        Партнёрский процент зависит от общей суммы обменов ваших рефералов и
-        будет меняться по таблице:
-      </p>
+      <p className="faq_a">&nbsp;&nbsp;&nbsp;&nbsp;{t("Affilate_txt1")}</p>
 
       <table className="affiliate-table">
         <thead>
           <tr>
-            <th>Уровень</th>
-            <th>Общая сумма обменов рефералов</th>
-            <th>Ваша прибыль</th>
+            <th>{t("Affilate_level")}</th>
+            <th>{t("Affilate_refs")}</th>
+            <th>{t("Affilate_yours")}</th>
           </tr>
         </thead>
         <tbody>
@@ -61,10 +49,7 @@ function AffilateComponent() {
         </tbody>
       </table>
 
-      <p className="faq_a">
-        Вывод партнерской прибыли осуществляется каждый день. Минимальная сумма
-        для вывода — 10$.
-      </p>
+      <p className="faq_a">{t("Affilate_txt2")}</p>
     </div>
   );
 }

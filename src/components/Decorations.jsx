@@ -10,7 +10,6 @@ function decorations() {
     <div className="decorations">
       <div className="sparkles">
         <img src={Sparkles} alt="" className="sparkles_el1 sparkles_el" />
-        <img src={Sparkles} alt="" className="sparkles_el2 sparkles_el" />
         <img src={Sparkles} alt="" className="sparkles_el3 sparkles_el" />
         <img src={Sparkles} alt="" className="sparkles_el4 sparkles_el" />
       </div>

@@ -245,9 +245,15 @@ function Header() {
               {t("History")}
             </p>
           )}
-          <p className="groupNav_el">{t("FAQ")}</p>
-          <p className="groupNav_el">{t("TermsOfService")}</p>
-          <p className="groupNav_el">{t("Support")}</p>
+          <Link to="/faq" className="groupNav_el">
+            {t("FAQ")}
+          </Link>
+          <Link to="/terms" className="groupNav_el">
+            {t("TermsOfService")}
+          </Link>
+          <Link to="/support" className="groupNav_el">
+            {t("Support")}
+          </Link>
         </nav>
         <div className="header_group2">
           <div className="group2_lang" onClick={showDropLang}>
