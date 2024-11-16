@@ -2686,6 +2686,12 @@ footer {
   }
 }
 
+/* Для Firefox */
+.rates_currency_container {
+  scrollbar-width: thin;
+  scrollbar-color: #ff03895d #326cff69;
+}
+
 .burgerActive {
   width: 80vw;
   height: 100%;
@@ -2930,7 +2936,7 @@ footer {
   max-width: 130px;
   overflow-x: auto;
   scrollbar-width: thin;
-  scrollbar-color: #888 transparent;
+  scrollbar-color: #ff03895d #326cff69;
 }
 
 .quick__curency_box_currency_value2::-webkit-scrollbar {

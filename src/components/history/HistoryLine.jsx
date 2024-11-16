@@ -13,7 +13,7 @@ function HistoryLine({ createdAt, from, to, status, darker, transactionId }) {
   };
   return (
     <Link
-      to={`/zayavka2/${transactionId}`}
+      to={`/zayavka/${transactionId}`}
       className={`table__content_line ${darker}`}
     >
       <p className="table__content_line_el">{formattedDate}</p>

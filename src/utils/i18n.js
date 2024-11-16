@@ -128,6 +128,11 @@ const resources = {
       Affilate_level: "Level",
       Affilate_refs: "Total amount of exchanges of referrals ",
       Affilate_yours: "Your profit",
+      Home_checkboxTxt1:
+        "By using the site and creating an exchange, you agree to",
+      Home_checkboxTxt2: "UsdtAsia's Terms of Service",
+      Home_checkboxTxt3: "and",
+      Home_checkboxTxt4: "Privacy Policy.",
     },
   },
   ru: {
@@ -254,6 +259,10 @@ const resources = {
       Affilate_level: "Уровень",
       Affilate_refs: "Общая сумма обменов рефералов",
       Affilate_yours: "Ваша",
+      Home_checkboxTxt1: "Используя сайт и создавая обмен, вы соглашаетесь с",
+      Home_checkboxTxt2: "Условиями обслуживания",
+      Home_checkboxTxt3: "и",
+      Home_checkboxTxt4: "Политикой конфиденциальности UsdtAsia.",
     },
   },
 };

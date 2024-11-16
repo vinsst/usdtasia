@@ -27,6 +27,8 @@ import { fiatImageMap } from "../../assets/fiatImageMap";
 
 import { currencyImageMap } from "../../assets/currencyImageMap";
 import { jwtDecode } from "jwt-decode";
+
+import { useTranslation } from "react-i18next";
 function ExchangeContainer() {
   const currencyImages = useSelector(
     (state) => state.currencyImageReducer.currencyImages
@@ -198,6 +200,8 @@ function ExchangeContainer() {
     dispatch(swapSendGet());
   };
 
+  const { t } = useTranslation();
+
   return (
     <div className="exchange_container">
       <section className="quick__exchange_container">
@@ -273,13 +277,13 @@ function ExchangeContainer() {
             )}
           </div>
           <Link to="terms" className="quick__exchange_span">
-            Используя сайт и создавая обмен, вы соглашаетесь с{" "}
+            {t("Home_checkboxTxt1")}{" "}
             <span className="change_span_done_blue">
-              Условиями обслуживания
-            </span>
-             и 
+              {t("Home_checkboxTxt2")}
+            </span>{" "}
+            {t("Home_checkboxTxt3")}{" "}
             <span className="change_span_done_blue">
-              Политикой конфиденциальности UsdtAsia.
+              {t("Home_checkboxTxt4")}
             </span>
           </Link>
         </section>
