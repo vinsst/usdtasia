@@ -103,7 +103,7 @@ function Footer() {
           </section>
         </div>
         <div className="footer_span">
-          © 2018–2024  USDTASIA . Все права защищены.
+          © 2018–2024  USDTASIA . All rights reresved.
         </div>
       </section>
     </footer>
