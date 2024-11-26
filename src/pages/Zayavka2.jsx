@@ -5,8 +5,10 @@ import axios from "axios";
 
 import time_line from "../assets/img/time_line.svg";
 import { QRCodeSVG } from "qrcode.react";
+import { useTranslation } from "react-i18next";
 
 function Zayavka2() {
+  const { t } = useTranslation();
   const { transactionId } = useParams();
   const [transactionData, setTransactionData] = useState(null);
   const [error, setError] = useState(true);
@@ -101,49 +103,33 @@ function Zayavka2() {
         </section>
         <div className="exchange_container_padding order_padding pay_txt">
           <section className="pay__txt_top">
-            <h5 className="txt__top_h5">
-              Поздравляем! Вы почти завершили обмен, для завершения, проделайте
-              следующие шаги
-            </h5>
+            <h5 className="txt__top_h5">{t("Order2_congrat")}</h5>
             <p className="txt__top_p">
-              Для совершения операции #{transactionData.id} на сумму:{" "}
-              {transactionData.from.value.toFixed(2)}.{" "}
-              {transactionData.from.name} Вам потребуется выполнить следующие
-              действия:
+              {t("Order2_toFinish1")} #{transactionData.id}{" "}
+              {t("Order2_toFinish2")} {transactionData.from.value.toFixed(2)}.{" "}
+              {transactionData.from.name} {t("Order2_toFinish3")}
             </p>
           </section>
           <section className="pay_instruction">
             <div className="pay__instruction_el">
               <div className="punkt_number">1</div>
-              <p className="pay__instruction_p">
-                Совершите оплату по предоставленным ниже реквизитам
-              </p>
+              <p className="pay__instruction_p">{t("Order2_inst1")}</p>
             </div>
             <img src={time_line} alt="" className="pay__instruction_img" />
             <div className="pay__instruction_el">
               <div className="punkt_number">2</div>
-              <p className="pay__instruction_p">
-                Дождаться подтверждения транзакции в сети.
-              </p>
+              <p className="pay__instruction_p">{t("Order2_inst2")}</p>
             </div>
             <img src={time_line} alt="" className="pay__instruction_img" />
             <div className="pay__instruction_el">
               <div className="punkt_number">3</div>
-              <p className="pay__instruction_p">
-                Ожидайте перевода ваших средств
-              </p>
+              <p className="pay__instruction_p">{t("Order2_inst3")}</p>
             </div>
           </section>
           <section className="pay__waning_txt">
             <p className="pay__warning_p">
-              <span className="white">Внимание! </span>
-              <span>
-                Перед тем как оплатить, откройте Ваш Email и сверьте номер
-                кошелька указанный ниже, с номером полученным в Email сообщении.
-                Номера кошельков обязаны совпадать. В случае несовпадения, не
-                выполняйте платеж и свяжитесь с поддержкой! Проверка номера
-                кошелька ОБЯЗАТЕЛЬНА.
-              </span>
+              <span className="white">{t("Order2_attention1")} </span>
+              <span>{t("Order2_attention2")}</span>
             </p>
           </section>
           <section className="qrSection">
@@ -154,14 +140,16 @@ function Zayavka2() {
                   {transactionData.from.value} {transactionData.from.name}
                 </p>
                 <div className="qrSection_valuta">
-                  <p className="qrSection__valuta_word white">Валюта:&nbsp;</p>
+                  <p className="qrSection__valuta_word white">
+                    {t("Order2_qr1")}&nbsp;
+                  </p>
                   <p className="qrSection__valuta_name">
                     {transactionData.from.name}
                   </p>
                 </div>
                 <div className="qrSection_reqizity">
                   <p className="qrSection__reqizity_word white">
-                    Реквизиты:&nbsp;
+                    {t("Order2_qr2")}&nbsp;
                   </p>
                   <p className="qrSection__reqizity_code">
                     {transactionData.wallet}
@@ -171,24 +159,20 @@ function Zayavka2() {
                   className="qrSection_copyAddress"
                   onClick={handleCopyAddress}
                 >
-                  Копировать адресс
+                  {t("Order2_qr3")}
                 </p>
               </div>
             </div>
           </section>
           <section className="pay__txt_bottom_container">
             <p className="pay__txt_bottom">
-              * В зависимости от страны, выдача средств происходит в офисе либо
-              через представителя.<br></br>
-              <br></br> * Для сумм выше 10 000$ в эквиваленте возможен обмен в
-              офисе либо при участии представителя. Данная опция является
-              индивидуальной и зависит от ряда факторов.<br></br>
-              <br></br> * ПОМНИТЕ криптовалютные транзакции являются не
-              отзывными. Внимательно проверьте адрес, на который Вы отправляете
-              средства. Мы не сможем вернуть средства, если они будут отправлены
-              на неверный кошелек.<br></br>
-              <br></br> * Транзакция считается подтвержденной после 3х
-              подтверждений для сети Bitcoin.
+              {t("Order2_t1")}
+              <br></br>
+              <br></br> {t("Order2_t2")}
+              <br></br>
+              <br></br> {t("Order2_t3")}
+              <br></br>
+              <br></br> {t("Order2_t4")}
             </p>
           </section>
           <section className="exchange_btn pay_btn_container">
@@ -197,7 +181,7 @@ function Zayavka2() {
                 className="quick__exchange_btn order_btn pay__btnCancel pay_btn"
                 onClick={statusCancelled}
               >
-                ОТМЕНИТЬ ЗАЯВКУ
+                {t("Order2_cancel")}
               </button>
             </Link>
             <Link to={loginTxt > 0 ? "/history" : `/zayavka/${transactionId}`}>
@@ -205,7 +189,7 @@ function Zayavka2() {
                 className="quick__exchange_btn order_btn pay_btn"
                 onClick={statusPending}
               >
-                Я ОПЛАТИЛ(А) ЗАЯВКУ
+                {t("Order2_paid")}
               </button>
             </Link>
           </section>

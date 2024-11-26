@@ -138,6 +138,30 @@ const resources = {
       Order_statusLong: "Order processing status",
       Order_statusShort: "Status:",
       Order_pay: "PAY THE ORDER",
+      Order2_congrat:
+        "Congratulations! You have almost completed the exchange, to complete it, follow these steps",
+      Order2_toFinish1: "To complete the transaction",
+      Order2_toFinish2: "for the amount of:",
+      Order2_toFinish3: "you will need to do the following:",
+      Order2_inst1: "Make a payment using the details provided below",
+      Order2_inst2: "Wait for the transaction to be confirmed on the network.",
+      Order2_inst3: "Wait for your funds to be transferred",
+      Order2_attention1: "Attention! ",
+      Order2_attention2:
+        "Before paying, open your Email and check the wallet number specified below with the number received in the Email message. The wallet numbers must match. If they do not match, do not make the payment and contact support! Verification of the wallet number is MANDATORY.",
+      Order2_qr1: "Currency:",
+      Order2_qr2: "Details:",
+      Order2_qr3: "Copy address",
+      Order2_t1:
+        "* Depending on the country, funds are issued at the office or through a representative.",
+      Order2_t2:
+        "* For amounts above $10,000 in equivalent, an exchange is possible at the office or with the participation of a representative. This option is individual and depends on a number of factors.",
+      Order2_t3:
+        "* REMEMBER cryptocurrency transactions are not revocable. Carefully check the address to which you send funds. We will not be able to return funds if they are sent to the wrong wallet.",
+      Order2_t4:
+        "* The transaction is considered confirmed after 3 confirmations for the Bitcoin network.",
+      Order2_cancel: "CANCEL APPLICATION",
+      Order2_paid: "I HAVE PAID THE APPLICATION",
     },
   },
   ru: {
@@ -273,6 +297,30 @@ const resources = {
       Order_statusLong: "Статус обработки заявки",
       Order_statusShort: "Статус:",
       Order_pay: "ОПЛАТИТЬ ЗАЯВКУ",
+      Order2_congrat:
+        "Поздравляем! Вы почти завершили обмен, для завершения, проделайте следующие шаги",
+      Order2_toFinish1: "Для совершения операции",
+      Order2_toFinish2: "на сумму:",
+      Order2_toFinish3: "вам потребуется выполнить следующие действия:",
+      Order2_inst1: "Совершите оплату по предоставленным ниже реквизитам",
+      Order2_inst2: "Дождаться подтверждения транзакции в сети.",
+      Order2_inst3: "Ожидайте перевода ваших средств",
+      Order2_attention1: "Внимание! ",
+      Order2_attention2:
+        "Перед тем как оплатить, откройте Ваш Email и сверьте номер кошелька указанный ниже, с номером полученным в Email сообщении. Номера кошельков обязаны совпадать. В случае несовпадения, не выполняйте платеж и свяжитесь с поддержкой! Проверка номера кошелька ОБЯЗАТЕЛЬНА.",
+      Order2_qr1: "Валюта:",
+      Order2_qr2: "Реквизиты:",
+      Order2_qr3: "Копировать адресс",
+      Order2_t1:
+        "* В зависимости от страны, выдача средств происходит в офисе либо через представителя.",
+      Order2_t2:
+        "* Для сумм выше 10 000$ в эквиваленте возможен обмен в офисе либо при участии представителя. Данная опция является индивидуальной и зависит от ряда факторов.",
+      Order2_t3:
+        "* ПОМНИТЕ криптовалютные транзакции являются не отзывными. Внимательно проверьте адрес, на который Вы отправляете средства. Мы не сможем вернуть средства, если они будут отправлены на неверный кошелек.",
+      Order2_t4:
+        "* Транзакция считается подтвержденной после 3х подтверждений для сети Bitcoin.",
+      Order2_cancel: "ОТМЕНИТЬ ЗАЯВКУ",
+      Order2_paid: "Я ОПЛАТИЛ(А) ЗАЯВКУ",
     },
   },
 };
