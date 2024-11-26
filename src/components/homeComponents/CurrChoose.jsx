@@ -14,8 +14,7 @@ function CurrChoose({ img, txt, number, symb, status, input }) {
     const validInput = /^\d*\.?\d*$/.test(inputValue);
 
     if (validInput) {
-      const numericValue = inputValue ? parseFloat(inputValue) : 0;
-      dispatch(setSendNum(numericValue));
+      dispatch(setSendNum(inputValue));
     }
   };
 
@@ -47,8 +46,6 @@ function CurrChoose({ img, txt, number, symb, status, input }) {
             className="quick__curency_box_currency_value quick__curency_box_currency_value_input"
             type="text"
             placeholder="0.05"
-            min="0"
-            step="0.01"
             onChange={handleChange}
             value={num}
           />

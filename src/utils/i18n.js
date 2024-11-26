@@ -133,6 +133,11 @@ const resources = {
       Home_checkboxTxt2: "UsdtAsia's Terms of Service",
       Home_checkboxTxt3: "and",
       Home_checkboxTxt4: "Privacy Policy.",
+      Order_data: "Order date:",
+      Order_rate: "Exchange rate:",
+      Order_statusLong: "Order processing status",
+      Order_statusShort: "Status:",
+      Order_pay: "PAY THE ORDER",
     },
   },
   ru: {
@@ -263,6 +268,11 @@ const resources = {
       Home_checkboxTxt2: "Условиями обслуживания",
       Home_checkboxTxt3: "и",
       Home_checkboxTxt4: "Политикой конфиденциальности UsdtAsia.",
+      Order_data: "Дата заявки:",
+      Order_rate: "Курс обмена:",
+      Order_statusLong: "Статус обработки заявки",
+      Order_statusShort: "Статус:",
+      Order_pay: "ОПЛАТИТЬ ЗАЯВКУ",
     },
   },
 };

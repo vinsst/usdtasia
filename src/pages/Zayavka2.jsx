@@ -161,7 +161,7 @@ function Zayavka2() {
                 </div>
                 <div className="qrSection_reqizity">
                   <p className="qrSection__reqizity_word white">
-                    Реквезиты:&nbsp;
+                    Реквизиты:&nbsp;
                   </p>
                   <p className="qrSection__reqizity_code">
                     {transactionData.wallet}
@@ -188,10 +188,7 @@ function Zayavka2() {
               средства. Мы не сможем вернуть средства, если они будут отправлены
               на неверный кошелек.<br></br>
               <br></br> * Транзакция считается подтвержденной после 3х
-              подтверждений для сети Bitcoin.<br></br>
-              <br></br> * На сумму до 800 BYN возможна выдача наличных в
-              банкомате по коду. Если Вам требуется данная опция, обратитесь в
-              чат к Оператору. ( Беларусь )
+              подтверждений для сети Bitcoin.
             </p>
           </section>
           <section className="exchange_btn pay_btn_container">
@@ -203,7 +200,7 @@ function Zayavka2() {
                 ОТМЕНИТЬ ЗАЯВКУ
               </button>
             </Link>
-            <Link to={loginTxt > 0 ? "/history" : "/"}>
+            <Link to={loginTxt > 0 ? "/history" : `/zayavka/${transactionId}`}>
               <button
                 className="quick__exchange_btn order_btn pay_btn"
                 onClick={statusPending}

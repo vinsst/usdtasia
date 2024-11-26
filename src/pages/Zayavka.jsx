@@ -135,10 +135,10 @@ function Zayavka() {
           />
           <section className="order_status">
             <p className="order__status_p">
-              Статус обработки заявки {transactionData.id}
+              {t("Order_statusLong")} {transactionData.id}
             </p>
             <span className="order__status_p">
-              Статус:{" "}
+              {t("Order_statusShort")}{" "}
               <span
                 className={`statusTransaction_zayavka ${
                   transactionData.status === 0
@@ -156,7 +156,7 @@ function Zayavka() {
               </span>
             </span>
             <p className="order__status_p order__status_p_mob">
-              Статус заявки {transactionData.id}
+              {t("Order_statusLong")} {transactionData.id}
             </p>
             <p
               className={`statusTransaction_zayavka      order__status_p_mob mob_oplachena 
@@ -198,7 +198,7 @@ ${
           </section>
           <Link to={`/zayavka2/${transactionId}`} className="exchange_btn">
             <button className="quick__exchange_btn order_btn">
-              ОПЛАТИТЬ ЗАЯВКУ
+              {t("Order_pay")}
             </button>
           </Link>
         </div>
