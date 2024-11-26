@@ -6,6 +6,7 @@ import login_lock from "../../assets/img/login_lock.svg";
 import { jwtDecode } from "jwt-decode";
 
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 
 import { useDispatch } from "react-redux";
 import { addLogin } from "../../redux/actions";
@@ -87,7 +88,7 @@ function Login({ loginRef, close, handleRegistrClick }) {
         });
     }
   }, [dispatch]);
-
+  const { t } = useTranslation();
   return (
     <div className="login_container">
       <form onSubmit={handleSubmit} className="login_content" ref={loginRef}>
@@ -97,12 +98,12 @@ function Login({ loginRef, close, handleRegistrClick }) {
         </div>
         <div className="login_loginInput">
           <div className="loginInput_chooseAuth">
-            <p className="loginInput__login_word">Логин</p>
+            <p className="loginInput__login_word">{t("Login_1")}</p>
             <p
               className="loginInput__registr_word"
               onClick={handleRegistrClick}
             >
-              Регистрация
+              {t("Login_2")}
             </p>
           </div>
           <div className="loginInput_withIcon">
@@ -117,8 +118,8 @@ function Login({ loginRef, close, handleRegistrClick }) {
         </div>
         <div className="login_loginInput">
           <div className="loginInput_chooseAuth">
-            <p className="loginInput__login_word">Пароль</p>
-            <p className="loginInput__registr_word">Забыли пароль?</p>
+            <p className="loginInput__login_word">{t("Login_3")}</p>
+            <p className="loginInput__registr_word">{t("Login_4")}</p>
           </div>
           <div className="loginInput_withIcon">
             <img src={login_lock} alt="" className="loginInput_icon" />
@@ -139,21 +140,21 @@ function Login({ loginRef, close, handleRegistrClick }) {
               <img src={done} alt="" className="quick__exchange_img" />
             )}
           </div>
-          <p className="rememberMe_p">Запомнить меня</p>
+          <p className="rememberMe_p">{t("Login_5")}</p>
         </div>
         {error && (
-          <span className="invalidLogin">Неправильные логин или пароль</span>
+          <span className="invalidLogin">Incorrect login or password</span>
         )}
         {login.length > 0 && password.length > 0 ? (
           <section className="exchange_btn">
             <button className="quick__exchange_btn order_btn" type="submit">
-              ВОЙТИ
+              {t("Login_6")}
             </button>
           </section>
         ) : (
           <section className="exchange_btn quick__exchange_btn_nonActive">
             <button className="quick__exchange_btn order_btn" disabled>
-              ВОЙТИ
+              {t("Login_6")}
             </button>
           </section>
         )}

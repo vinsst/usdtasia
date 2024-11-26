@@ -6,6 +6,7 @@ import login_lock from "../../assets/img/login_lock.svg";
 import alternate_email from "../../assets/img/alternate_email.svg";
 
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 
 function Registration({ registrRef, close, handleLogin }) {
   const [checked, setChecked] = useState(false);
@@ -50,7 +51,7 @@ function Registration({ registrRef, close, handleLogin }) {
       alert("Passwords do not match");
     }
   };
-
+  const { t } = useTranslation();
   return (
     <div className="login_container">
       <form onSubmit={handleSubmit} className="login_content" ref={registrRef}>
@@ -60,7 +61,7 @@ function Registration({ registrRef, close, handleLogin }) {
         </div>
         <div className="login_loginInput">
           <div className="loginInput_chooseAuth">
-            <p className="loginInput__login_word">Логин</p>
+            <p className="loginInput__login_word">{t("Login_1")}</p>
           </div>
           <div className="loginInput_withIcon">
             <img src={login_profile} alt="" className="loginInput_icon" />
@@ -74,7 +75,7 @@ function Registration({ registrRef, close, handleLogin }) {
         </div>
         <div className="login_loginInput">
           <div className="loginInput_chooseAuth">
-            <p className="loginInput__login_word">Пароль</p>
+            <p className="loginInput__login_word">{t("Login_3")}</p>
           </div>
           <div className="loginInput_withIcon">
             <img src={login_lock} alt="" className="loginInput_icon" />
@@ -88,7 +89,7 @@ function Registration({ registrRef, close, handleLogin }) {
         </div>
         <div className="login_loginInput">
           <div className="loginInput_chooseAuth">
-            <p className="loginInput__login_word">Пароль еще раз</p>
+            <p className="loginInput__login_word">{t("Registration_1")}</p>
           </div>
           <div className="loginInput_withIcon">
             <img src={login_lock} alt="" className="loginInput_icon" />
@@ -125,9 +126,7 @@ function Registration({ registrRef, close, handleLogin }) {
               )}
             </div>
           </div>
-          <p className="rememberMe_p">
-            С правилами сервиса ознакомлен и согласен
-          </p>
+          <p className="rememberMe_p">{t("Registration_2")}</p>
         </div>
         {checked &&
         login.length > 0 &&
@@ -136,13 +135,13 @@ function Registration({ registrRef, close, handleLogin }) {
         email.length > 0 ? (
           <section className="exchange_btn">
             <button className="quick__exchange_btn order_btn" type="submit">
-              ЗАРЕГИСТРИРОВАТЬСЯ
+              {t("Registration_3")}
             </button>
           </section>
         ) : (
           <section className="exchange_btn quick__exchange_btn_nonActive">
             <button className="quick__exchange_btn order_btn" disabled>
-              ЗАРЕГИСТРИРОВАТЬСЯ
+              {t("Registration_3")}
             </button>
           </section>
         )}

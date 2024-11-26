@@ -6,6 +6,7 @@ import arrRight from "../assets/img/arrRight.svg";
 import { useSelector } from "react-redux";
 import axios from "axios";
 import { jwtDecode } from "jwt-decode";
+import TableStaticLine from "../components/history/TableStaticLine";
 
 function History() {
   const [transactions, setTransactions] = useState([]);
@@ -67,7 +68,6 @@ function History() {
       setCurrentPage(currentPage - 1);
     }
   };
-
   return (
     <main className="homeMain home_container container other_container">
       <div className="zayavka__h1_container">
@@ -79,14 +79,7 @@ function History() {
         </section>
         <div className="exchange_container_padding order_padding history_padding">
           <section className="history_table">
-            <div className="table__static_line">
-              <p className="table__static_line_el">ДАТА</p>
-              <p className="table__static_line_el">ОТДАЕТЕ</p>
-              <p className="table__static_line_el">СУММА</p>
-              <p className="table__static_line_el">ПОЛУЧАЕТЕ</p>
-              <p className="table__static_line_el">СУММА</p>
-              <p className="table__static_line_el">СТАТУС</p>
-            </div>
+            <TableStaticLine />
             {transactions.map((transaction, index) => {
               const isEven = index % 2 === 1;
               return (
@@ -101,7 +94,7 @@ function History() {
             {transactions.length === 0 && (
               <div className="table_zeroTransactions">
                 <p className="table_zeroTransactions_p">
-                  Вы еще не создавали транзакции
+                  You have not created any transactions yet.
                 </p>
               </div>
             )}
