@@ -2385,6 +2385,12 @@ footer {
   margin-top: 30px;
 }
 
+@media (max-width: 1000px) {
+  .pay_btn_container * {
+    width: 100%;
+  }
+}
+
 .pay__btnCancel {
   background: #23517b;
 }

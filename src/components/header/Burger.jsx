@@ -15,6 +15,7 @@ function Burger({
   handleLoginClick,
   handleRegistrClick,
   burgerContentRef,
+  close,
 }) {
   const { t } = useTranslation();
 
@@ -66,11 +67,11 @@ function Burger({
           </div>
         </div>
         <nav className="header_groupNav burgerShow_nav">
-          <Link to="/" className="groupNav_el">
+          <Link to="/" className="groupNav_el" onClick={close}>
             {t("Home")}
           </Link>
           {token ? (
-            <Link to="/history" className="groupNav_el">
+            <Link to="/history" className="groupNav_el" onClick={close}>
               {t("History")}
             </Link>
           ) : (
@@ -78,13 +79,13 @@ function Burger({
               {t("History")}
             </p>
           )}
-          <Link to="/faq" className="groupNav_el">
+          <Link to="/faq" className="groupNav_el" onClick={close}>
             {t("FAQ")}
           </Link>
-          <Link to="/terms" className="groupNav_el">
+          <Link to="/terms" className="groupNav_el" onClick={close}>
             {t("TermsOfService")}
           </Link>
-          <Link to="/support" className="groupNav_el">
+          <Link to="/support" className="groupNav_el" onClick={close}>
             {t("Support")}
           </Link>
         </nav>

@@ -28,7 +28,7 @@ function Recent() {
           (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
         );
 
-        setTransactions(sortedTransactions.slice(0, 5));
+        setTransactions(sortedTransactions.slice(0, 6));
       } catch (error) {
         console.error("Error fetching transactions:", error);
       }

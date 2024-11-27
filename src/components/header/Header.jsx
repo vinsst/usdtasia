@@ -313,6 +313,7 @@ function Header() {
           handleLoginClick={handleLoginClick}
           handleRegistrClick={handleRegistrClick}
           burgerContentRef={burgerContentRef}
+          close={handleCloseModals}
         />
       ) : null}
     </header>

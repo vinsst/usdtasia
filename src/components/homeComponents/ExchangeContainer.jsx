@@ -291,7 +291,6 @@ function ExchangeContainer() {
         {checked &&
         email.length > 0 &&
         name.length > 0 &&
-        telega.length > 0 &&
         isEmailValid &&
         num > minSend &&
         convertedValue > minGet ? (

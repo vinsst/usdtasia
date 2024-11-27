@@ -22,6 +22,7 @@ function Zayavka() {
   );
   const imgArrays = { ...fiatImageMap, ...currencyImageMap, ...currencyImages };
   const { transactionId } = useParams();
+  const [visibleBtn, setVisibleBtn] = useState(true);
   const [transactionData, setTransactionData] = useState(null);
   const [error, setError] = useState(true);
 
@@ -48,6 +49,14 @@ function Zayavka() {
 
     fetchData();
   }, [transactionId, token, loginTxt]);
+
+  useEffect(() => {
+    if (transactionData && transactionData.status === 0) {
+      setVisibleBtn(true);
+    } else {
+      setVisibleBtn(false);
+    }
+  }, [transactionData]);
 
   if (!transactionData)
     return (
@@ -175,32 +184,36 @@ ${
               {statusMap[transactionData.status]}
             </p>
           </section>
-          <section className="order_instruction">
-            <h3 className="order__instruction_h3">{t("WhatShouldBeDone")}</h3>
-            <div className="order__instruction_punkty">
-              <div className="order__instruction_punkt">
-                <div className="punkt_number">1</div>
-                <p className="punkt_p">{t("WhatShouldBeDone1")}</p>
+          {visibleBtn && (
+            <section className="order_instruction">
+              <h3 className="order__instruction_h3">{t("WhatShouldBeDone")}</h3>
+              <div className="order__instruction_punkty">
+                <div className="order__instruction_punkt">
+                  <div className="punkt_number">1</div>
+                  <p className="punkt_p">{t("WhatShouldBeDone1")}</p>
+                </div>
+                <div className="order__instruction_punkt">
+                  <div className="punkt_number">2</div>
+                  <p className="punkt_p">{t("WhatShouldBeDone2")}</p>
+                </div>
+                <div className="order__instruction_punkt">
+                  <div className="punkt_number">3</div>
+                  <p className="punkt_p">{t("WhatShouldBeDone3")}</p>
+                </div>
+                <div className="order__instruction_punkt">
+                  <div className="punkt_number">4</div>
+                  <p className="punkt_p">{t("WhatShouldBeDone4")}</p>
+                </div>
               </div>
-              <div className="order__instruction_punkt">
-                <div className="punkt_number">2</div>
-                <p className="punkt_p">{t("WhatShouldBeDone2")}</p>
-              </div>
-              <div className="order__instruction_punkt">
-                <div className="punkt_number">3</div>
-                <p className="punkt_p">{t("WhatShouldBeDone3")}</p>
-              </div>
-              <div className="order__instruction_punkt">
-                <div className="punkt_number">4</div>
-                <p className="punkt_p">{t("WhatShouldBeDone4")}</p>
-              </div>
-            </div>
-          </section>
-          <Link to={`/zayavka2/${transactionId}`} className="exchange_btn">
-            <button className="quick__exchange_btn order_btn">
-              {t("Order_pay")}
-            </button>
-          </Link>
+            </section>
+          )}
+          {visibleBtn && (
+            <Link to={`/zayavka2/${transactionId}`} className="exchange_btn">
+              <button className="quick__exchange_btn order_btn">
+                {t("Order_pay")}
+              </button>
+            </Link>
+          )}
         </div>
       </div>
     </main>

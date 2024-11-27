@@ -160,8 +160,8 @@ const resources = {
         "* REMEMBER cryptocurrency transactions are not revocable. Carefully check the address to which you send funds. We will not be able to return funds if they are sent to the wrong wallet.",
       Order2_t4:
         "* The transaction is considered confirmed after 3 confirmations for the Bitcoin network.",
-      Order2_cancel: "CANCEL APPLICATION",
-      Order2_paid: "I HAVE PAID THE APPLICATION",
+      Order2_cancel: "CANCEL ORDER",
+      Order2_paid: "ORDER PAID",
       History_1: "DATE",
       History_2: "GIVING",
       History_3: "AMOUNT",

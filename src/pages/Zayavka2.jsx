@@ -6,6 +6,7 @@ import axios from "axios";
 import time_line from "../assets/img/time_line.svg";
 import { QRCodeSVG } from "qrcode.react";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 function Zayavka2() {
   const { t } = useTranslation();
@@ -37,26 +38,6 @@ function Zayavka2() {
     fetchData();
   }, [transactionId, token, loginTxt]);
 
-  if (!transactionData)
-    return (
-      <main className="homeMain home_container container other_container">
-        <p className="loading_history">Loading...</p>
-        <p className="loading_history logInPlz_history">
-          It can be a transaction of another user
-        </p>
-      </main>
-    );
-
-  if (error)
-    return (
-      <main className="homeMain home_container container other_container">
-        <p className="loading_history">Loading...</p>
-        <p className="loading_history logInPlz_history">
-          It can be a transaction of another user
-        </p>
-      </main>
-    );
-
   const statusCancelled = async () => {
     try {
       const response = await axios.put(
@@ -86,6 +67,37 @@ function Zayavka2() {
       console.error("Error updating status:", error);
     }
   };
+
+  const navigate = useNavigate();
+
+  const handleRedirect = () => {
+    navigate(loginTxt > 0 ? "/history" : `/zayavka/${transactionId}`);
+  };
+
+  const paidFunc = () => {
+    statusPending();
+    handleRedirect();
+  };
+
+  if (!transactionData)
+    return (
+      <main className="homeMain home_container container other_container">
+        <p className="loading_history">Loading...</p>
+        <p className="loading_history logInPlz_history">
+          It can be a transaction of another user
+        </p>
+      </main>
+    );
+
+  if (error)
+    return (
+      <main className="homeMain home_container container other_container">
+        <p className="loading_history">Loading...</p>
+        <p className="loading_history logInPlz_history">
+          It can be a transaction of another user
+        </p>
+      </main>
+    );
 
   const handleCopyAddress = () => {
     const addressText = transactionData.wallet;
@@ -184,14 +196,12 @@ function Zayavka2() {
                 {t("Order2_cancel")}
               </button>
             </Link>
-            <Link to={loginTxt > 0 ? "/history" : `/zayavka/${transactionId}`}>
-              <button
-                className="quick__exchange_btn order_btn pay_btn"
-                onClick={statusPending}
-              >
-                {t("Order2_paid")}
-              </button>
-            </Link>
+            <button
+              className="quick__exchange_btn order_btn pay_btn"
+              onClick={paidFunc}
+            >
+              {t("Order2_paid")}
+            </button>
           </section>
         </div>
       </div>
