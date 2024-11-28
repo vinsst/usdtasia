@@ -74,9 +74,14 @@ function Zayavka2() {
     navigate(loginTxt > 0 ? "/history" : `/zayavka/${transactionId}`);
   };
 
-  const paidFunc = () => {
-    statusPending();
-    handleRedirect();
+  const paidFunc = async () => {
+    try {
+      await statusPending();
+      handleRedirect();
+      window.location.reload();
+    } catch (error) {
+      console.error("Error in paidFunc:", error);
+    }
   };
 
   if (!transactionData)

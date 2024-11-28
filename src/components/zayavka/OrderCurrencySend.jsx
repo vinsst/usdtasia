@@ -1,6 +1,8 @@
 import React from "react";
+import useRound from "../../hooks/useRound";
 
 function OrderCurrencySend({ fromName, value, img }) {
+  const roundedFromValue = useRound(value, fromName);
   return (
     <div className="order_currency">
       <div className="order__currency_left">
@@ -13,7 +15,7 @@ function OrderCurrencySend({ fromName, value, img }) {
       <div className="order__currency_left_txt order__curr_end">
         <p className="order__currency_left_txt_p_send">Amount:</p>
         <p className="order__currency_left_txt_p">
-          {value} {fromName}
+          {roundedFromValue} {fromName}
         </p>
       </div>
     </div>

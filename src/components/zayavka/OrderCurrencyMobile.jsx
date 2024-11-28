@@ -1,5 +1,6 @@
 import React from "react";
 import arrRight from "../../assets/img/arrRight.svg";
+import useRound from "../../hooks/useRound";
 
 function OrderCurrencyMobile({
   fromName,
@@ -9,12 +10,15 @@ function OrderCurrencyMobile({
   toImg,
   fromImg,
 }) {
+  const roundedFromValue = useRound(fromValue, fromName);
+  const roundedToValue = useRound(toValue, toName);
+
   return (
     <section className="quick__exchange_curr_mob">
       <div className="order_currency_mob">
         <div className="order_currency_mob_txt">
           <p className="order_currency_mob_txt_up">
-            {fromValue} {fromName}
+            {roundedFromValue} {fromName}
           </p>
         </div>
         <img src={fromImg} alt="" className="order_currency_mob_img" />
@@ -25,7 +29,7 @@ function OrderCurrencyMobile({
         <div className="order_currency_mob_txt">
           <p className="order_currency_mob_txt_up">
             {" "}
-            {toValue} {toName}
+            {roundedToValue} {toName}
           </p>
         </div>
       </div>
