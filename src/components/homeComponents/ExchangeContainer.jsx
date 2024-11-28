@@ -197,7 +197,9 @@ function ExchangeContainer() {
   }, [priceArray, sendName, getName]);
 
   const swapping = () => {
-    dispatch(swapSendGet());
+    setTimeout(() => {
+      dispatch(swapSendGet());
+    }, 50);
   };
 
   const { t } = useTranslation();
@@ -210,6 +212,7 @@ function ExchangeContainer() {
       <div className="exchange_container_padding">
         <section className="quick__currencyChoioce_block">
           <CurrChoose
+            key={`send-${sendName}`}
             img={imgSrcSend}
             txt={sendName}
             input={true}
@@ -230,6 +233,7 @@ function ExchangeContainer() {
           />
 
           <CurrChoose
+            key={`get-${getName}`}
             img={imgSrcGet}
             txt={getName}
             number={convertedValue.toFixed(2)}
@@ -240,7 +244,7 @@ function ExchangeContainer() {
         <section className="quick__exchange_currenct_span">
           <div className="quick__exchange_currenct_span_1 quick__exchange_currenct_span_1_1_isInMobile">
             <div className="quick__exchange_currenct_span_1_1">
-              Курс обмена: 1 {sendName} ≈{" "}
+              {t("Order_rate")} 1 {sendName} ≈{" "}
               {parseFloat(gettingPrice() * exchangePercentNum).toFixed(2)}{" "}
               {getName}
             </div>
