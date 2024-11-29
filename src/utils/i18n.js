@@ -517,6 +517,183 @@ const resources = {
       Registration_3: "登记",
     },
   },
+  uz: {
+    translation: {
+      Home: "Uy",
+      History: "Tarix",
+      FAQ: "TSS",
+      TermsOfService: "Xizmat shartlari",
+      Support: "Qo'llab-quvvatlash",
+      SignIn: "tizimga kirish",
+      SignUp: "Qo'shiq ayt",
+      LogOut: "Chiqish",
+      CardOneMain: "24/7 qo'llab-quvvatlash",
+      CardOneTxt:
+        "Bizning qo'llab-quvvatlash jamoamiz sizga kun yoki tunning istalgan vaqtida yordam berishga tayyor.",
+      CardTwoMain: "Bozordagi eng yaxshi narxlar",
+      CardTwoTxt:
+        "Biz sizga eng qulay narxlarni taklif qilish uchun 20 dan ortiq kripto savdo platformalari bilan hamkorlik qilamiz.",
+      CardThreeMain: "Tez operatsiyalar",
+      CardThreeTxt:
+        "O'rtacha tranzaksiya tezligi 5-40 daqiqani tashkil qiladi, bu sizga bozor imkoniyatlaridan tezda foydalanish imkonini beradi.",
+      HomeQuestionsBlock1: "Nima uchun USDTASIA ga ishonish kerak?",
+      HomeAnswersBlock1:
+        "USDTASIA – tezkor va anonim kriptovalyuta almashinuvi xizmati boʻlib, u 2018-yildan beri bozorda mavjud. Shu vaqt ichida millionlab foydalanuvchilar kripto birjamizdan muvaffaqiyatli foydalanishdi va bugungi kunda biz har yili 2,6 milliondan ortiq mamnun mijozlarga tezkor kriptovalyuta almashinuvi va sotib olish xizmatlarini taklif etamiz. oy. Kripto birjamiz faoliyatini yaxshilash maqsadida biz sanoatning yetakchi kompaniyalari bilan hamkorlik qildik. USDTASIA ning malakali yordamchi xodimlari istalgan vaqtda almashinuvga oid barcha savollaringizga yordam berish uchun 24/7 ishlaydi.",
+      HomeQuestionsBlock2: "Kripto valyutasini qanday almashtirish kerak",
+      HomeAnswersBlock2:
+        "1. 1.Almashtirish juftligini o'rnating<br />Almashtiriladigan juftlikni tanlang<br /><br />" +
+        "2. Hamyoningiz manzilini kiriting<br />Kripto valyutangiz yuboriladigan kriptovalyuta hamyonining manzilini kiriting<br /><br />" +
+        "3. Toʻlovni amalga oshiring<br />Oʻzingiz almashtirmoqchi boʻlgan kriptovalyutani ekranda koʻrgan manzilingizga yuboring<br /><br />" +
+        "4. Mablag'lar kelishini kuting<br />Almashtirish jarayonini kuzatib boring. Siz kriptovalyuta yoki fiat pulingizni imkon qadar tezroq olasiz",
+      HomeQuestionsBlock3: "Qanchalik tez orada kripto valyutasini olaman?",
+      HomeAnswersBlock3:
+        "O'rtacha kriptovalyuta almashinuvi jarayoni 15 dan 60 daqiqagacha davom etadi. Biroq, ma'lum bir blokcheyn bo'lsa, bu vaqt oshishi mumkin ",
+      HomeQuestionsBlock4: "Qaysi kriptovalyutalarni qo'llab-quvvatlaysiz?",
+      HomeAnswersBlock4:
+        "Foydalanuvchilar bir necha marta bosish orqali 500 dan ortiq kriptovalyutalarni eng yaxshi tranzaksiya kurslarida sotib olishlari va almashtirishlari mumkin. Kriptovalyuta bozori juda tez rivojlanayotganligi sababli, biz tez almashish, eng yaxshi kurslarda sotib olish va sotish uchun mavjud raqamli valyutalar ro'yxatini doimiy ravishda kengaytirmoqdamiz. Qulay toʻlov usulini (Visa, Mastercard, Apple Pay yoki bank oʻtkazmasi) tanlash orqali qoʻllab-quvvatlanadigan kriptovalyutalarning keng assortimentidan BTC, ETH, XRP, LTC va boshqa tangalarni almashtiring va sotib oling.",
+      HomeQuestionsBlock5:
+        "Roʻyxatda oʻz valyutamni topa olmadim. Men nima qilaman?",
+      HomeAnswersBlock5:
+        "Bizda butun dunyo bo'ylab to'lov agentlarining keng tarmog'i mavjud, agar sizning ayirboshlash summangiz 10000 USD dan ortiq bo'lsa - biz siz uchun to'lov usulini va dunyoning istalgan valyutasida eng yaxshi kursni topamiz.",
+      HomeQuestionsBlock6: "Sizda ulgurji valyuta kurslari bormi?",
+      HomeAnswersBlock6:
+        "Bizda 10 000 USD dan yuqori ayirboshlash uchun maxsus kurslar mavjud. Onlayn chatda bizga yozing. USDTASIA qo'llab-quvvatlash xizmati, shuningdek ayirboshlash xizmatining o'zi kechayu kunduz ishlaydi va sizga yordam berishdan mamnun bo'ladi.",
+      AboutOurBrand: "About our brand ",
+      AffilateProgram: "AFFILIATE dasturi",
+      PrivacyPolicy: "Maxfiylik siyosati",
+      Order: "Ilova",
+      PersonalInformation: "Shaxsiy ma'lumot",
+      Created: "Yaratilgan",
+      Pending: "Kutilmoqda",
+      Cancelled: "Bekor qilingan",
+      Success: "Muvaffaqiyat",
+      WhatShouldBeDone: "Keyinchalik nima qilish kerak:",
+      WhatShouldBeDone1:
+        "Kiritilgan ma'lumotlarni tekshiring, agar siz almashinuv bilan bog'liq muammolar mavjud bo'lsa, sizga kerak bo'ladi",
+      WhatShouldBeDone2:
+        "Ilovani to'lash tugmachasini bosing va keyingi ko'rsatmalarga amal qiling",
+      WhatShouldBeDone3: "To'lovdan so'ng operatorga to'lov haqida yozing",
+      WhatShouldBeDone4: "Hisobingizga yoki hamyoningizga kvitansiyani kuting",
+      Terms_h: "USDTAsia ning Foydalanish shartlari va Maxfiylik siyosati.",
+      Terms_allTxt:
+        "<br /> 1. Bitim taraflari.<br /><br />" +
+        " 1.1 Shartnoma, bir tomondan, bundan keyin Xizmat deb ataladigan elektron aktivlar usdtasia Internet-xizmati va boshqa tomondan, Xizmat xizmatlaridan foydalangan shaxs nomidagi Foydalanuvchi o'rtasida tuziladi. qo'l.<br /><br />" +
+        "2. Atamalar ro'yxati.<br /><br />" +
+        "2.1. Xizmat raqamli va/yoki elektron valyutalarni ayirboshlash, sotish va sotib olish bo'yicha Internet xizmatlarini taqdim etish tizimidir <br /><br />" +
+        "2.2. Foydalanuvchi - Xizmat xizmatlaridan foydalanuvchi har qanday jismoniy shaxs<br /><br />" +
+        "2.3. Ilova - Foydalanuvchining Xizmat veb-sayti orqali elektron shaklni to'ldirish orqali, Shartnomada ko'rsatilgan va ushbu Ilova parametrlarida ko'rsatilgan shartlar asosida Xizmat tomonidan taklif etilayotgan xizmatlardan biridan foydalanish niyatining ifodasidir. <br /><br />" +
+        "2.4. Elektron birlik - elektron hisob-kitob tizimlarining foydalanuvchilari bilan kelishuvidan kelib chiqadigan talablarning yoki boshqa huquqlarning ma'lum miqdorini bildiruvchi tegishli elektron hisob-kitob tizimlarining hisob birligi <br /><br />" +
+        "3. Shartnoma mavzusi.<br /><br />" +
+        "3.1. Ushbu Shartnomaning predmeti xizmatdan foydalanuvchiga elektron birliklarni almashtirish xizmatini taqdim etishdan iborat. <br /><br />" +
+        "4. Umumiy shartlar<br /><br />" +
+        "4.1.Ushbu Shartnoma Foydalanuvchi va Xizmat o'rtasidagi Xizmat tomonidan Foydalanuvchiga taqdim etiladigan xizmatlar bo'yicha munosabatlarni tartibga soladi va Xizmat va Foydalanuvchi o'rtasida ushbu mavzu bo'yicha oldingi barcha kelishuvlarni bekor qiladi<br /><br />" +
+        "4.2. Ushbu shartnoma Foydalanuvchi ilovani shakllantirishni yakunlagan paytdan boshlab kuchga kiradi<br /><br />" +
+        "4.3 Xizmat va Foydalanuvchi tomonidan taqdim etilgan ikkala tomon ham ushbu shartnomani yozma ravishda ekvivalent shartnoma sifatida qabul qiladilar.<br /><br />" +
+        "4.4. Xizmat foydalanuvchini tegishli ogohlantirmasdan, lekin shartnomaning joriy versiyasini ushbu sahifada majburiy e'lon qilgan holda bir tomonlama tartibda ushbu shartnomaga o'zgartirishlar kiritish huquqini o'zida saqlab qoladi.<br /><br />" +
+        "4.5. Ushbu shartnoma 'Kriptovalyuta depozitlari qoidalari' va 'To'lovni qaytarish qoidalari' moddalarida tavsiflangan qoidalarning bandlari va kichik bandlarini o'z ichiga oladi. <br /><br />" +
+        "5. Foydalanish shartlari <br /><br />" +
+        "5.1. Agar Xizmat hisobvarag'iga arizada ko'rsatilgan summadan farq qiladigan summa kelib tushsa, Xizmat elektron birliklarning haqiqiy tushumiga to'g'ri keladigan qayta hisob-kitobni amalga oshiradi. Xizmat ko'rsatish yo'nalishlarining aksariyati avtomatik rejimda amalga oshiriladi, qachonki Birjaning qo'lda yo'nalishi uchun ariza yaratish, operator ishlayotganiga ishonch hosil qilish kerak (aks holda, Cryptocurrency qayta ishlash operatorning ish vaqtida amalga oshiriladi). muayyan holatga qarab, birja tomonidan belgilangan tarmoq tasdiqlashlari soniga erishish Kriptovalyuta aktivlarini kreditlash uchun kerakli miqdordagi tarmoq tasdiqlashlari “Kriptovalyuta depozitlari qoidalari” maqolasida ko'rsatilgan.<br /> <br />" +
+        "5.2.Agar foydalanuvchi to'lovni qaytarishni talab qilsa, u 'To'lovni qaytarish qoidalari' maqolasida tasvirlangan qoidalarga amal qiladi.<br /><br />" +
+        "5.3. Shartnoma bekor qilingan yoki noto'g'ri to'lov olingan taqdirda, Elektron birliklar Qaytish uchun kelishilgan kundan boshlab 72 soat ichida qaytariladi.<br /><br />" +
+        "5.4. Agar Foydalanuvchidan Xizmat akkaunti bo‘yicha belgilangan muddatda Elektron birliklar olinmasa, Foydalanuvchi murojaat qilgan paytdan e’tiboran tomonlar o‘rtasidagi shartnoma bir tomondan Xizmat tomonidan shartnoma sifatida bekor qilinadi. Agar Elektron birliklar ko'rsatilgan muddatdan keyin Xizmat hisobiga o'tkazilsa, foydalanuvchining arizasi yoki Xizmat tomonidan foydalanuvchining to'lovlari tiklanganidan keyin bunday mablag'lar 'To'lovni qaytarish qoidalari'ga muvofiq qaytarilishi kerak. Foydalanuvchining roziligi bilan ariza.<br /><br />" +
+        "5.5. Hisob-kitob tizimining aybi tufayli Foydalanuvchi tomonidan ko'rsatilgan rekvizitlarga pul mablag'larini o'tkazishda kechikish bo'lsa, Xizmat pul mablag'larini uzoq vaqt davomida olish natijasida etkazilgan zarar uchun javobgar bo'lmaydi. Bunda Foydalanuvchi rozi bo'lishi kerak: barcha da'volar hisob-kitob tizimiga keltiriladi va Xizmat qonun doirasida o'z imkoniyatlaridan kelib chiqqan holda yordam ko'rsatadi" +
+        "5.6. Xizmat xizmatlaridan foydalanganda Foydalanuvchi Xizmat ushbu qoidalar doirasida olingan nom birliklari doirasida cheklangan javobgarlikka ega ekanligiga to'liq rozi bo'ladi va Foydalanuvchiga qo'shimcha kafolatlar bermaydi, shuningdek, xizmat ko'rsatmaydi. Foydalanuvchiga qo'shimcha javobgarlik Shunga ko'ra, Foydalanuvchi Xizmatga nisbatan qo'shimcha javobgarlikni o'z zimmasiga olmaydi" +
+        "5.7.Xizmat, agar foydalanuvchi Ilovani yaratishda noto'g'ri ma'lumotlarni ko'rsatgan bo'lsa, Elektron birliklar noto'g'ri o'tkazilganda etkazilgan zarar va oqibatlar uchun javobgar emas. <br /> <br />" +
+        "5.8. To'lovlar bo'yicha da'volar to'lov amalga oshirilgandan keyin 2 soatdan kechiktirmay qabul qilinadi. Xato to'lovlarni qidirish va qaytarish xizmatining narxi 500 USD. <br /> <br />" +
+        "5.8.1. Agar Mijoz birja operatsiyasi yoʻnalishi boʻyicha tanlangan bankka mos kelmaydigan moliya muassasasi tomonidan chiqarilgan bank kartasini koʻrsatsa yoki benefitsiarning koʻrsatilgan rekvizitlarida xatolikka yoʻl qoʻygan boʻlsa, bunda ushbu shartnoma shartlariga muvofiq. Ushbu nomuvofiqlik natijasida kelib chiqqan da'voni ko'rib chiqish uchun mijoz 100 AQSh dollari miqdorida yig'im to'lashi shart <br /> <br />" +
+        "5.9.Xizmatdan noqonuniy o'tkazmalar va firibgarlik harakatlari uchun foydalanish qat'iyan man etiladi. Ushbu shartnomani tuzishda Foydalanuvchi ushbu talablarni bajarishga va firibgarlik sodir etilgan taqdirda qonun bilan belgilangan jinoiy javobgarlikka tortish majburiyatini oladi. <br /> <br. />" +
+        "6.10. Xizmat birinchi so‘rov bo‘yicha Elektron bloklarni o‘tkazish to‘g‘risidagi ma’lumotlarni huquqni muhofaza qiluvchi organlarga, to‘lov tizimlari ma’muriyatiga, shuningdek, sud organlari tomonidan isbotlangan firibgarlik natijasida jabrlangan noqonuniy xatti-harakatlardan jabrlanganlarga topshirishga haqli. <br /> <br />" +
+        "5.11. Foydalanuvchi firibgarlik va pul yuvishda gumon qilingan taqdirda uning shaxsini tasdiqlovchi barcha hujjatlarni taqdim etish majburiyatini oladi <br /> <br />" +
+        "5.12. Foydalanuvchi Xizmatning ishlashiga xalaqit bermaslik va uning dasturiy va texnik vositalariga zarar bermaslik majburiyatini oladi, Foydalanuvchi esa Pudratchi shartnomaning barcha shartlari va shartlarini bajarishini ta'minlash uchun aniq ma'lumotlarni taqdim etishga majburdir. <br / > <br />" +
+        "5.13. Foydalanuvchi qonun hujjatlariga mos keladigan me'yorlarga rioya qilishi, shuningdek, aloqa oqimlarini buzmaslik va Xizmat dastur kodining normal ishlashi uchun to'siqlar yaratmasligi shart <br /> <br / >" +
+        "5.14. Foydalanuvchiga uchinchi shaxslar foydasiga ayirboshlash taqiqlanadi <br /> <br /> " +
+        "5.15. Shubhali tranzaktsiyalar sodir bo'lgan taqdirda, foydalanuvchidan tekshirish so'ralishi mumkin. <br /> <br />" +
+        "5.16.Qabul qiluvchidan komissiya olinib bank kartalaridan foydalanilganda (kredit limitidan foydalanganlik uchun, ijtimoiy to‘lovlar uchun kartalar va boshqalar) yig‘im oluvchi tomonidan to‘langan bo‘lsa, ayirboshlash xizmati bunday to‘lovlar uchun javobgarlikni o‘z zimmasiga olmaydi. to'lovlar <br /> <br />" +
+        "5.17. Fiat valyutalarida amalga oshirilgan barcha to'lovlar o'nlik kasrlardan foydalanmasdan amalga oshiriladi <br /> <br />" +
+        "6. Kutilmagan holatlar. <br /> <br />" +
+        "6.1 Agar foydalanuvchining arizasini ko'rib chiqish jarayonida Xizmat tomonidan Shartnoma shartlarini bajarmasligiga olib keladigan kutilmagan holatlar yuzaga kelsa, arizani bajarish muddatlari fors-major holatlarining tegishli davriga qoldiriladi. Xizmat muddati o'tgan majburiyatlar uchun javobgar emas /> <br />" +
+        "6.2 Agar mijoz xalqaro pul o'tkazmasini olmagan bo'lsa, biz pulni qaytarib beramiz, qaytarish muddati 10 ish kuni <br /> <br />" +
+        "7.Da'volar va nizolar. <br /> <br />" +
+        "7.1 Ushbu Shartnoma bo'yicha da'volar Xizmat tomonidan elektron pochta ko'rinishida qabul qilinadi, unda Foydalanuvchi da'voning mohiyatini ko'rsatadi yoki Foydalanuvchilarning texnik yordam chatida. <br /> <br />" +
+        "8. Majburiyatlardan voz kechish <br /> <br />" +
+        "8.1.Xizmat hech qanday sabablar ko'rsatmasdan shartnoma tuzishni va arizani bajarishni rad etishga haqli. <br /> <br />" +
+        "9. Shaxsiy ma'lumotlarni saqlash va qayta ishlash <br /> <br />" +
+        "9.1. Xizmat foydalanuvchidan shaxsiy ma'lumotlarni shifrlangan shaklda saqlash, oshkora qilmaslik, uchinchi shaxslarga bermaslik majburiyatini olgan operatsiyalarni amalga oshirish uchun qabul qiladi, 5.9-bandda ko'rsatilgan hollar bundan mustasno. ushbu Shartnomaning 5.9 <br /> <br />" +
+        "9.2. Xizmat, agar kerak bo'lsa, har qanday mavjud vositalar yordamida Foydalanuvchi haqida qo'shimcha ma'lumotlarni to'plash bo'yicha faoliyatni mustaqil ravishda amalga oshirishga haqli. Bunday faoliyat natijasida to'plangan barcha ma'lumotlar oshkor etilmaydi, uchinchi shaxslarga berilmaydi, ushbu shartnomaning 5.9-bandida tavsiflangan hollar bundan mustasno <br /> <br />" +
+        "9.3. Xizmat birja yoki Elektron hisob-kitob tizimining rasmiy yozma soʻrovi/sud qarori/oʻz tashabbusi bilan foydalanuvchining shaxsiy maʼlumotlarini va Foydalanuvchi tomonidan amalga oshirilgan tranzaktsiyalar rekvizitlarini, agar ularning maxfiy maqomi saqlanishi sharti bilan oʻtkazishga haqli. tergov zaruriyati tug'ilganda) huquqni muhofaza qilish organlariga, shuningdek ular tegishli bo'lgan Foydalanuvchiga <br /> <br />" +
+        "9.4. Foydalanuvchi to'g'risidagi barcha to'plangan ma'lumotlar, shuningdek, u tomonidan amalga oshirilgan operatsiyalar rekvizitlari Xizmat tomonidan foydalanuvchining oxirgi buyrug'i bajarilgan paytdan boshlab besh yil davomida Xizmat ma'lumotlar bazasida saqlanadi",
+      Support_q1: "Veb-sayt texnik yordamiga murojaat qilish tez va oson!",
+      Support_q2: "Diqqat! Biz hech qachon birinchi yozmaymiz!",
+      Support_q3: "Onlayn 24/7",
+      Support_a1:
+        "Bizning veb-sayt jamoasi sizning har qanday savolingizni hal qilishga yordam beradi, Clean Exchange yordami tajribali, malakali va ishonchli jamoadir. Muloqotning mos va qulay usulini tanlang va operatorlarimizga elektron pochta, telegram yoki saytdagi chat oynasida yozing! Tez va aniq javob olasiz, bu juda oson!",
+      Support_a2:
+        "Ijtimoiy tarmoqlarda ko'plab firibgarlar mavjud bo'lib, ular o'zlarini bizdek ko'rsatib, sizning pulingizni o'zlashtirishga harakat qilishadi. Shuni bilish muhimki, biz hech qachon zararli havolalarni qo'shish yoki yuborish uchun so'rovlar yubormaymiz. O'zingizni himoya qilishning ajoyib usuli bu qidiruv orqali emas, balki faqat saytdagi havola orqali bizga qo'shishdir. Aks holda, biz sizning shaxsiy ma'lumotlaringizni olish maqsadi bo'lgan firibgarlar bilan emas, balki biz bilan bog'lanishingizga kafolat bermaymiz.",
+      Support_a3:
+        "Bizning xizmatimizda siz 24/7 kun davomida qo'llab-quvvatlanasiz, hozirda bitcoin kursidan qat'iy nazar operatorlarimizga istalgan savol berishingiz mumkin yoki tarjimada texnik xatolik bor, bizning xodimlarimiz sizga doimo javob berishga tayyor! Hamma narsaga qaramay, bizning mutaxassislarimizning samaradorligi eng yuqori darajada. Va ularning soni bizga qo'llab-quvvatlash xizmatining kechayu kunduz ishini tashkil qilish imkonini beradi - tushliksiz, bayramlar va dam olish kunlarisiz.",
+      Support_a4: "Telegram - @usdtasia_support",
+      Support_a5: "support@usdtasia.com manziliga xat yuboring",
+      Support_a6: "24/7 - saytda suhbat",
+      Affilate_h: "AFFILIATE dasturi",
+      Affilate_txt1:
+        "Hamkorlik dasturi ro'yxatdan o'tgan foydalanuvchilarga yo'naltiruvchi havola orqali bizning saytimizga kelgan mijozlar almashinuvidan sho''ba royaltilarini olish imkonini beradi. Dasturda ishtirok etish juda oddiy. Siz bizning saytimizda ro'yxatdan o'tishingiz kerak. Va texnik yordamga yozing, sizga almashinuvni amalga oshirish uchun shaxsiy havola beriladi. Hamkorlar ulushi sizning tavsiyalaringiz almashinuvining umumiy miqdoriga bog'liq va jadvalga muvofiq o'zgaradi:",
+      Affilate_txt2:
+        "Hamkorlik foydasini yechib olish har kuni amalga oshiriladi. Pul olish uchun minimal miqdor - $ 10.",
+      Affilate_level: "Daraja",
+      Affilate_refs: "Referal almashinuvining umumiy miqdori ",
+      Affilate_yours: "Sizning foydangiz",
+      Home_checkboxTxt1:
+        "Saytdan foydalanish va almashinuv yaratish orqali siz rozilik bildirasiz",
+      Home_checkboxTxt2: "UsdtAsia xizmatidan foydalanish shartlari",
+      Home_checkboxTxt3: "va",
+      Home_checkboxTxt4: "Maxfiylik siyosati.",
+      Order_data: "Buyurtma sanasi:",
+      Order_rate: "Valyuta kursi:",
+      Order_statusLong: "Buyurtmani qayta ishlash holati",
+      Order_statusShort: "Holati:",
+      Order_pay: "Buyurtmani to'lang",
+      Order2_congrat:
+        "Tabriklaymiz! Siz almashinuvni deyarli yakunladingiz, uni yakunlash uchun quyidagi amallarni bajaring",
+      Order2_toFinish1: "Tranzaktsiyani yakunlash uchun",
+      Order2_toFinish2: "miqdori uchun:",
+      Order2_toFinish3: "siz quyidagilarni qilishingiz kerak bo'ladi:",
+      Order2_inst1:
+        "Quyida keltirilgan maʼlumotlardan foydalangan holda toʻlovni amalga oshiring",
+      Order2_inst2: "Tarmoqdagi tranzaksiya tasdiqlanishini kuting.",
+      Order2_inst3: "Mablag'laringiz o'tkazilishini kuting",
+      Order2_attention1: "Diqqat! ",
+      Order2_attention2:
+        "To'lashdan oldin elektron pochtangizni oching va quyida ko'rsatilgan hamyon raqamini elektron pochta xabarida olingan raqam bilan tekshiring. Hamyon raqamlari mos kelishi kerak. Agar ular mos kelmasa, to'lovni amalga oshirmang va qo'llab-quvvatlash xizmatiga murojaat qiling! Hamyon raqamini tekshirish MAJBURIY.",
+      Order2_qr1: "Valyuta:",
+      Order2_qr2: "Tafsilotlar:",
+      Order2_qr3: "Manzilni nusxalash",
+      Order2_t1:
+        "* Mamlakatga qarab, mablag'lar ofisda yoki vakil orqali beriladi.",
+      Order2_t2:
+        "* Ekvivalenti 10 000 AQSh dollaridan yuqori bo'lgan mablag'lar uchun ofisda yoki vakil ishtirokida almashtirish mumkin. Ushbu parametr individualdir va bir qator omillarga bog'liq.",
+      Order2_t3:
+        "* Esda tuting, kriptovalyuta operatsiyalari qaytarib olinmaydi. Pul yuboradigan manzilni diqqat bilan tekshiring. Agar ular noto'g'ri hamyonga yuborilgan bo'lsa, biz ularni qaytarib bera olmaymiz.",
+      Order2_t4:
+        "* Bitkoin tarmog'i uchun 3 ta tasdiqdan so'ng bitim tasdiqlangan hisoblanadi.",
+      Order2_cancel: "Buyurtmani bekor qilish",
+      Order2_paid: "Buyurtma to'lanadi",
+      History_1: "DATE",
+      History_2: "BERISH",
+      History_3: "AMOUNT",
+      History_4: "QABUL ETILADI",
+      History_5: "STATUS",
+      Login_1: "Tizimga kirish",
+      Login_2: "Ro‘yxatdan o‘tish",
+      Login_3: "Parol",
+      Login_4: "Parolingiz esdan chiqdimi?",
+      Login_5: "Meni eslaysizmi",
+      Login_6: "TIZIMGA KIRISH",
+      Registration_1: "Parolni qayta kiriting",
+      Registration_2:
+        "Men xizmat ko'rsatish shartlarini o'qib chiqdim va roziman",
+      Registration_3: "RO‘YXATDAN KETISH",
+    },
+  },
 };
 
 const savedLanguage = localStorage.getItem("selectedLanguage") || "en";
