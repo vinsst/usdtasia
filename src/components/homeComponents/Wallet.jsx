@@ -159,7 +159,7 @@ function Wallet({ isEmailValid }) {
             <input
               type="text"
               className="wallet_input"
-              placeholder="Telegram"
+              placeholder="Telegram/WhatsApp"
               onChange={handleTelegaChange}
               value={telega}
             />
