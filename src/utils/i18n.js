@@ -756,51 +756,51 @@ const resources = {
       Terms_h: "Warunki korzystania z usług i polityka prywatności USDTAsia.",
       Terms_allTxt:
         "<br /> 1. Strony Umowy.<br /><br />" +
-        " 1.1 Umowa zostaje zawarta pomiędzy usługodawcą internetowym wymiany aktywów elektronicznych usdtasia zwanym dalej Usługą, z jednej strony, a Użytkownikiem, w osobie tego, który skorzystał z usług Usługi, z drugiej strony.<br /><br />" +
-        "2. List of terms.<br /><br />" +
-        "2.1. The Service is a system of providing Internet services for exchange, sale and purchase of digital and/or electronic currencies <br /><br />" +
-        "2.2. User is any natural person who uses the services of the Service<br /><br />" +
-        "2.3. Application is an expression of the User's intention to use one of the services offered by the Service, by filling out an electronic form through the Service's website, on the terms and conditions described in the Agreement and specified in the parameters of this Application <br /><br />" +
-        "2.4. Electronic Unit is a unit of account of the respective electronic settlement systems, denoting a certain amount of claims or other rights arising from the agreement of the electronic settlement systems with their users <br /><br />" +
-        "3.Subject of the Agreement.<br /><br />" +
-        "3.1. The subject of this Agreement is to provide the Service User with the service of exchange of Electronic Units. <br /><br />" +
-        "4. General Terms and Conditions<br /><br />" +
-        "4.1.This Agreement regulates the relations between the User and the Service regarding the services provided by the Service to the User and cancels all previous agreements between the Service and the User on this subject<br /><br />" +
-        "4.2. This agreement comes into effect from the moment the User completes the formation of the Application<br /><br />" +
-        "4.3 Both parties, represented by the Service and the User, accept this agreement as an equivalent contract in writing.<br /><br />" +
-        "4.4. The Service reserves the right to unilaterally make changes to this agreement without appropriate notice to the User, but with mandatory publication of the current version of the agreement on this page.<br /><br />" +
-        "4.5. This agreement includes clauses and subclauses of the rules described in the articles “Cryptocurrency Deposit Rules” and “Refund Rules”. <br /><br />" +
-        "5. Terms of Service <br /><br />" +
-        "5.1. If the Service account receives an amount that differs from the amount specified in the application, the Service makes a recalculation that corresponds to the actual receipt of Electronic Units. Most of the directions of the Service are carried out in automatic mode, when creating an Application for manual direction of the exchange, it is necessary to make sure that the operator is working (otherwise, payment will be made during the working hours of the operator). Cryptocurrency processing takes place after reaching the number of network confirmations defined by the Exchange, depending on the specific case. The required number of network confirmations for crediting Cryptocurrency Assets is specified in the article “Rules for Cryptocurrency Deposits”.<br /> <br />" +
-        "5.2.In case the User requests a Refund, it follows the rules described in the article “Refund Rules”.<br /><br />" +
-        "5.3. In case of cancelation of the agreement or receipt of erroneous payment, the Electronic Units are returned within 72 hours from the date of agreement to the Return.<br /><br />" +
-        "5.4. If the Electronic Units are not received from the User on the Service's account within the specified period of time, from the moment of the User's application, the agreement between the parties is terminated by the Service on the one hand, as the agreement does not come into effect. If the Electronic Units are transferred to the Service's account after the specified period, such funds are subject to Refund according to the “Refund Rules” after the User's application or the Service restores the User's Application with the User's consent.<br /><br />" +
-        "5.5. If there is a delay in transferring funds to the details specified by the User due to the fault of the settlement system, the Service is not liable for damages resulting from the long receipt of funds. In this case the User should agree that all claims will be brought to the settlement system, and the Service renders its assistance to the best of its abilities within the limits of the law. <br /> <br />" +
-        "5.6. In case of using the services of the Service, the User fully agrees that the Service bears limited responsibility within the framework of these rules of the received title units and does not give additional guarantees to the User, as well as does not bear additional responsibility to the User. Accordingly, the User does not bear additional responsibility to the Service. <br /> <br />" +
-        "5.7.The Service is not liable for damages and consequences in case of erroneous transfer of Electronic Units if the User has specified incorrect details when creating the Application. <br /> <br />" +
-        "5.8. Claims for payments are accepted not later than 2 hours after the payment has been made. The cost of the service of search and refund of erroneous payments is 500 usdt. <br /> <br />" +
-        "5.8.1. If the Customer specifies a bank card issued by a financial institution that does not match the bank selected in the direction of the exchange transaction, or makes a mistake in the specified details of the beneficiary, in accordance with the terms of service provision, the Customer is obliged to pay a fee of 100 usdt for processing the claim resulting from this discrepancy <br /> <br />" +
-        "5.9.It is strictly forbidden to use the Service for illegal transfers and fraudulent actions. When entering into this agreement, the User undertakes to fulfill these requirements and in case of fraud to bear criminal liability established by law. <br /> <br />" +
-        "6.10. At the first request the Service has the right to transfer information about the transfer of Electronic Units to law enforcement authorities, administration of payment systems, as well as to victims of illegal actions who suffered as a result of fraud proven by judicial authorities <br /> <br />" +
-        "5.11. The User undertakes to present all documents proving his/her identity in case of suspicion of fraud and money laundering <br /> <br />" +
-        "5.12. The User undertakes not to interfere with the operation of the Service and not to damage its software and hardware, and the User undertakes to provide accurate information to ensure that the Contractor fulfills all the terms and conditions of the contract. <br /> <br />" +
-        "5.13. The User is obliged to comply with the norms corresponding to the legislation, as well as not to tamper with the communication flows and not to create obstacles for the normal operation of the program code of the Service <br /> <br />" +
-        "5.14. The User is prohibited from making exchanges in favor of third parties <br /> <br /> " +
-        "5.15. In case of suspicious transactions, the User may be asked for verification. <br /> <br />" +
-        "5.16.In the case of using bank cards with a fee from the recipient (for the use of credit limit, cards for social payments, etc.) the fee is paid by the recipient, the exchange service does not bear any responsibility for such fees <br /> <br />" +
-        "5.17. All payments made in fiat currencies are made without using decimal fractions <br /> <br />" +
-        "6. Contingencies. <br /> <br />" +
-        "6.1 If in the process of processing the User's Application unforeseen circumstances arise that contribute to the Service's failure to fulfill the terms and conditions of the Agreement, the deadlines for the fulfillment of the Application are postponed for the corresponding period of the duration of force majeure. The Service is not responsible for overdue obligations. Any factors that are beyond the control of the Service may be considered as unforeseen circumstances <br /> <br />" +
-        "6.2 In case the client has not received an international transfer, we will make a refund, the refund period is 10 working days <br /> <br />" +
-        "7.Claims and Disputes. <br /> <br />" +
-        "7.1 Claims under this Agreement are accepted by the Service in the form of an e-mail in which the User specifies the essence of the claim or in the technical support chat of Users. <br /> <br />" +
-        "8. Waiver of Obligations <br /> <br />" +
-        "8.1.The Service has the right to refuse to conclude the contract and fulfill the Application without giving any reasons. <br /> <br />" +
-        "9. Storage and processing of personal data <br /> <br />" +
-        "9.1. The Service accepts personal data from the User for the purpose of carrying out operations, which the Service undertakes to store in encrypted form, not to make public, not to transfer to third parties, except for the cases described in clause 5.9 of this Agreement. 5.9 of this agreement <br /> <br />" +
-        "9.2. The Service has the right, if necessary, to independently carry out activities to collect additional data about the User by any available means. All information collected as a result of such activities is not made public, is not transferred to third parties, except as described in paragraph 5.9. of this agreement <br /> <br />" +
-        "9.3. The Service has the right to transfer the User's personal data and details of transactions performed by the User, provided that their confidential status is preserved upon an official written request of the Exchange or the Electronic Settlement System / court decision / own initiative (in case of need for investigation) to law enforcement authorities, as well as to the User to whom they belong <br /> <br />" +
-        "9.4. All collected data about the User, as well as details of transactions made by him/her, shall be stored in the database of the Service for five years from the moment of execution by the Service of the last User's Order",
+        " 1.1 Umowa jest dostępna pomiędzy usługami internetowymi, które są połączone z usługami elektronicznymi, z drugiej strony.<br /><br />" +
+        "2. Lista terminów.<br /><br />" +
+        "2.1. Serwis to system świadczenia usług internetowych w zakresie wymiany, sprzedaży i zakupu walut cyfrowych i/lub elektronicznych <br /><br />" +
+        "2.2. Użytkownikiem jest każda osoba fizyczna korzystająca z usług Serwisu<br /><br />" +
+        "2.3. Zgłoszenie stanowi wyrażenie woli Użytkownika skorzystania z jednej z usług oferowanych przez Serwis, poprzez wypełnienie elektronicznego formularza za pośrednictwem strony internetowej Serwisu, na zasadach opisanych w Umowie i określonych w parametrach niniejszego Aplikacji <br /><br />" +
+        "2.4. Jednostka Elektroniczna jest jednostką rozliczeniową odpowiedniego podmiotu systemy rozliczeń elektronicznych, oznaczające określoną liczbę roszczeń lub innych praw wynikających z umowy systemów rozliczeń elektronicznych z ich użytkownikami <br /><br />" +
+        "3.Przedmiot Umowy.<br /><br / >" +
+        "3.1. Przedmiotem niniejszej Umowy jest świadczenie na rzecz Użytkownika Usługi usługi wymiany Jednostek Elektronicznych. <br /><br />" +
+        "4. Ogólne Warunki Handlowe<br /><br / >" +
+        "4.1. Niniejsza Umowa reguluje stosunki między Użytkownikiem a Serwisem w zakresie usług świadczonych przez Serwis na rzecz Użytkownika i anuluje wszystkie wcześniejsze umowy między Serwisem a Użytkownikiem w tym zakresie<br /><br />" +
+        "4.2. Niniejsza umowa wchodzi w życie z chwilą ukończenia przez Użytkownika tworzenia Aplikacji<br /><br />" +
+        "4.3 Obie strony, reprezentowane przez Serwis i Użytkownika, akceptują niniejszą umowę jako umowę równoważną na piśmie.<br /><br />" +
+        "4.4. Usługa zastrzega sobie prawo do jednostronnego wprowadzania zmian do niniejszej umowy bez odpowiedniego powiadomienia Użytkownika, ale z obowiązkową publikacją aktualnej wersji umowy na tej stronie.<br /><br />" +
+        "4.5. Niniejsza umowa obejmuje klauzule i podklauzule zasad opisanych w artykułach „Zasady depozytów kryptowalutowych' i „Zasady zwrotów'. <br /><br />" +
+        "5. Warunki korzystania z usługi <br /><br />" +
+        "5.1. Jeśli na rachunek Serwisu wpłynie kwota różniąca się od kwoty określonej we wniosku, Serwis dokona przeliczenia odpowiadającego rzeczywistemu otrzymaniu Jednostek Elektronicznych. Większość instrukcji Serwisu jest realizowana w trybie automatycznym, podczas tworzenia Wniosku o ręczne kierowanie wymianą należy upewnić się, że operator pracuje (w przeciwnym razie płatność zostanie zrealizowana w godzinach pracy operatora). Przetwarzanie kryptowaluty odbywa się po osiągnięciu liczby potwierdzeń sieciowych zdefiniowanych przez Giełdę, w zależności od konkretnego przypadku. Wymagana liczba potwierdzeń sieciowych do zaksięgowania Aktywów Kryptowalutowych jest określona w artykule „Zasady Depozytów Kryptowalutowych”.<br /> <br />" +
+        "5.2. W przypadku, gdy Użytkownik zażąda Zwrotu, postępuje zgodnie z zasadami opisanymi w artykule „Zasady Zwrotu”.<br /><br />" +
+        "5.3. W przypadku odstąpienia od umowy lub otrzymania błędnej płatności, Jednostki Elektroniczne są zwracane w ciągu 72 godzin od daty zawarcia umowy do Zwrotu.<br /><br />" +
+        "5.4. Jeżeli Jednostki Elektroniczne nie zostaną otrzymane od Użytkownika na konto Serwisu w określonym czasie, od momentu złożenia wniosku przez Użytkownika, umowa między stronami zostaje rozwiązana przez Serwis z jednej strony, gdyż umowa nie wchodzi w życie. Jeżeli Jednostki Elektroniczne zostaną przelane na konto Serwisu po określonym czasie, środki te podlegają Zwrotowi zgodnie z „Zasadami Zwrotu” po złożeniu wniosku przez Użytkownika lub Serwis przywróci Wniosek Użytkownika za zgodą Użytkownika.<br /><br />" +
+        "5.5. Jeżeli nastąpi opóźnienie w przekazaniu środków na dane wskazane przez Użytkownika z powodu winy systemu rozliczeniowego, Serwis nie ponosi odpowiedzialności za szkody wynikające z długiego otrzymania środków. W takim przypadku Użytkownik powinien wyrazić zgodę, że wszelkie roszczenia zostaną zgłoszone do systemu rozliczeniowego, a Serwis udzieli pomocy w miarę swoich możliwości w granicach prawa. <br /> <br />" +
+        "5.6. W przypadku korzystania z usług Serwisu, Użytkownik w pełni zgadza się, że Serwis ponosi ograniczoną odpowiedzialność w ramach niniejszych zasad za otrzymane jednostki tytułowe i nie udziela Użytkownikowi dodatkowych gwarancji, a także nie ponosi dodatkowej odpowiedzialności wobec Użytkownika. W związku z tym Użytkownik nie ponosi dodatkowej odpowiedzialności wobec Serwisu. <br /> <br />" +
+        "5.7. Serwis nie ponosi odpowiedzialności za szkody i konsekwencje w przypadku błędnego przekazania Jednostek Elektronicznych, jeśli Użytkownik podał nieprawidłowe dane podczas tworzenia Aplikacji. <br /> <br />" +
+        "5.8. Reklamacje dotyczące płatności przyjmowane są nie później niż 2 godziny po dokonaniu płatności. Koszt usługi wyszukiwania i zwrotu błędnych płatności wynosi 500 usdt. <br /> <br />" +
+        "5.8.1. Jeżeli Klient określi kartę bankową wydaną przez instytucję finansową, która nie odpowiada bankowi wybranemu w kierunku transakcji wymiany lub popełni błąd w podanych danych beneficjenta, zgodnie z warunkami świadczenia usług, Klient zobowiązany jest do uiszczenia opłaty w wysokości 100 USD za rozpatrzenie roszczenia wynikającego z tej rozbieżności <br /> <br />" +
+        "5.9. Surowo zabrania się korzystania z Usługi w celu dokonywania nielegalnych przelewów i działań oszukańczych. Zawierając niniejszą umowę, Użytkownik zobowiązuje się do spełnienia tych wymagań, a w przypadku oszustwa ponosić odpowiedzialność karną przewidzianą przez prawo. <br /> <br />" +
+        "6.10. Na pierwsze żądanie Usługa ma prawo przekazać informacje o przekazaniu Jednostek Elektronicznych organom ścigania, administracji systemów płatniczych, a także ofiarom działań niezgodnych z prawem, które ucierpiały w wyniku oszustwa udowodnionego przez organy sądowe <br /> <br />" +
+        "5.11. Użytkownik zobowiązuje się przedstawić wszelkie dokumenty potwierdzające jego tożsamość w przypadku podejrzenia oszustwa i prania pieniędzy <br /> <br />" +
+        "5.12. Użytkownik zobowiązuje się nie ingerować w działanie Serwisu i nie uszkadzać jego oprogramowania i sprzętu, a także zobowiązuje się do podania dokładnych informacji w celu zapewnienia, że ​​Wykonawca wypełnia wszystkie warunki umowy. <br /> <br />" +
+        "5.13. Użytkownik zobowiązany jest do przestrzegania norm odpowiadających przepisom prawa, a także do nieingerowania w przepływy komunikacyjne i nietworzenia przeszkód dla normalnego działania kodu programowego Serwisu <br /> <br />" +
+        "5.14. Użytkownikowi zabrania się dokonywania wymian na rzecz osób trzecich <br /> <br /> " +
+        "5.15. W przypadku podejrzanych transakcji Użytkownik może zostać poproszony o weryfikację. <br /> <br />" +
+        "5.16.W przypadku korzystania z kart bankowych z opłatą od odbiorcy (za wykorzystanie limitu kredytowego, kart do płatności socjalnych itp.) opłatę ponosi odbiorca, usługa wymiany nie ponosi żadnej odpowiedzialności za takie opłaty <br /> <br />" +
+        "5.17. Wszystkie płatności dokonywane w walutach fiducjarnych są dokonywane bez użycia ułamków dziesiętnych <br /> <br />" +
+        "6. Nieprzewidziane okoliczności. <br /> <br />" +
+        "6.1 Jeżeli w trakcie przetwarzania Wniosku Użytkownika wystąpią nieprzewidziane okoliczności, które przyczynią się do niespełnienia przez Serwis warunków Umowy, terminy realizacji Wniosku ulegają przesunięciu o okres odpowiadający czasowi trwania siły wyższej. Serwis nie ponosi odpowiedzialności za przeterminowane zobowiązania. Wszelkie czynniki pozostające poza kontrolą Serwisu mogą być uznane za nieprzewidziane okoliczności <br /> <br />" +
+        "6.2 W przypadku, gdy klient nie otrzymał przelewu międzynarodowego, dokonamy zwrotu, okres zwrotu wynosi 10 dni roboczych <br /> <br />" +
+        "7. Reklamacje i spory. <br /> <br />" +
+        "7.1 Reklamacje na podstawie niniejszej Umowy są przyjmowane przez Serwis w formie wiadomości e-mail, w której Użytkownik określa istotę reklamacji lub na czacie pomocy technicznej Użytkowników. <br /> <br />" +
+        "8. Zrzeczenie się zobowiązań <br /> <br />" +
+        "8.1. Serwis ma prawo odmówić zawarcia umowy i realizacji Aplikacji bez podania przyczyn. <br /> <br />" +
+        "9. Przechowywanie i przetwarzanie danych osobowych <br /> <br />" +
+        "9.1. Serwis przyjmuje dane osobowe od Użytkownika w celu przeprowadzenia operacji, które Serwis zobowiązuje się przechowywać w formie zaszyfrowanej, nie upubliczniać, nie przekazywać osobom trzecim, z wyjątkiem przypadków opisanych w punkcie 5.9 niniejszej Umowy. 5.9 niniejszej umowy <br /> <br />" +
+        "9.2. Serwis ma prawo, w razie potrzeby, samodzielnie przeprowadzić działania mające na celu zebranie dodatkowych danych o Użytkowniku za pomocą wszelkich dostępnych środków. Wszelkie informacje zebrane w wyniku takich działań nie są upubliczniane, nie są przekazywane osobom trzecim, z wyjątkiem przypadków opisanych w paragrafie 5.9. niniejszej umowy <br /> <br />" +
+        "9.3. Serwis ma prawo przekazać dane osobowe Użytkownika oraz szczegóły transakcji dokonanych przez Użytkownika, pod warunkiem zachowania ich poufności na oficjalne pisemne żądanie Giełdy lub Systemu Rozliczeń Elektronicznych/decyzję sądu/własną inicjatywę (w przypadku konieczności przeprowadzenia dochodzenia) organom ścigania, a także Użytkownikowi, do którego należą <br /> <br />" +
+        "9.4. Wszelkie zebrane dane o Użytkowniku, a także szczegóły transakcji dokonanych przez niego, będą przechowywane w bazie danych Serwisu przez okres pięciu lat od momentu wykonania przez Serwis ostatniego Zamówienia Użytkownika",
       Support_q1:
         "Skontaktowanie się z pomocą techniczną strony internetowej jest szybkie i łatwe!",
       Support_q2: "Uwaga! Nigdy nie piszemy pierwsi!",
@@ -870,6 +870,182 @@ const resources = {
       Registration_1: "Powtórz hasło",
       Registration_2: "Przeczytałem i akceptuję warunki korzystania z usługi",
       Registration_3: "REJESTR",
+    },
+  },
+  ka: {
+    translation: {
+      Home: "მთავარი",
+      History: "ისტორია",
+      FAQ: "FAQ",
+      TermsOfService: "მომსახურების პირობები",
+      Support: "მხარდაჭერა",
+      SignIn: "შესვლა",
+      SignUp: "იმღერე",
+      LogOut: "გასვლა",
+      CardOneMain: "24/7 მხარდაჭერა",
+      CardOneTxt:
+        "ჩვენი მხარდაჭერის ჯგუფი მზად არის დაგეხმაროთ დღის ან ღამის ნებისმიერ დროს.",
+      CardTwoMain: "საუკეთესო ტარიფები ბაზარზე",
+      CardTwoTxt:
+        "ჩვენ ვთანამშრომლობთ 20-ზე მეტ კრიპტო სავაჭრო პლატფორმასთან, რათა შემოგთავაზოთ ყველაზე ხელსაყრელი ტარიფები.",
+      CardThreeMain: "სწრაფი ტრანზაქციები",
+      CardThreeTxt:
+        "ტრანზაქციის საშუალო სიჩქარე 5-40 წუთია, რაც საშუალებას გაძლევთ სწრაფად გამოიყენოთ ბაზრის შესაძლებლობები.",
+      HomeQuestionsBlock1: "რატომ ენდობით USDTASIA-ს?",
+      HomeAnswersBlock1:
+        "USDTASIA არის მყისიერი და ანონიმური კრიპტოვალუტის გაცვლის სერვისი, რომელიც ბაზარზეა 2018 წლიდან. ამ დროის განმავლობაში მილიონობით მომხმარებელმა წარმატებით გამოიყენა ჩვენი კრიპტობირჟა და დღეს ჩვენ ვთავაზობთ კრიპტოვალუტის სწრაფ გაცვლას და შეძენის სერვისებს ყოველ 2.6 მილიონზე მეტ კმაყოფილ მომხმარებელს. თვე. ჩვენი კრიპტო ბირჟის ფუნქციონირების გასაუმჯობესებლად, ჩვენ ვთანამშრომლობთ ინდუსტრიის წამყვან კომპანიებთან. USDTASIA-ს კვალიფიციური დამხმარე პერსონალი ხელმისაწვდომია 24/7, რათა დაგეხმაროთ ნებისმიერ დროს გაცვლასთან დაკავშირებულ ყველა კითხვაში.",
+      HomeQuestionsBlock2: "როგორ გავცვალოთ კრიპტოვალუტა",
+      HomeAnswersBlock2:
+        "1. 1. დააყენეთ გაცვლის წყვილი<br />აირჩიეთ გასაცვლელი წყვილი<br /><br />" +
+        "2. შეიყვანეთ თქვენი საფულის მისამართი<br />შეიყვანეთ კრიპტოვალუტის საფულის მისამართი, რომელზეც გაიგზავნება თქვენი კრიპტოვალუტა<br /><br />" +
+        "3. გადაიხადეთ<br />გააგზავნეთ კრიპტოვალუტა, რომლის გადაცვლაც გსურთ, იმ მისამართზე, რომელსაც ეკრანზე ხედავთ<br /><br />" +
+        "4.დაელოდეთ თანხების მოსვლას<br /> თვალყური ადევნეთ თქვენი გაცვლის პროგრესს. თქვენ მიიღებთ თქვენს კრიპტოვალუტას ან ფიატის ფულს რაც შეიძლება მალე",
+      HomeQuestionsBlock3: "How soon will I get my cryptocurrency?",
+      HomeAnswersBlock3:
+        "On average, the cryptocurrency exchange process takes between 15 and 60 minutes. However, this time may increase if a particular blockchain ",
+      HomeQuestionsBlock4: "What cryptocurrencies do you support?",
+      HomeAnswersBlock4:
+        "Users are able to buy and exchange more than 500 cryptocurrencies in a few clicks at the best transaction rates. As the cryptocurrency market is developing very fast, we are continuously expanding the list of digital currencies available for fast exchange, buying and selling at the best rates. Exchange and buy BTC, ETH, XRP, LTC and other coins from a wide range of supported cryptocurrencies by choosing a convenient payment method (Visa, Mastercard, Apple Pay or bank transfer).",
+      HomeQuestionsBlock5:
+        "I couldn't find my currency in the list. What do I do?",
+      HomeAnswersBlock5:
+        "We have an extensive network of payout agents all over the world, if your exchange amount is more than 10000 usdt - we will find for you a way of payment and the best rate in any currency of the world",
+      HomeQuestionsBlock6: "Do you have wholesale exchange rates?",
+      HomeAnswersBlock6:
+        "We have special rates for exchange amounts over 10000 usd. Write to us in online chat. USDTASIA support service, as well as the exchange service itself works round the clock and will be glad to help you",
+      AboutOurBrand: "About our brand ",
+      AffilateProgram: "AFFILATE Program",
+      PrivacyPolicy: "Privacy Policy",
+      Order: "Application",
+      PersonalInformation: "Personal information",
+      Created: "Created",
+      Pending: "Pending",
+      Cancelled: "Cancelled",
+      Success: "Success",
+      WhatShouldBeDone: "What to do next:",
+      WhatShouldBeDone1:
+        "Verify the data entered, you will need it in case you have any issues with the exchange",
+      WhatShouldBeDone2:
+        "Click on the button pay application and follow the further instructions",
+      WhatShouldBeDone3:
+        "After payment, write to the operator about the payment",
+      WhatShouldBeDone4: "Wait for the receipt to your account or wallet",
+      Terms_h: "USDTAsia's Terms of Service and Privacy Policy.",
+      Terms_allTxt:
+        "<br /> 1. Parties to the Agreement.<br /><br />" +
+        " 1.1 The Agreement is concluded between the Internet service for exchange of Electronic Assets usdtasia hereinafter referred to as the Service, on the one hand, and the User, in the person of the one who has used the services of the Service, on the other hand.<br /><br />" +
+        "2. List of terms.<br /><br />" +
+        "2.1. The Service is a system of providing Internet services for exchange, sale and purchase of digital and/or electronic currencies <br /><br />" +
+        "2.2. User is any natural person who uses the services of the Service<br /><br />" +
+        "2.3. Application is an expression of the User's intention to use one of the services offered by the Service, by filling out an electronic form through the Service's website, on the terms and conditions described in the Agreement and specified in the parameters of this Application <br /><br />" +
+        "2.4. Electronic Unit is a unit of account of the respective electronic settlement systems, denoting a certain amount of claims or other rights arising from the agreement of the electronic settlement systems with their users <br /><br />" +
+        "3.Subject of the Agreement.<br /><br />" +
+        "3.1. The subject of this Agreement is to provide the Service User with the service of exchange of Electronic Units. <br /><br />" +
+        "4. General Terms and Conditions<br /><br />" +
+        "4.1.This Agreement regulates the relations between the User and the Service regarding the services provided by the Service to the User and cancels all previous agreements between the Service and the User on this subject<br /><br />" +
+        "4.2. This agreement comes into effect from the moment the User completes the formation of the Application<br /><br />" +
+        "4.3 Both parties, represented by the Service and the User, accept this agreement as an equivalent contract in writing.<br /><br />" +
+        "4.4. The Service reserves the right to unilaterally make changes to this agreement without appropriate notice to the User, but with mandatory publication of the current version of the agreement on this page.<br /><br />" +
+        "4.5. This agreement includes clauses and subclauses of the rules described in the articles “Cryptocurrency Deposit Rules” and “Refund Rules”. <br /><br />" +
+        "5. Terms of Service <br /><br />" +
+        "5.1. If the Service account receives an amount that differs from the amount specified in the application, the Service makes a recalculation that corresponds to the actual receipt of Electronic Units. Most of the directions of the Service are carried out in automatic mode, when creating an Application for manual direction of the exchange, it is necessary to make sure that the operator is working (otherwise, payment will be made during the working hours of the operator). Cryptocurrency processing takes place after reaching the number of network confirmations defined by the Exchange, depending on the specific case. The required number of network confirmations for crediting Cryptocurrency Assets is specified in the article “Rules for Cryptocurrency Deposits”.<br /> <br />" +
+        "5.2.In case the User requests a Refund, it follows the rules described in the article “Refund Rules”.<br /><br />" +
+        "5.3. In case of cancelation of the agreement or receipt of erroneous payment, the Electronic Units are returned within 72 hours from the date of agreement to the Return.<br /><br />" +
+        "5.4. If the Electronic Units are not received from the User on the Service's account within the specified period of time, from the moment of the User's application, the agreement between the parties is terminated by the Service on the one hand, as the agreement does not come into effect. If the Electronic Units are transferred to the Service's account after the specified period, such funds are subject to Refund according to the “Refund Rules” after the User's application or the Service restores the User's Application with the User's consent.<br /><br />" +
+        "5.5. If there is a delay in transferring funds to the details specified by the User due to the fault of the settlement system, the Service is not liable for damages resulting from the long receipt of funds. In this case the User should agree that all claims will be brought to the settlement system, and the Service renders its assistance to the best of its abilities within the limits of the law. <br /> <br />" +
+        "5.6. In case of using the services of the Service, the User fully agrees that the Service bears limited responsibility within the framework of these rules of the received title units and does not give additional guarantees to the User, as well as does not bear additional responsibility to the User. Accordingly, the User does not bear additional responsibility to the Service. <br /> <br />" +
+        "5.7.The Service is not liable for damages and consequences in case of erroneous transfer of Electronic Units if the User has specified incorrect details when creating the Application. <br /> <br />" +
+        "5.8. Claims for payments are accepted not later than 2 hours after the payment has been made. The cost of the service of search and refund of erroneous payments is 500 usdt. <br /> <br />" +
+        "5.8.1. If the Customer specifies a bank card issued by a financial institution that does not match the bank selected in the direction of the exchange transaction, or makes a mistake in the specified details of the beneficiary, in accordance with the terms of service provision, the Customer is obliged to pay a fee of 100 usdt for processing the claim resulting from this discrepancy <br /> <br />" +
+        "5.9.It is strictly forbidden to use the Service for illegal transfers and fraudulent actions. When entering into this agreement, the User undertakes to fulfill these requirements and in case of fraud to bear criminal liability established by law. <br /> <br />" +
+        "6.10. At the first request the Service has the right to transfer information about the transfer of Electronic Units to law enforcement authorities, administration of payment systems, as well as to victims of illegal actions who suffered as a result of fraud proven by judicial authorities <br /> <br />" +
+        "5.11. The User undertakes to present all documents proving his/her identity in case of suspicion of fraud and money laundering <br /> <br />" +
+        "5.12. The User undertakes not to interfere with the operation of the Service and not to damage its software and hardware, and the User undertakes to provide accurate information to ensure that the Contractor fulfills all the terms and conditions of the contract. <br /> <br />" +
+        "5.13. The User is obliged to comply with the norms corresponding to the legislation, as well as not to tamper with the communication flows and not to create obstacles for the normal operation of the program code of the Service <br /> <br />" +
+        "5.14. The User is prohibited from making exchanges in favor of third parties <br /> <br /> " +
+        "5.15. In case of suspicious transactions, the User may be asked for verification. <br /> <br />" +
+        "5.16.In the case of using bank cards with a fee from the recipient (for the use of credit limit, cards for social payments, etc.) the fee is paid by the recipient, the exchange service does not bear any responsibility for such fees <br /> <br />" +
+        "5.17. All payments made in fiat currencies are made without using decimal fractions <br /> <br />" +
+        "6. Contingencies. <br /> <br />" +
+        "6.1 If in the process of processing the User's Application unforeseen circumstances arise that contribute to the Service's failure to fulfill the terms and conditions of the Agreement, the deadlines for the fulfillment of the Application are postponed for the corresponding period of the duration of force majeure. The Service is not responsible for overdue obligations. Any factors that are beyond the control of the Service may be considered as unforeseen circumstances <br /> <br />" +
+        "6.2 In case the client has not received an international transfer, we will make a refund, the refund period is 10 working days <br /> <br />" +
+        "7.Claims and Disputes. <br /> <br />" +
+        "7.1 Claims under this Agreement are accepted by the Service in the form of an e-mail in which the User specifies the essence of the claim or in the technical support chat of Users. <br /> <br />" +
+        "8. Waiver of Obligations <br /> <br />" +
+        "8.1.The Service has the right to refuse to conclude the contract and fulfill the Application without giving any reasons. <br /> <br />" +
+        "9. Storage and processing of personal data <br /> <br />" +
+        "9.1. The Service accepts personal data from the User for the purpose of carrying out operations, which the Service undertakes to store in encrypted form, not to make public, not to transfer to third parties, except for the cases described in clause 5.9 of this Agreement. 5.9 of this agreement <br /> <br />" +
+        "9.2. The Service has the right, if necessary, to independently carry out activities to collect additional data about the User by any available means. All information collected as a result of such activities is not made public, is not transferred to third parties, except as described in paragraph 5.9. of this agreement <br /> <br />" +
+        "9.3. The Service has the right to transfer the User's personal data and details of transactions performed by the User, provided that their confidential status is preserved upon an official written request of the Exchange or the Electronic Settlement System / court decision / own initiative (in case of need for investigation) to law enforcement authorities, as well as to the User to whom they belong <br /> <br />" +
+        "9.4. All collected data about the User, as well as details of transactions made by him/her, shall be stored in the database of the Service for five years from the moment of execution by the Service of the last User's Order",
+      Support_q1: "Contacting website tech support is quick and easy!",
+      Support_q2: "Attention! We never write first!",
+      Support_q3: "Online 24/7",
+      Support_a1:
+        "Our website team will help you solve any of your questions, Clean Exchange support is experienced, qualified and reliable team. Choose a suitable and comfortable way of communication and write to our operators by e-mail, telegram or in the chat window on the site! You will get an answer quickly and clearly, it's that easy!",
+      Support_a2:
+        "In social networks there is a large number of scammers who will try to embezzle your money pretending to be us. It is important to know that we never send requests to add or send any malicious links. A great way to protect yourself would be to only add to us through a link from the site, not through a search. Otherwise, we do not guarantee that you will be communicating with us and not with scammers whose goal is to obtain your personal data.",
+      Support_a3:
+        "In our service you get support 24/7, you can ask any question to our operators, regardless of the bitcoin rate at the moment or you have a technical error in the translation, our staff is always ready to answer you! Despite everything, the efficiency of our specialists is at the highest level. And their number allows us to organize round-the-clock work of the support service - without lunches, holidays and weekends.",
+      Support_a4: "Telegram - @usdtasia_support",
+      Support_a5: "Mail support@usdtasia.com",
+      Support_a6: "24/7 - chat on the site",
+      Affilate_h: "AFFILATE Program ",
+      Affilate_txt1:
+        "The affiliate program allows registered users to earn on affiliate royalties from the exchanges of customers who came to our site through a referral link. Participation in the program is quite simple. You need to register on our site. And write to tech support, you will be given your personal link to make the exchange. Partner percentage depends on the total amount of exchanges of your referrals and will vary according to the table:",
+      Affilate_txt2:
+        "Withdrawal of affiliate profit is carried out every day. The minimum amount for withdrawal is $10.",
+      Affilate_level: "Level",
+      Affilate_refs: "Total amount of exchanges of referrals ",
+      Affilate_yours: "Your profit",
+      Home_checkboxTxt1:
+        "By using the site and creating an exchange, you agree to",
+      Home_checkboxTxt2: "UsdtAsia's Terms of Service",
+      Home_checkboxTxt3: "and",
+      Home_checkboxTxt4: "Privacy Policy.",
+      Order_data: "Order date:",
+      Order_rate: "Exchange rate:",
+      Order_statusLong: "Order processing status",
+      Order_statusShort: "Status:",
+      Order_pay: "PAY THE ORDER",
+      Order2_congrat:
+        "Congratulations! You have almost completed the exchange, to complete it, follow these steps",
+      Order2_toFinish1: "To complete the transaction",
+      Order2_toFinish2: "for the amount of:",
+      Order2_toFinish3: "you will need to do the following:",
+      Order2_inst1: "Make a payment using the details provided below",
+      Order2_inst2: "Wait for the transaction to be confirmed on the network.",
+      Order2_inst3: "Wait for your funds to be transferred",
+      Order2_attention1: "Attention! ",
+      Order2_attention2:
+        "Before paying, open your Email and check the wallet number specified below with the number received in the Email message. The wallet numbers must match. If they do not match, do not make the payment and contact support! Verification of the wallet number is MANDATORY.",
+      Order2_qr1: "Currency:",
+      Order2_qr2: "Details:",
+      Order2_qr3: "Copy address",
+      Order2_t1:
+        "* Depending on the country, funds are issued at the office or through a representative.",
+      Order2_t2:
+        "* For amounts above $10,000 in equivalent, an exchange is possible at the office or with the participation of a representative. This option is individual and depends on a number of factors.",
+      Order2_t3:
+        "* REMEMBER cryptocurrency transactions are not revocable. Carefully check the address to which you send funds. We will not be able to return funds if they are sent to the wrong wallet.",
+      Order2_t4:
+        "* The transaction is considered confirmed after 3 confirmations for the Bitcoin network.",
+      Order2_cancel: "CANCEL ORDER",
+      Order2_paid: "ORDER PAID",
+      History_1: "DATE",
+      History_2: "GIVING",
+      History_3: "AMOUNT",
+      History_4: "RECEIVING",
+      History_5: "STATUS",
+      Login_1: "Login",
+      Login_2: "Registration",
+      Login_3: "Password",
+      Login_4: "Forgot your password?",
+      Login_5: "Remember me",
+      Login_6: "LOGIN",
+      Registration_1: "Repeat password",
+      Registration_2: "I have read and agree to the terms of service",
+      Registration_3: "REGISTER",
     },
   },
 };
