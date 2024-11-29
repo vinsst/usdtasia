@@ -16,8 +16,12 @@ function HistoryLine({ createdAt, from, to, status, darker, transactionId }) {
       to={`/zayavka/${transactionId}`}
       className={`table__content_line ${darker}`}
     >
-      <p className="table__content_line_el">{formattedDate}</p>
-      <p className="table__content_line_el history__blue_font">{from.name}</p>
+      <p className="table__content_line_el table__content_line_el_date">
+        {formattedDate}
+      </p>
+      <p className="table__content_line_el history__blue_font table__content_line_el_from">
+        {from.name}
+      </p>
       <p className="table__content_line_el">{from.value.toFixed(2)}</p>
       <p className="table__content_line_el history__blue_font">{to.name}</p>
       <p className="table__content_line_el">{to.value.toFixed(2)}</p>

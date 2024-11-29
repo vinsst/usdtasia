@@ -9,7 +9,9 @@ function TableStaticLine() {
       <p className="table__static_line_el">{t("History_2")}</p>
       <p className="table__static_line_el">{t("History_3")}</p>
       <p className="table__static_line_el">{t("History_4")}</p>
-      <p className="table__static_line_el">{t("History_3")}</p>
+      <p className="table__static_line_el table__static_line_el_amount">
+        {t("History_3")}
+      </p>
       <p className="table__static_line_el">{t("History_5")}</p>
     </div>
   );

@@ -2520,7 +2520,6 @@ footer {
 .history_padding {
   padding: 15px;
   border-radius: 32px;
-  overflow-x: auto;
 }
 
 .history_table {
@@ -2529,7 +2528,6 @@ footer {
   font-size: 15px;
   font-weight: 400;
   background: #25458a26;
-  min-width: 1000px;
 }
 
 .table__static_line {
@@ -2542,6 +2540,35 @@ footer {
   background: #25458a;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
+}
+
+@media (max-width: 900px) {
+  .table__static_line {
+    font-size: 12px;
+    font-weight: 400;
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 900px) {
+  .table__content_line_el_from {
+    padding-left: 10px;
+  }
+}
+
+@media (max-width: 550px) {
+  .table__static_line {
+    font-size: 10px;
+    font-weight: 300;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+}
+
+@media (max-width: 400px) {
+  .table__static_line_el_amount {
+    padding-left: 5px;
+  }
 }
 
 .table_blue {
@@ -2559,6 +2586,24 @@ footer {
   padding: 14px 20px;
   display: flex;
   align-items: center;
+}
+
+@media (max-width: 550px) {
+  .table__content_line {
+    padding: 15px 5px;
+  }
+}
+
+@media (max-width: 550px) {
+  .table__content_line {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 550px) {
+  .table__content_line_el_date {
+    font-size: 8px;
+  }
 }
 
 .table__content_line > * {
