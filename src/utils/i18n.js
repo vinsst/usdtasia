@@ -694,6 +694,184 @@ const resources = {
       Registration_3: "RO‘YXATDAN KETISH",
     },
   },
+  pl: {
+    translation: {
+      Home: "Dom",
+      History: "Historia",
+      FAQ: "FAQ",
+      TermsOfService: "Warunki korzystania z usługi",
+      Support: "Wsparcie",
+      SignIn: "Zalogować się",
+      SignUp: "Zarejestruj się",
+      LogOut: "Wyloguj się",
+      CardOneMain: "Wsparcie 24/7",
+      CardOneTxt:
+        "Nasz zespół wsparcia jest do Państwa dyspozycji o każdej porze dnia i nocy.",
+      CardTwoMain: "Najlepsze stawki na rynku",
+      CardTwoTxt:
+        "Współpracujemy z ponad 20 platformami do handlu kryptowalutami, aby zaoferować Ci najkorzystniejsze kursy.",
+      CardThreeMain: "Szybkie transakcje",
+      CardThreeTxt:
+        "Średni czas realizacji transakcji wynosi 5–40 minut, co pozwala na szybkie wykorzystanie szans rynkowych.",
+      HomeQuestionsBlock1: "Dlaczego warto zaufać USDTASIA?",
+      HomeAnswersBlock1:
+        "USDTASIA to natychmiastowa i anonimowa usługa wymiany kryptowalut, która jest na rynku od 2018 roku. W tym czasie miliony użytkowników z powodzeniem skorzystało z naszej giełdy kryptowalut, a dziś oferujemy szybką wymianę kryptowalut i usługi zakupu ponad 2,6 milionom zadowolonych klientów każdego miesiąca. Aby usprawnić funkcjonowanie naszej giełdy kryptowalut, nawiązaliśmy współpracę z wiodącymi w branży firmami. Wykwalifikowany personel wsparcia USDTASIA jest dostępny 24/7, aby pomóc Ci w każdej chwili we wszystkich kwestiach związanych z wymianą.",
+      HomeQuestionsBlock2: "Jak wymienić kryptowalutę",
+      HomeAnswersBlock2:
+        "1. 1. Ustaw parę wymiany<br />Wybierz parę, która ma zostać wymieniona<br /><br />" +
+        "2. Wprowadź adres swojego portfela<br />Wprowadź adres portfela kryptowalutowego, na który zostanie wysłana Twoja kryptowaluta<br /><br />" +
+        "3. Dokonaj płatności<br />Wyślij kryptowalutę, którą chcesz wymienić, na adres widoczny na ekranie<br /><br />" +
+        "4. Poczekaj na dotarcie środków<br />Śledź postęp swojej wymiany. Otrzymasz swoją kryptowalutę lub pieniądze fiducjarne tak szybko, jak to możliwe",
+      HomeQuestionsBlock3: "Jak szybko otrzymam swoją kryptowalutę?",
+      HomeAnswersBlock3:
+        "Średnio proces wymiany kryptowaluty trwa od 15 do 60 minut. Jednak czas ten może się wydłużyć, jeśli konkretny blockchain ",
+      HomeQuestionsBlock4: "Jakie kryptowaluty obsługujecie?",
+      HomeAnswersBlock4:
+        "Użytkownicy mogą kupować i wymieniać ponad 500 kryptowalut za pomocą kilku kliknięć po najlepszych kursach transakcyjnych. Ponieważ rynek kryptowalut rozwija się bardzo szybko, stale poszerzamy listę walut cyfrowych dostępnych do szybkiej wymiany, kupna i sprzedaży po najlepszych kursach. Wymieniaj i kupuj BTC, ETH, XRP, LTC i inne monety z szerokiej gamy obsługiwanych kryptowalut, wybierając wygodną metodę płatności (Visa, Mastercard, Apple Pay lub przelew bankowy).",
+      HomeQuestionsBlock5:
+        "Nie mogłem znaleźć mojej waluty na liście. Co mam zrobić?",
+      HomeAnswersBlock5:
+        "Posiadamy rozległą sieć agentów wypłacających pieniądze na całym świecie. Jeśli Twoja kwota wymiany przekracza 10000 USDT - znajdziemy dla Ciebie sposób płatności i najlepszy kurs w dowolnej walucie świata.",
+      HomeQuestionsBlock6: "Czy oferują Państwo hurtowe kursy wymiany?",
+      HomeAnswersBlock6:
+        "Mamy specjalne stawki na kwoty wymiany powyżej 10000 USD. Napisz do nas na czacie online. Obsługa USDTASIA, jak i sama usługa wymiany działają całą dobę i chętnie Ci pomożemy",
+      AboutOurBrand: "O naszej marce ",
+      AffilateProgram: "Program partnerski",
+      PrivacyPolicy: "Polityka prywatności",
+      Order: "Aplikacja",
+      PersonalInformation: "Informacje osobiste",
+      Created: "Stworzony",
+      Pending: "Aż do",
+      Cancelled: "Odwołany",
+      Success: "Sukces",
+      WhatShouldBeDone: "Co robić dalej:",
+      WhatShouldBeDone1:
+        "Sprawdź wprowadzone dane, będą Ci potrzebne w razie problemów z wymianą",
+      WhatShouldBeDone2:
+        "Kliknij przycisk Zapłać wniosek i postępuj zgodnie z dalszymi instrukcjami",
+      WhatShouldBeDone3:
+        "Po dokonaniu płatności napisz do operatora o płatności",
+      WhatShouldBeDone4:
+        "Poczekaj na potwierdzenie wpłaty na swoje konto lub portfel",
+      Terms_h: "Warunki korzystania z usług i polityka prywatności USDTAsia.",
+      Terms_allTxt:
+        "<br /> 1. Strony Umowy.<br /><br />" +
+        " 1.1 Umowa zostaje zawarta pomiędzy usługodawcą internetowym wymiany aktywów elektronicznych usdtasia zwanym dalej Usługą, z jednej strony, a Użytkownikiem, w osobie tego, który skorzystał z usług Usługi, z drugiej strony.<br /><br />" +
+        "2. List of terms.<br /><br />" +
+        "2.1. The Service is a system of providing Internet services for exchange, sale and purchase of digital and/or electronic currencies <br /><br />" +
+        "2.2. User is any natural person who uses the services of the Service<br /><br />" +
+        "2.3. Application is an expression of the User's intention to use one of the services offered by the Service, by filling out an electronic form through the Service's website, on the terms and conditions described in the Agreement and specified in the parameters of this Application <br /><br />" +
+        "2.4. Electronic Unit is a unit of account of the respective electronic settlement systems, denoting a certain amount of claims or other rights arising from the agreement of the electronic settlement systems with their users <br /><br />" +
+        "3.Subject of the Agreement.<br /><br />" +
+        "3.1. The subject of this Agreement is to provide the Service User with the service of exchange of Electronic Units. <br /><br />" +
+        "4. General Terms and Conditions<br /><br />" +
+        "4.1.This Agreement regulates the relations between the User and the Service regarding the services provided by the Service to the User and cancels all previous agreements between the Service and the User on this subject<br /><br />" +
+        "4.2. This agreement comes into effect from the moment the User completes the formation of the Application<br /><br />" +
+        "4.3 Both parties, represented by the Service and the User, accept this agreement as an equivalent contract in writing.<br /><br />" +
+        "4.4. The Service reserves the right to unilaterally make changes to this agreement without appropriate notice to the User, but with mandatory publication of the current version of the agreement on this page.<br /><br />" +
+        "4.5. This agreement includes clauses and subclauses of the rules described in the articles “Cryptocurrency Deposit Rules” and “Refund Rules”. <br /><br />" +
+        "5. Terms of Service <br /><br />" +
+        "5.1. If the Service account receives an amount that differs from the amount specified in the application, the Service makes a recalculation that corresponds to the actual receipt of Electronic Units. Most of the directions of the Service are carried out in automatic mode, when creating an Application for manual direction of the exchange, it is necessary to make sure that the operator is working (otherwise, payment will be made during the working hours of the operator). Cryptocurrency processing takes place after reaching the number of network confirmations defined by the Exchange, depending on the specific case. The required number of network confirmations for crediting Cryptocurrency Assets is specified in the article “Rules for Cryptocurrency Deposits”.<br /> <br />" +
+        "5.2.In case the User requests a Refund, it follows the rules described in the article “Refund Rules”.<br /><br />" +
+        "5.3. In case of cancelation of the agreement or receipt of erroneous payment, the Electronic Units are returned within 72 hours from the date of agreement to the Return.<br /><br />" +
+        "5.4. If the Electronic Units are not received from the User on the Service's account within the specified period of time, from the moment of the User's application, the agreement between the parties is terminated by the Service on the one hand, as the agreement does not come into effect. If the Electronic Units are transferred to the Service's account after the specified period, such funds are subject to Refund according to the “Refund Rules” after the User's application or the Service restores the User's Application with the User's consent.<br /><br />" +
+        "5.5. If there is a delay in transferring funds to the details specified by the User due to the fault of the settlement system, the Service is not liable for damages resulting from the long receipt of funds. In this case the User should agree that all claims will be brought to the settlement system, and the Service renders its assistance to the best of its abilities within the limits of the law. <br /> <br />" +
+        "5.6. In case of using the services of the Service, the User fully agrees that the Service bears limited responsibility within the framework of these rules of the received title units and does not give additional guarantees to the User, as well as does not bear additional responsibility to the User. Accordingly, the User does not bear additional responsibility to the Service. <br /> <br />" +
+        "5.7.The Service is not liable for damages and consequences in case of erroneous transfer of Electronic Units if the User has specified incorrect details when creating the Application. <br /> <br />" +
+        "5.8. Claims for payments are accepted not later than 2 hours after the payment has been made. The cost of the service of search and refund of erroneous payments is 500 usdt. <br /> <br />" +
+        "5.8.1. If the Customer specifies a bank card issued by a financial institution that does not match the bank selected in the direction of the exchange transaction, or makes a mistake in the specified details of the beneficiary, in accordance with the terms of service provision, the Customer is obliged to pay a fee of 100 usdt for processing the claim resulting from this discrepancy <br /> <br />" +
+        "5.9.It is strictly forbidden to use the Service for illegal transfers and fraudulent actions. When entering into this agreement, the User undertakes to fulfill these requirements and in case of fraud to bear criminal liability established by law. <br /> <br />" +
+        "6.10. At the first request the Service has the right to transfer information about the transfer of Electronic Units to law enforcement authorities, administration of payment systems, as well as to victims of illegal actions who suffered as a result of fraud proven by judicial authorities <br /> <br />" +
+        "5.11. The User undertakes to present all documents proving his/her identity in case of suspicion of fraud and money laundering <br /> <br />" +
+        "5.12. The User undertakes not to interfere with the operation of the Service and not to damage its software and hardware, and the User undertakes to provide accurate information to ensure that the Contractor fulfills all the terms and conditions of the contract. <br /> <br />" +
+        "5.13. The User is obliged to comply with the norms corresponding to the legislation, as well as not to tamper with the communication flows and not to create obstacles for the normal operation of the program code of the Service <br /> <br />" +
+        "5.14. The User is prohibited from making exchanges in favor of third parties <br /> <br /> " +
+        "5.15. In case of suspicious transactions, the User may be asked for verification. <br /> <br />" +
+        "5.16.In the case of using bank cards with a fee from the recipient (for the use of credit limit, cards for social payments, etc.) the fee is paid by the recipient, the exchange service does not bear any responsibility for such fees <br /> <br />" +
+        "5.17. All payments made in fiat currencies are made without using decimal fractions <br /> <br />" +
+        "6. Contingencies. <br /> <br />" +
+        "6.1 If in the process of processing the User's Application unforeseen circumstances arise that contribute to the Service's failure to fulfill the terms and conditions of the Agreement, the deadlines for the fulfillment of the Application are postponed for the corresponding period of the duration of force majeure. The Service is not responsible for overdue obligations. Any factors that are beyond the control of the Service may be considered as unforeseen circumstances <br /> <br />" +
+        "6.2 In case the client has not received an international transfer, we will make a refund, the refund period is 10 working days <br /> <br />" +
+        "7.Claims and Disputes. <br /> <br />" +
+        "7.1 Claims under this Agreement are accepted by the Service in the form of an e-mail in which the User specifies the essence of the claim or in the technical support chat of Users. <br /> <br />" +
+        "8. Waiver of Obligations <br /> <br />" +
+        "8.1.The Service has the right to refuse to conclude the contract and fulfill the Application without giving any reasons. <br /> <br />" +
+        "9. Storage and processing of personal data <br /> <br />" +
+        "9.1. The Service accepts personal data from the User for the purpose of carrying out operations, which the Service undertakes to store in encrypted form, not to make public, not to transfer to third parties, except for the cases described in clause 5.9 of this Agreement. 5.9 of this agreement <br /> <br />" +
+        "9.2. The Service has the right, if necessary, to independently carry out activities to collect additional data about the User by any available means. All information collected as a result of such activities is not made public, is not transferred to third parties, except as described in paragraph 5.9. of this agreement <br /> <br />" +
+        "9.3. The Service has the right to transfer the User's personal data and details of transactions performed by the User, provided that their confidential status is preserved upon an official written request of the Exchange or the Electronic Settlement System / court decision / own initiative (in case of need for investigation) to law enforcement authorities, as well as to the User to whom they belong <br /> <br />" +
+        "9.4. All collected data about the User, as well as details of transactions made by him/her, shall be stored in the database of the Service for five years from the moment of execution by the Service of the last User's Order",
+      Support_q1:
+        "Skontaktowanie się z pomocą techniczną strony internetowej jest szybkie i łatwe!",
+      Support_q2: "Uwaga! Nigdy nie piszemy pierwsi!",
+      Support_q3: "Online 24/7",
+      Support_a1:
+        "Nasz zespół strony internetowej pomoże Ci rozwiązać każde Twoje pytanie, Clean Exchange support to doświadczony, wykwalifikowany i niezawodny zespół. Wybierz odpowiedni i wygodny sposób komunikacji i napisz do naszych operatorów e-mailem, telegramem lub w oknie czatu na stronie! Szybko i jasno otrzymasz odpowiedź, to takie proste!",
+      Support_a2:
+        "W sieciach społecznościowych jest wielu oszustów, którzy będą próbowali przywłaszczyć Twoje pieniądze, podszywając się pod nas. Ważne jest, aby wiedzieć, że nigdy nie wysyłamy próśb o dodanie lub wysyłanie złośliwych linków. Świetnym sposobem na ochronę byłoby dodawanie do nas tylko za pośrednictwem linku ze strony, a nie za pośrednictwem wyszukiwania. W przeciwnym razie nie gwarantujemy, że będziesz komunikować się z nami, a nie ze oszustami, których celem jest uzyskanie Twoich danych osobowych.",
+      Support_a3:
+        "W naszym serwisie otrzymujesz wsparcie 24/7, możesz zadać dowolne pytanie naszym operatorom, niezależnie od aktualnego kursu bitcoina lub masz błąd techniczny w tłumaczeniu, nasz personel jest zawsze gotowy, aby Ci odpowiedzieć! Mimo wszystko wydajność naszych specjalistów jest na najwyższym poziomie. A ich liczba pozwala nam zorganizować całodobową pracę serwisu wsparcia - bez przerw obiadowych, świąt i weekendów.",
+      Support_a4: "Telegram - @usdtasia_support",
+      Support_a5: "Mail support@usdtasia.com",
+      Support_a6: "24/7 - czat na stronie",
+      Affilate_h: "Program partnerski ",
+      Affilate_txt1:
+        "Program partnerski pozwala zarejestrowanym użytkownikom zarabiać na tantiemach partnerskich z wymian klientów, którzy trafili na naszą stronę za pośrednictwem linku polecającego. Udział w programie jest dość prosty. Musisz zarejestrować się na naszej stronie. I napisać do pomocy technicznej, otrzymasz swój osobisty link, aby dokonać wymiany. Procent partnera zależy od całkowitej kwoty wymian Twoich poleconych i będzie się różnić zgodnie z tabelą:",
+      Affilate_txt2:
+        "Wypłata zysku partnerskiego odbywa się codziennie. Minimalna kwota wypłaty wynosi 10 USD.",
+      Affilate_level: "Poziom",
+      Affilate_refs: "Całkowita kwota wymian poleceń ",
+      Affilate_yours: "Twój zysk",
+      Home_checkboxTxt1:
+        "Korzystając ze strony i tworząc wymianę, wyrażasz zgodę na",
+      Home_checkboxTxt2: "Warunki korzystania z usługi UsdtAsia",
+      Home_checkboxTxt3: "I",
+      Home_checkboxTxt4: "Polityka prywatności.",
+      Order_data: "Data zamówienia:",
+      Order_rate: "Kurs wymiany:",
+      Order_statusLong: "Status przetwarzania zamówienia",
+      Order_statusShort: "Status:",
+      Order_pay: "ZAPŁAĆ ZA ZAMÓWIENIE",
+      Order2_congrat:
+        "Gratulacje! Prawie ukończyłeś wymianę, aby ją ukończyć, wykonaj następujące kroki",
+      Order2_toFinish1: "Aby zakończyć transakcję",
+      Order2_toFinish2: "na kwotę:",
+      Order2_toFinish3: "będziesz musiał wykonać następujące czynności:",
+      Order2_inst1: "Dokonaj płatności korzystając z danych podanych poniżej",
+      Order2_inst2: "Poczekaj na potwierdzenie transakcji w sieci.",
+      Order2_inst3: "Poczekaj na przelanie środków",
+      Order2_attention1: "Uwaga! ",
+      Order2_attention2:
+        "Przed dokonaniem płatności otwórz swój e-mail i sprawdź numer portfela podany poniżej z numerem otrzymanym w wiadomości e-mail. Numery portfela muszą się zgadzać. Jeśli nie są zgodne, nie dokonuj płatności i skontaktuj się z pomocą techniczną! Weryfikacja numeru portfela jest OBOWIĄZKOWA.",
+      Order2_qr1: "Waluta:",
+      Order2_qr2: "Bliższe dane:",
+      Order2_qr3: "Kopiuj adres",
+      Order2_t1:
+        "* W zależności od kraju, środki są wypłacane w biurze lub za pośrednictwem przedstawiciela.",
+      Order2_t2:
+        "* W przypadku kwot powyżej 10 000 USD w ekwiwalencie, wymiana jest możliwa w biurze lub z udziałem przedstawiciela. Ta opcja jest indywidualna i zależy od szeregu czynników.",
+      Order2_t3:
+        "* PAMIĘTAJ, że transakcje kryptowalutowe nie są odwołalne. Dokładnie sprawdź adres, na który wysyłasz środki. Nie będziemy mogli zwrócić środków, jeśli zostaną wysłane do niewłaściwego portfela.",
+      Order2_t4:
+        "* Transakcję uznaje się za potwierdzoną po 3-krotnym potwierdzeniu w sieci Bitcoin.",
+      Order2_cancel: "ANULUJ ZAMÓWIENIE",
+      Order2_paid: "ZAMÓWIENIE OPŁACONE",
+      History_1: "DATA",
+      History_2: "DAJĄCY",
+      History_3: "KWOTA",
+      History_4: "OTRZYMUJĄCY",
+      History_5: "STATUS",
+      Login_1: "Login",
+      Login_2: "Rejestracja",
+      Login_3: "Hasło",
+      Login_4: "Zapomniałeś hasła?",
+      Login_5: "Zapamiętaj mnie",
+      Login_6: "LOGIN",
+      Registration_1: "Powtórz hasło",
+      Registration_2: "Przeczytałem i akceptuję warunki korzystania z usługi",
+      Registration_3: "REJESTR",
+    },
+  },
 };
 
 const savedLanguage = localStorage.getItem("selectedLanguage") || "en";
