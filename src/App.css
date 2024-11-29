@@ -2571,6 +2571,13 @@ footer {
   }
 }
 
+.table__content_line_el_value {
+  max-width: 180px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin-right: 5px;
+}
+
 .table_blue {
   color: #b2cfe0;
 }
