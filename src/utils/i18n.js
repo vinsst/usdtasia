@@ -900,152 +900,330 @@ const resources = {
         "2. შეიყვანეთ თქვენი საფულის მისამართი<br />შეიყვანეთ კრიპტოვალუტის საფულის მისამართი, რომელზეც გაიგზავნება თქვენი კრიპტოვალუტა<br /><br />" +
         "3. გადაიხადეთ<br />გააგზავნეთ კრიპტოვალუტა, რომლის გადაცვლაც გსურთ, იმ მისამართზე, რომელსაც ეკრანზე ხედავთ<br /><br />" +
         "4.დაელოდეთ თანხების მოსვლას<br /> თვალყური ადევნეთ თქვენი გაცვლის პროგრესს. თქვენ მიიღებთ თქვენს კრიპტოვალუტას ან ფიატის ფულს რაც შეიძლება მალე",
-      HomeQuestionsBlock3: "How soon will I get my cryptocurrency?",
+      HomeQuestionsBlock3: "რამდენ ხანში მივიღებ ჩემს კრიპტოვალუტას?",
       HomeAnswersBlock3:
-        "On average, the cryptocurrency exchange process takes between 15 and 60 minutes. However, this time may increase if a particular blockchain ",
-      HomeQuestionsBlock4: "What cryptocurrencies do you support?",
+        "საშუალოდ, კრიპტოვალუტის გაცვლის პროცესი 15-დან 60 წუთამდე გრძელდება. თუმცა, ეს დრო შეიძლება გაიზარდოს კონკრეტული ბლოკჩეინის შემთხვევაში ",
+      HomeQuestionsBlock4: "რა კრიპტოვალუტებს უჭერთ მხარს?",
       HomeAnswersBlock4:
-        "Users are able to buy and exchange more than 500 cryptocurrencies in a few clicks at the best transaction rates. As the cryptocurrency market is developing very fast, we are continuously expanding the list of digital currencies available for fast exchange, buying and selling at the best rates. Exchange and buy BTC, ETH, XRP, LTC and other coins from a wide range of supported cryptocurrencies by choosing a convenient payment method (Visa, Mastercard, Apple Pay or bank transfer).",
-      HomeQuestionsBlock5:
-        "I couldn't find my currency in the list. What do I do?",
+        "მომხმარებლებს შეუძლიათ შეიძინონ და გაცვალონ 500-ზე მეტი კრიპტოვალუტა რამდენიმე დაწკაპუნებით საუკეთესო ტრანზაქციის ტარიფებით. იმის გამო, რომ კრიპტოვალუტის ბაზარი ძალიან სწრაფად ვითარდება, ჩვენ მუდმივად ვაფართოებთ ციფრული ვალუტების სიას, რომლებიც ხელმისაწვდომია სწრაფი გაცვლისთვის, ყიდვა-გაყიდვისთვის საუკეთესო ტარიფებით. გაცვალეთ და შეიძინეთ BTC, ETH, XRP, LTC და სხვა მონეტები მხარდაჭერილი კრიპტოვალუტების ფართო სპექტრიდან გადახდის მოსახერხებელი მეთოდის არჩევით (Visa, Mastercard, Apple Pay ან საბანკო გადარიცხვა).",
+      HomeQuestionsBlock5: "სიაში ჩემი ვალუტა ვერ ვიპოვე. რა ვქნა?",
       HomeAnswersBlock5:
-        "We have an extensive network of payout agents all over the world, if your exchange amount is more than 10000 usdt - we will find for you a way of payment and the best rate in any currency of the world",
-      HomeQuestionsBlock6: "Do you have wholesale exchange rates?",
+        "ჩვენ გვაქვს გადახდის აგენტების ფართო ქსელი მთელ მსოფლიოში, თუ თქვენი გაცვლის თანხა 10000 აშშ დოლარზე მეტია - ჩვენ ვიპოვით თქვენთვის გადახდის საშუალებას და საუკეთესო კურსს მსოფლიოს ნებისმიერ ვალუტაში.",
+      HomeQuestionsBlock6: "გაქვთ საბითუმო კურსები?",
       HomeAnswersBlock6:
-        "We have special rates for exchange amounts over 10000 usd. Write to us in online chat. USDTASIA support service, as well as the exchange service itself works round the clock and will be glad to help you",
-      AboutOurBrand: "About our brand ",
-      AffilateProgram: "AFFILATE Program",
-      PrivacyPolicy: "Privacy Policy",
-      Order: "Application",
-      PersonalInformation: "Personal information",
-      Created: "Created",
-      Pending: "Pending",
-      Cancelled: "Cancelled",
-      Success: "Success",
-      WhatShouldBeDone: "What to do next:",
+        "ჩვენ გვაქვს სპეციალური ტარიფები 10000 დოლარზე მეტი ოდენობის გაცვლისთვის. მოგვწერეთ ონლაინ ჩატში. USDTASIA მხარდაჭერის სერვისი, ისევე როგორც თავად გაცვლის სერვისი მუშაობს მთელი საათის განმავლობაში და სიამოვნებით დაგეხმარებით",
+      AboutOurBrand: "ჩვენი ბრენდის შესახებ ",
+      AffilateProgram: "შვილობილი პროგრამა",
+      PrivacyPolicy: "კონფიდენციალურობის პოლიტიკა",
+      Order: "განაცხადი",
+      PersonalInformation: "პირადი ინფორმაცია",
+      Created: "შექმნილია",
+      Pending: "მომლოდინე",
+      Cancelled: "გაუქმდა",
+      Success: "წარმატებები",
+      WhatShouldBeDone: "რა უნდა გავაკეთოთ შემდეგ:",
       WhatShouldBeDone1:
-        "Verify the data entered, you will need it in case you have any issues with the exchange",
+        "გადაამოწმეთ შეყვანილი მონაცემები, ის დაგჭირდებათ, თუ გაცვლასთან დაკავშირებული პრობლემები გაქვთ",
       WhatShouldBeDone2:
-        "Click on the button pay application and follow the further instructions",
-      WhatShouldBeDone3:
-        "After payment, write to the operator about the payment",
-      WhatShouldBeDone4: "Wait for the receipt to your account or wallet",
-      Terms_h: "USDTAsia's Terms of Service and Privacy Policy.",
+        "დააჭირეთ ღილაკს გადახდის აპლიკაცია და მიჰყევით შემდგომ ინსტრუქციას",
+      WhatShouldBeDone3: "გადახდის შემდეგ მიწერეთ ოპერატორს გადახდის შესახებ",
+      WhatShouldBeDone4: "დაელოდეთ ქვითარს თქვენს ანგარიშზე ან საფულეზე",
+      Terms_h:
+        "USDTAsia-ს მომსახურების პირობები და კონფიდენციალურობის პოლიტიკა.",
       Terms_allTxt:
-        "<br /> 1. Parties to the Agreement.<br /><br />" +
-        " 1.1 The Agreement is concluded between the Internet service for exchange of Electronic Assets usdtasia hereinafter referred to as the Service, on the one hand, and the User, in the person of the one who has used the services of the Service, on the other hand.<br /><br />" +
-        "2. List of terms.<br /><br />" +
-        "2.1. The Service is a system of providing Internet services for exchange, sale and purchase of digital and/or electronic currencies <br /><br />" +
-        "2.2. User is any natural person who uses the services of the Service<br /><br />" +
-        "2.3. Application is an expression of the User's intention to use one of the services offered by the Service, by filling out an electronic form through the Service's website, on the terms and conditions described in the Agreement and specified in the parameters of this Application <br /><br />" +
-        "2.4. Electronic Unit is a unit of account of the respective electronic settlement systems, denoting a certain amount of claims or other rights arising from the agreement of the electronic settlement systems with their users <br /><br />" +
-        "3.Subject of the Agreement.<br /><br />" +
-        "3.1. The subject of this Agreement is to provide the Service User with the service of exchange of Electronic Units. <br /><br />" +
-        "4. General Terms and Conditions<br /><br />" +
-        "4.1.This Agreement regulates the relations between the User and the Service regarding the services provided by the Service to the User and cancels all previous agreements between the Service and the User on this subject<br /><br />" +
-        "4.2. This agreement comes into effect from the moment the User completes the formation of the Application<br /><br />" +
-        "4.3 Both parties, represented by the Service and the User, accept this agreement as an equivalent contract in writing.<br /><br />" +
-        "4.4. The Service reserves the right to unilaterally make changes to this agreement without appropriate notice to the User, but with mandatory publication of the current version of the agreement on this page.<br /><br />" +
-        "4.5. This agreement includes clauses and subclauses of the rules described in the articles “Cryptocurrency Deposit Rules” and “Refund Rules”. <br /><br />" +
-        "5. Terms of Service <br /><br />" +
-        "5.1. If the Service account receives an amount that differs from the amount specified in the application, the Service makes a recalculation that corresponds to the actual receipt of Electronic Units. Most of the directions of the Service are carried out in automatic mode, when creating an Application for manual direction of the exchange, it is necessary to make sure that the operator is working (otherwise, payment will be made during the working hours of the operator). Cryptocurrency processing takes place after reaching the number of network confirmations defined by the Exchange, depending on the specific case. The required number of network confirmations for crediting Cryptocurrency Assets is specified in the article “Rules for Cryptocurrency Deposits”.<br /> <br />" +
-        "5.2.In case the User requests a Refund, it follows the rules described in the article “Refund Rules”.<br /><br />" +
-        "5.3. In case of cancelation of the agreement or receipt of erroneous payment, the Electronic Units are returned within 72 hours from the date of agreement to the Return.<br /><br />" +
-        "5.4. If the Electronic Units are not received from the User on the Service's account within the specified period of time, from the moment of the User's application, the agreement between the parties is terminated by the Service on the one hand, as the agreement does not come into effect. If the Electronic Units are transferred to the Service's account after the specified period, such funds are subject to Refund according to the “Refund Rules” after the User's application or the Service restores the User's Application with the User's consent.<br /><br />" +
-        "5.5. If there is a delay in transferring funds to the details specified by the User due to the fault of the settlement system, the Service is not liable for damages resulting from the long receipt of funds. In this case the User should agree that all claims will be brought to the settlement system, and the Service renders its assistance to the best of its abilities within the limits of the law. <br /> <br />" +
-        "5.6. In case of using the services of the Service, the User fully agrees that the Service bears limited responsibility within the framework of these rules of the received title units and does not give additional guarantees to the User, as well as does not bear additional responsibility to the User. Accordingly, the User does not bear additional responsibility to the Service. <br /> <br />" +
-        "5.7.The Service is not liable for damages and consequences in case of erroneous transfer of Electronic Units if the User has specified incorrect details when creating the Application. <br /> <br />" +
-        "5.8. Claims for payments are accepted not later than 2 hours after the payment has been made. The cost of the service of search and refund of erroneous payments is 500 usdt. <br /> <br />" +
-        "5.8.1. If the Customer specifies a bank card issued by a financial institution that does not match the bank selected in the direction of the exchange transaction, or makes a mistake in the specified details of the beneficiary, in accordance with the terms of service provision, the Customer is obliged to pay a fee of 100 usdt for processing the claim resulting from this discrepancy <br /> <br />" +
-        "5.9.It is strictly forbidden to use the Service for illegal transfers and fraudulent actions. When entering into this agreement, the User undertakes to fulfill these requirements and in case of fraud to bear criminal liability established by law. <br /> <br />" +
-        "6.10. At the first request the Service has the right to transfer information about the transfer of Electronic Units to law enforcement authorities, administration of payment systems, as well as to victims of illegal actions who suffered as a result of fraud proven by judicial authorities <br /> <br />" +
-        "5.11. The User undertakes to present all documents proving his/her identity in case of suspicion of fraud and money laundering <br /> <br />" +
-        "5.12. The User undertakes not to interfere with the operation of the Service and not to damage its software and hardware, and the User undertakes to provide accurate information to ensure that the Contractor fulfills all the terms and conditions of the contract. <br /> <br />" +
-        "5.13. The User is obliged to comply with the norms corresponding to the legislation, as well as not to tamper with the communication flows and not to create obstacles for the normal operation of the program code of the Service <br /> <br />" +
-        "5.14. The User is prohibited from making exchanges in favor of third parties <br /> <br /> " +
-        "5.15. In case of suspicious transactions, the User may be asked for verification. <br /> <br />" +
-        "5.16.In the case of using bank cards with a fee from the recipient (for the use of credit limit, cards for social payments, etc.) the fee is paid by the recipient, the exchange service does not bear any responsibility for such fees <br /> <br />" +
-        "5.17. All payments made in fiat currencies are made without using decimal fractions <br /> <br />" +
-        "6. Contingencies. <br /> <br />" +
-        "6.1 If in the process of processing the User's Application unforeseen circumstances arise that contribute to the Service's failure to fulfill the terms and conditions of the Agreement, the deadlines for the fulfillment of the Application are postponed for the corresponding period of the duration of force majeure. The Service is not responsible for overdue obligations. Any factors that are beyond the control of the Service may be considered as unforeseen circumstances <br /> <br />" +
-        "6.2 In case the client has not received an international transfer, we will make a refund, the refund period is 10 working days <br /> <br />" +
+        "<br /> 1. ხელშეკრულების მხარეები.<br /><br />" +
+        "1.1 შეთანხმება გაფორმებულია ინტერნეტ სერვისს შორის ელექტრონული აქტივების გაცვლის usdtasia-ს შორის, შემდგომში მოხსენიებული, როგორც სერვისი, ერთი მხრივ, და მომხმარებელი, პირადად, ვინც ისარგებლა სერვისის მომსახურებით, მეორე მხრივ. ხელი.<br /><br />" +
+        "2. ტერმინების სია.<br /><br />" +
+        "2.1. სერვისი არის ციფრული და/ან ელექტრონული ვალუტების გაცვლის, გაყიდვისა და შესყიდვის ინტერნეტ სერვისების მიწოდების სისტემა <br /><br />" +
+        "2.2. მომხმარებელი არის ნებისმიერი ფიზიკური პირი, რომელიც სარგებლობს სერვისის მომსახურებით<br /><br />" +
+        "2.3 განაცხადი არის მომხმარებლის განზრახვის გამოხატვა, გამოიყენოს სერვისის მიერ შემოთავაზებული ერთ-ერთი სერვისი, სერვისის ვებსაიტის მეშვეობით ელექტრონული ფორმის შევსებით, ხელშეკრულებაში აღწერილი და ამ აპლიკაციის პარამეტრებში მითითებული პირობებით. <br /><br />" +
+        "2.4. ელექტრონული ერთეული არის შესაბამისი ელექტრონული ანგარიშსწორების სისტემების აღრიცხვის ერთეული, რომელიც აღნიშნავს გარკვეული რაოდენობის მოთხოვნას ან სხვა უფლებებს, რომლებიც წარმოიქმნება ელექტრონული ანგარიშსწორების სისტემების მომხმარებლებთან შეთანხმებიდან <br /><br />" +
+        "3.ხელშეკრულების საგანი.<br /><br />" +
+        "3.1. წინამდებარე შეთანხმების საგანია სერვისის მომხმარებლის მიწოდება ელექტრონული ერთეულების გაცვლის სერვისით. <br /><br />" +
+        "4. ზოგადი წესები და პირობები<br /><br />" +
+        "4.1. ეს შეთანხმება არეგულირებს მომხმარებელსა და სერვისს შორის ურთიერთობას სერვისის მიერ მომხმარებლისთვის მიწოდებულ სერვისებთან დაკავშირებით და აუქმებს ყველა წინა ხელშეკრულებას სერვისსა და მომხმარებელს შორის ამ თემაზე<br /><br />" +
+        "4.2. ეს შეთანხმება ძალაში შედის იმ მომენტიდან, როდესაც მომხმარებელი დაასრულებს აპლიკაციის ფორმირებას<br /><br />" +
+        "4.3 ორივე მხარე, წარმოდგენილი სერვისისა და მომხმარებლის მიერ, წერილობით ეთანხმება ამ შეთანხმებას, როგორც ექვივალენტურ კონტრაქტს.<br /><br />" +
+        "4.4. სერვისი იტოვებს უფლებას ცალმხრივად შეიტანოს ცვლილებები ამ ხელშეკრულებაში მომხმარებლის შესაბამისი შეტყობინების გარეშე, მაგრამ ამ გვერდზე ხელშეკრულების მიმდინარე ვერსიის სავალდებულო გამოქვეყნებით.<br /><br />" +
+        "4.5. ეს შეთანხმება მოიცავს სტატიებში 'კრიპტოვალუტის ანაბრის წესები' და 'ანაზღაურების წესები' აღწერილი წესების პუნქტებსა და ქვეპუნქტებს. <br /><br />" +
+        "5. მომსახურების პირობები <br /><br />" +
+        "5.1. თუ სერვისის ანგარიშზე მიღებულია თანხა, რომელიც განსხვავდება განაცხადში მითითებული თანხისგან, სერვისი აკეთებს ხელახალი გამოთვლას, რომელიც შეესაბამება ელექტრონული ერთეულების ფაქტობრივ მიღებას. სერვისის მიმართულებების უმეტესობა ხორციელდება ავტომატურ რეჟიმში, როდესაც ბირჟის ხელით მიმართულების განაცხადის შექმნით, აუცილებელია დარწმუნდეთ, რომ ოპერატორი მუშაობს (წინააღმდეგ შემთხვევაში, გადახდა განხორციელდება ოპერატორის სამუშაო საათებში). კრიპტოვალუტის დამუშავება ხდება ბირჟის მიერ განსაზღვრული ქსელის დადასტურებების რაოდენობის მიღწევის შემდეგ, კონკრეტული შემთხვევიდან გამომდინარე. />" +
+        "5.2. იმ შემთხვევაში, თუ მომხმარებელი ითხოვს თანხის დაბრუნებას, ის მიჰყვება სტატიაში 'ანაზღაურების წესები'.<br /><br />" +
+        "5.3. ხელშეკრულების გაუქმების ან არასწორი გადახდის მიღების შემთხვევაში, ელექტრონული ერთეულები ბრუნდება შეთანხმების დღიდან დაბრუნებამდე 72 საათის განმავლობაში.<br /><br />" +
+        "5.4. თუ ელექტრონული ერთეულები არ მიიღება მომხმარებლისგან სერვისის ანგარიშზე მითითებულ ვადაში, მომხმარებლის განაცხადის მომენტიდან, მხარეებს შორის ხელშეკრულება წყდება სერვისის მიერ ერთი მხრივ, როგორც ხელშეკრულება. არ შედის ძალაში, თუ ელექტრონული ერთეულები გადაირიცხება სერვისის ანგარიშზე მითითებული პერიოდის შემდეგ, ასეთი თანხები ექვემდებარება დაბრუნებას „ანაზღაურების წესების“ შესაბამისად. მომხმარებლის აპლიკაცია ან სერვისი აღადგენს მომხმარებლის აპლიკაციას მომხმარებლის თანხმობით.<br /><br />" +
+        "5.5. თუ მომხმარებლის მიერ მითითებულ დეტალებზე თანხის გადარიცხვა დაგვიანებულია ანგარიშსწორების სისტემის ბრალის გამო, სერვისი არ არის პასუხისმგებელი თანხის ხანგრძლივი მიღების შედეგად მიყენებული ზიანისთვის. ამ შემთხვევაში მომხმარებელი უნდა დაეთანხმოს, რომ ყველა პრეტენზია წარედგინება ანგარიშსწორების სისტემას და სამსახური უწევს დახმარებას თავისი შესაძლებლობების ფარგლებში, კანონის ფარგლებში" +
+        "5.6. სერვისით სარგებლობის შემთხვევაში მომხმარებელი სრულად ეთანხმება, რომ სერვისი ეკისრება შეზღუდული პასუხისმგებლობას მიღებული სათაურის ერთეულების ამ წესების ფარგლებში და არ აძლევს მომხმარებელს დამატებით გარანტიებს, ასევე არ ეკისრება დამატებითი პასუხისმგებლობა მომხმარებლის წინაშე, შესაბამისად, მომხმარებელი არ ეკისრება დამატებით პასუხისმგებლობას <br /> " +
+        "5.7. სერვისი არ არის პასუხისმგებელი ზარალზე და შედეგებზე ელექტრონული ერთეულების არასწორად გადაცემის შემთხვევაში, თუ მომხმარებელმა მიუთითა არასწორი დეტალები აპლიკაციის შექმნისას. <br /> <br />" +
+        "5.8. პრეტენზიები გადახდებზე მიიღება გადახდის განხორციელებიდან არაუგვიანეს 2 საათისა. ძებნის სერვისის ღირებულება და არასწორი გადახდების ანაზღაურება არის 500 აშშ დოლარი. <br /> <br />" +
+        "5.8.1. თუ კლიენტი მიუთითებს საფინანსო ინსტიტუტის მიერ გაცემულ საბანკო ბარათს, რომელიც არ ემთხვევა გაცვლითი ტრანზაქციის მიმართულებით შერჩეულ ბანკს, ან უშვებს შეცდომას ბენეფიციარის მითითებულ დეტალებში, პირობების შესაბამისად. მომსახურების მიწოდებისას, კლიენტი ვალდებულია გადაიხადოს საკომისიო 100 აშშ დოლარი ამ შეუსაბამობის შედეგად წარმოქმნილი საჩივრის დამუშავებისთვის <br /> <br />" +
+        "5.9. კატეგორიულად აკრძალულია სერვისის გამოყენება უკანონო გადარიცხვებისთვის და თაღლითური ქმედებებისთვის. ამ ხელშეკრულების დადებისას მომხმარებელი იღებს ვალდებულებას შეასრულოს ეს მოთხოვნები და თაღლითობის შემთხვევაში დაეკისროს კანონით დადგენილ სისხლის სამართლის პასუხისმგებლობას. <br /> <br> />" +
+        "6.10 სამსახურს უფლება აქვს პირველივე მოთხოვნით გადასცეს ინფორმაცია ელექტრონული ერთეულების გადაცემის შესახებ სამართალდამცავ ორგანოებს, გადახდის სისტემების ადმინისტრირებას, აგრეთვე სასამართლო ხელისუფლების მიერ დადასტურებული თაღლითობის შედეგად დაზარალებული უკანონო ქმედებების მსხვერპლს. <br /> <br />" +
+        "5.11. მომხმარებელი იღებს ვალდებულებას წარმოადგინოს მისი ვინაობის დამადასტურებელი ყველა დოკუმენტი თაღლითობისა და ფულის გათეთრების შესახებ ეჭვის შემთხვევაში <br /> <br />" +
+        "5.12. მომხმარებელი იღებს ვალდებულებას არ ჩაერიოს სერვისის მუშაობაში და არ დააზიანოს მისი პროგრამული უზრუნველყოფა და აპარატურა, ხოლო მომხმარებელი იღებს ვალდებულებას მიაწოდოს ზუსტი ინფორმაცია, რათა უზრუნველყოს კონტრაქტორის მიერ ხელშეკრულების ყველა პირობის შესრულება. <br / > <br />" +
+        "5.13. მომხმარებელი ვალდებულია დაიცვას კანონმდებლობის შესაბამისი ნორმები, ასევე არ შეუშალოს საკომუნიკაციო ნაკადები და არ შეუქმნას დაბრკოლებები სამსახურის პროგრამული კოდის ნორმალურ ფუნქციონირებას <br /> <br / >" +
+        "5.14. მომხმარებელს ეკრძალება გაცვლა მესამე მხარის სასარგებლოდ <br /> <br /> " +
+        "5.15. საეჭვო ტრანზაქციების შემთხვევაში, მომხმარებელს შეიძლება მოეთხოვოს გადამოწმება. <br /> <br />" +
+        "5.16. საბანკო ბარათების მიმღების საკომისიოს გამოყენების შემთხვევაში (საკრედიტო ლიმიტის, სოციალური გადახდების ბარათების გამოყენებისას და ა.შ.) საკომისიო იხდის მიმღებს, გაცვლის სერვისი არ ეკისრება პასუხისმგებლობას ასეთზე. საფასური <br /> <br />" +
+        "5.17. ფიატის ვალუტაში განხორციელებული ყველა გადახდა ხდება ათობითი წილადების გამოყენების გარეშე <br /> <br />" +
+        "6. გაუთვალისწინებელი შემთხვევები. <br /> <br />" +
+        "6.1 თუ მომხმარებლის განაცხადის დამუშავების პროცესში წარმოიქმნება გაუთვალისწინებელი გარემოებები, რომლებიც ხელს უწყობს სერვისის მიერ ხელშეკრულების პირობების შეუსრულებლობას, აპლიკაციის შესრულების ვადები გადაიდება ფორსმაჟორის ხანგრძლივობის შესაბამისი პერიოდისთვის. სერვისი არ არის პასუხისმგებელი ვადაგადაცილებულ ვალდებულებებზე." +
+        "6.2 იმ შემთხვევაში, თუ კლიენტს არ მიუღია საერთაშორისო გადარიცხვა, ჩვენ დაგიბრუნებთ თანხას, თანხის დაბრუნების ვადა არის 10 სამუშაო დღე <br /> <br />" +
         "7.Claims and Disputes. <br /> <br />" +
-        "7.1 Claims under this Agreement are accepted by the Service in the form of an e-mail in which the User specifies the essence of the claim or in the technical support chat of Users. <br /> <br />" +
-        "8. Waiver of Obligations <br /> <br />" +
-        "8.1.The Service has the right to refuse to conclude the contract and fulfill the Application without giving any reasons. <br /> <br />" +
-        "9. Storage and processing of personal data <br /> <br />" +
-        "9.1. The Service accepts personal data from the User for the purpose of carrying out operations, which the Service undertakes to store in encrypted form, not to make public, not to transfer to third parties, except for the cases described in clause 5.9 of this Agreement. 5.9 of this agreement <br /> <br />" +
-        "9.2. The Service has the right, if necessary, to independently carry out activities to collect additional data about the User by any available means. All information collected as a result of such activities is not made public, is not transferred to third parties, except as described in paragraph 5.9. of this agreement <br /> <br />" +
-        "9.3. The Service has the right to transfer the User's personal data and details of transactions performed by the User, provided that their confidential status is preserved upon an official written request of the Exchange or the Electronic Settlement System / court decision / own initiative (in case of need for investigation) to law enforcement authorities, as well as to the User to whom they belong <br /> <br />" +
-        "9.4. All collected data about the User, as well as details of transactions made by him/her, shall be stored in the database of the Service for five years from the moment of execution by the Service of the last User's Order",
-      Support_q1: "Contacting website tech support is quick and easy!",
-      Support_q2: "Attention! We never write first!",
-      Support_q3: "Online 24/7",
+        "7.1 წინამდებარე ხელშეკრულებით გათვალისწინებული პრეტენზიები მიიღება სერვისის მიერ ელფოსტის სახით, რომელშიც მომხმარებელი აზუსტებს პრეტენზიის არსს ან მომხმარებელთა ტექნიკური მხარდაჭერის ჩატში. <br /> <br />" +
+        "8. ვალდებულებაზე უარის თქმა <br /> <br />" +
+        "8.1.სამსახურს უფლება აქვს უარი თქვას ხელშეკრულების დადებაზე და განაცხადოს რაიმე მიზეზის დასახელების გარეშე. <br /> <br />" +
+        "9. პერსონალური მონაცემების შენახვა და დამუშავება <br /> <br />" +
+        "9.1 სერვისი იღებს მომხმარებლისგან პერსონალურ მონაცემებს ოპერაციების განხორციელების მიზნით, რომლებსაც სერვისი იღებს ვალდებულებას შეინახოს დაშიფრული ფორმით, არ გაასაჯაროოს, არ გადასცეს მესამე პირებს, გარდა 5.9 პუნქტში აღწერილი შემთხვევებისა. ამ ხელშეკრულების 5.9 <br /> <br />" +
+        "9.2. სერვისს უფლება აქვს, საჭიროების შემთხვევაში, დამოუკიდებლად განახორციელოს აქტივობები მომხმარებლის შესახებ დამატებითი მონაცემების შეგროვების მიზნით ნებისმიერი ხელმისაწვდომი საშუალებით. ასეთი აქტივობების შედეგად შეგროვებული ყველა ინფორმაცია არ საჯაროვდება, არ გადაეცემა მესამე პირებს, გარდა ამ შეთანხმების 5.9 პუნქტში აღწერილის <br /> <br />" +
+        "9.3. სერვისს უფლება აქვს გადასცეს მომხმარებლის პერსონალური მონაცემები და მომხმარებლის მიერ განხორციელებული ტრანზაქციების დეტალები, იმ პირობით, რომ მათი კონფიდენციალური სტატუსი დაცულია ბირჟის ან ელექტრონული ანგარიშსწორების სისტემის ოფიციალური წერილობითი მოთხოვნით / სასამართლოს გადაწყვეტილებით / საკუთარი ინიციატივით ( გამოძიების საჭიროების შემთხვევაში) სამართალდამცავ ორგანოებს, ისევე როგორც მომხმარებელს, რომელსაც ისინი ეკუთვნიან <br /> <br />" +
+        "9.4. მომხმარებლის შესახებ შეგროვებული ყველა მონაცემი, ისევე როგორც მის მიერ განხორციელებული ტრანზაქციების დეტალები, ინახება სამსახურის მონაცემთა ბაზაში ხუთი წლის განმავლობაში მომხმარებლის ბოლო შეკვეთის სამსახურის მიერ შესრულების მომენტიდან",
+      Support_q1:
+        "ვებსაიტის ტექნიკურ მხარდაჭერასთან დაკავშირება სწრაფი და მარტივია!",
+      Support_q2: "ყურადღება! ჩვენ არასდროს ვწერთ პირველს!",
+      Support_q3: "ონლაინ 24/7",
       Support_a1:
-        "Our website team will help you solve any of your questions, Clean Exchange support is experienced, qualified and reliable team. Choose a suitable and comfortable way of communication and write to our operators by e-mail, telegram or in the chat window on the site! You will get an answer quickly and clearly, it's that easy!",
+        "ჩვენი ვებ-გვერდის გუნდი დაგეხმარებათ გადაჭრას თქვენი ნებისმიერი შეკითხვა, Clean Exchange მხარდაჭერა არის გამოცდილი, კვალიფიციური და სანდო გუნდი. აირჩიეთ კომუნიკაციის შესაფერისი და კომფორტული გზა და მოგვწერეთ ჩვენს ოპერატორებს ელექტრონული ფოსტით, ტელეგრამით ან საიტის ჩატის ფანჯარაში! თქვენ მიიღებთ პასუხს სწრაფად და ნათლად, ეს ასე მარტივია!",
       Support_a2:
-        "In social networks there is a large number of scammers who will try to embezzle your money pretending to be us. It is important to know that we never send requests to add or send any malicious links. A great way to protect yourself would be to only add to us through a link from the site, not through a search. Otherwise, we do not guarantee that you will be communicating with us and not with scammers whose goal is to obtain your personal data.",
+        "სოციალურ ქსელებში არის თაღლითების დიდი რაოდენობა, რომლებიც შეეცდებიან თქვენი ფულის გაფლანგვას, თითქოს ჩვენ ვართ. მნიშვნელოვანია იცოდეთ, რომ ჩვენ არასოდეს ვაგზავნით მოთხოვნებს რაიმე მავნე ბმულების დამატების ან გაგზავნის შესახებ. საკუთარი თავის დასაცავად შესანიშნავი გზა იქნება მხოლოდ საიტის ბმულით და არა ძიების საშუალებით დაგვიმატოთ. წინააღმდეგ შემთხვევაში, ჩვენ არ გაძლევთ გარანტიას, რომ თქვენ დაუკავშირდებით ჩვენთან და არა თაღლითებთან, რომელთა მიზანია თქვენი პერსონალური მონაცემების მოპოვება.",
       Support_a3:
-        "In our service you get support 24/7, you can ask any question to our operators, regardless of the bitcoin rate at the moment or you have a technical error in the translation, our staff is always ready to answer you! Despite everything, the efficiency of our specialists is at the highest level. And their number allows us to organize round-the-clock work of the support service - without lunches, holidays and weekends.",
+        "ჩვენს სერვისში თქვენ იღებთ მხარდაჭერას 24/7, შეგიძლიათ დაუსვათ ნებისმიერი შეკითხვა ჩვენს ოპერატორებს, მიუხედავად ბიტკოინის კურსისა ამ მომენტში ან გაქვთ ტექნიკური შეცდომა თარგმანში, ჩვენი პერსონალი ყოველთვის მზად არის გიპასუხოთ! მიუხედავად ყველაფრისა, ჩვენი სპეციალისტების ეფექტურობა უმაღლეს დონეზეა. მათი რიცხვი კი საშუალებას გვაძლევს მოვაწყოთ დამხმარე სამსახურის მრგვალი საათის მუშაობა - ლანჩების, არდადეგების და შაბათ-კვირის გარეშე.",
       Support_a4: "Telegram - @usdtasia_support",
       Support_a5: "Mail support@usdtasia.com",
-      Support_a6: "24/7 - chat on the site",
-      Affilate_h: "AFFILATE Program ",
+      Support_a6: "24/7 - ჩატი საიტზე",
+      Affilate_h: "შვილობილი პროგრამა ",
       Affilate_txt1:
-        "The affiliate program allows registered users to earn on affiliate royalties from the exchanges of customers who came to our site through a referral link. Participation in the program is quite simple. You need to register on our site. And write to tech support, you will be given your personal link to make the exchange. Partner percentage depends on the total amount of exchanges of your referrals and will vary according to the table:",
+        "შვილობილი პროგრამა საშუალებას აძლევს დარეგისტრირებულ მომხმარებლებს გამოიმუშაონ შვილობილი ჰონორარი იმ მომხმარებლების გაცვლიდან, რომლებიც მოვიდნენ ჩვენს საიტზე რეფერალური ბმულის საშუალებით. პროგრამაში მონაწილეობა საკმაოდ მარტივია. თქვენ უნდა დარეგისტრირდეთ ჩვენს საიტზე. და მიწერეთ ტექნიკურ მხარდაჭერას, მოგეცემათ თქვენი პირადი ბმული გაცვლის განსახორციელებლად. პარტნიორის პროცენტი დამოკიდებულია თქვენი რეფერალების გაცვლის მთლიან რაოდენობაზე და განსხვავდება ცხრილის მიხედვით:",
       Affilate_txt2:
-        "Withdrawal of affiliate profit is carried out every day. The minimum amount for withdrawal is $10.",
-      Affilate_level: "Level",
-      Affilate_refs: "Total amount of exchanges of referrals ",
-      Affilate_yours: "Your profit",
+        "შვილობილი მოგების ამოღება ხორციელდება ყოველდღე. გატანის მინიმალური თანხაა $10.",
+      Affilate_level: "დონე",
+      Affilate_refs: "რეფერალების გაცვლის მთლიანი რაოდენობა ",
+      Affilate_yours: "შენი მოგება",
       Home_checkboxTxt1:
-        "By using the site and creating an exchange, you agree to",
-      Home_checkboxTxt2: "UsdtAsia's Terms of Service",
-      Home_checkboxTxt3: "and",
-      Home_checkboxTxt4: "Privacy Policy.",
-      Order_data: "Order date:",
-      Order_rate: "Exchange rate:",
-      Order_statusLong: "Order processing status",
-      Order_statusShort: "Status:",
-      Order_pay: "PAY THE ORDER",
+        "საიტის გამოყენებით და გაცვლის შექმნით თქვენ ეთანხმებით",
+      Home_checkboxTxt2: "UsdtAsia-ს მომსახურების პირობები",
+      Home_checkboxTxt3: "და",
+      Home_checkboxTxt4: "კონფიდენციალურობის პოლიტიკა.",
+      Order_data: "შეკვეთის თარიღი:",
+      Order_rate: "გაცვლითი კურსი:",
+      Order_statusLong: "შეკვეთის დამუშავების სტატუსი",
+      Order_statusShort: "სტატუსი:",
+      Order_pay: "გადაიხადეთ შეკვეთა",
       Order2_congrat:
-        "Congratulations! You have almost completed the exchange, to complete it, follow these steps",
-      Order2_toFinish1: "To complete the transaction",
-      Order2_toFinish2: "for the amount of:",
-      Order2_toFinish3: "you will need to do the following:",
-      Order2_inst1: "Make a payment using the details provided below",
-      Order2_inst2: "Wait for the transaction to be confirmed on the network.",
-      Order2_inst3: "Wait for your funds to be transferred",
-      Order2_attention1: "Attention! ",
+        "გილოცავ! თქვენ თითქმის დაასრულეთ გაცვლა, მის დასასრულებლად მიჰყევით ამ ნაბიჯებს",
+      Order2_toFinish1: "გარიგების დასასრულებლად",
+      Order2_toFinish2: "ოდენობით:",
+      Order2_toFinish3: "თქვენ უნდა გააკეთოთ შემდეგი:",
+      Order2_inst1:
+        "განახორციელეთ გადახდა ქვემოთ მოცემული დეტალების გამოყენებით",
+      Order2_inst2: "დაელოდეთ ტრანზაქციის დადასტურებას ქსელში.",
+      Order2_inst3: "დაელოდეთ თქვენი თანხების გადარიცხვას",
+      Order2_attention1: "ყურადღება! ",
       Order2_attention2:
-        "Before paying, open your Email and check the wallet number specified below with the number received in the Email message. The wallet numbers must match. If they do not match, do not make the payment and contact support! Verification of the wallet number is MANDATORY.",
-      Order2_qr1: "Currency:",
-      Order2_qr2: "Details:",
-      Order2_qr3: "Copy address",
+        "გადახდამდე გახსენით თქვენი ელფოსტა და შეამოწმეთ ქვემოთ მითითებული საფულის ნომერი ელფოსტის შეტყობინებაში მიღებული ნომრით. საფულის ნომრები უნდა ემთხვეოდეს. თუ ისინი არ ემთხვევა, არ განახორციელოთ გადახდა და დაუკავშირდით მხარდაჭერას! საფულის ნომრის დადასტურება სავალდებულოა.",
+      Order2_qr1: "ვალუტა:",
+      Order2_qr2: "დეტალები:",
+      Order2_qr3: "დააკოპირეთ მისამართი",
       Order2_t1:
-        "* Depending on the country, funds are issued at the office or through a representative.",
+        "* ქვეყნიდან გამომდინარე, თანხები გაიცემა ოფისში ან წარმომადგენლის მეშვეობით.",
       Order2_t2:
-        "* For amounts above $10,000 in equivalent, an exchange is possible at the office or with the participation of a representative. This option is individual and depends on a number of factors.",
+        "* 10,000 აშშ დოლარზე მეტი თანხის ექვივალენტის შემთხვევაში შესაძლებელია გაცვლა ოფისში ან წარმომადგენლის მონაწილეობით. ეს ვარიანტი ინდივიდუალურია და მრავალ ფაქტორზეა დამოკიდებული.",
       Order2_t3:
-        "* REMEMBER cryptocurrency transactions are not revocable. Carefully check the address to which you send funds. We will not be able to return funds if they are sent to the wrong wallet.",
+        "* დაიმახსოვრე კრიპტოვალუტის ტრანზაქციები არ არის გაუქმება. ყურადღებით შეამოწმეთ მისამართი, რომელზეც აგზავნით თანხებს. ჩვენ ვერ შევძლებთ თანხების დაბრუნებას, თუ ისინი არასწორ საფულეში გაიგზავნება.",
       Order2_t4:
-        "* The transaction is considered confirmed after 3 confirmations for the Bitcoin network.",
-      Order2_cancel: "CANCEL ORDER",
-      Order2_paid: "ORDER PAID",
-      History_1: "DATE",
-      History_2: "GIVING",
-      History_3: "AMOUNT",
-      History_4: "RECEIVING",
-      History_5: "STATUS",
-      Login_1: "Login",
-      Login_2: "Registration",
-      Login_3: "Password",
-      Login_4: "Forgot your password?",
-      Login_5: "Remember me",
-      Login_6: "LOGIN",
-      Registration_1: "Repeat password",
-      Registration_2: "I have read and agree to the terms of service",
-      Registration_3: "REGISTER",
+        "* ტრანზაქცია დადასტურებულად ითვლება ბიტკოინის ქსელისთვის 3 დადასტურების შემდეგ.",
+      Order2_cancel: "შეკვეთის გაუქმება",
+      Order2_paid: "შეკვეთა გადახდილია",
+      History_1: "თარიღი",
+      History_2: "მიცემა",
+      History_3: "თანხა",
+      History_4: "მიღება",
+      History_5: "სტატუსი",
+      Login_1: "შესვლა",
+      Login_2: "რეგისტრაცია",
+      Login_3: "პაროლი",
+      Login_4: "დაგავიწყდათ პაროლი?",
+      Login_5: "დაიმახსოვრე",
+      Login_6: "შესვლა",
+      Registration_1: "გაიმეორეთ პაროლი",
+      Registration_2: "მე წავიკითხე და ვეთანხმები მომსახურების პირობებს",
+      Registration_3: "რეგისტრაცია",
+    },
+  },
+  ro: {
+    translation: {
+      Home: "Acasă",
+      History: "Istorie",
+      FAQ: "FAQ",
+      TermsOfService: "Termeni și condiții",
+      Support: "Sprijin",
+      SignIn: "Conectare",
+      SignUp: "Cântați",
+      LogOut: "Deconectați-vă",
+      CardOneMain: "Asistență 24/7",
+      CardOneTxt:
+        "Echipa noastră de asistență este disponibilă pentru a vă ajuta la orice oră din zi sau din noapte.",
+      CardTwoMain: "Cele mai bune tarife de pe piata",
+      CardTwoTxt:
+        "Cooperăm cu peste 20 de platforme de tranzacționare cripto pentru a vă oferi cele mai avantajoase rate.",
+      CardThreeMain: "Tranzacții rapide",
+      CardThreeTxt:
+        "Viteza medie a tranzacțiilor este de 5-40 de minute, permițându-vă să valorificați rapid oportunitățile de pe piață.",
+      HomeQuestionsBlock1: "De ce să aveți încredere în USDTASIA?",
+      HomeAnswersBlock1:
+        "USDTASIA este un serviciu de schimb instantaneu și anonim de criptomonede care se află pe piață din 2018. În acest timp, milioane de utilizatori au folosit cu succes schimbul nostru de criptomonede, iar astăzi oferim servicii rapide de schimb și cumpărare de criptomonede pentru mai mult de 2,6 milioane de clienți mulțumiți fiecare. lună. Pentru a îmbunătăți funcționarea schimbului nostru de cripto, am colaborat cu companii lidere din industrie. Personalul de asistență calificat al USDTASIA este disponibil 24/7 pentru a vă ajuta în orice moment cu toate întrebările legate de schimb.",
+      HomeQuestionsBlock2: "Cum se schimbă criptomonede",
+      HomeAnswersBlock2:
+        "1. 1.Setați perechea de schimb<br />Selectați perechea de schimbat<br /><br />" +
+        "2. Introduceți adresa portofelului dvs.<br />Introduceți adresa portofelului cu criptomonede la care va fi trimisă criptomoneda dvs.<br /><br />" +
+        "3. Efectuați o plată<br />Trimiteți criptomoneda pe care doriți să o schimbați la adresa pe care o vedeți pe ecran<br /><br />" +
+        "4. Așteptați să ajungă fondurile<br />Urmăriți progresul schimbului dvs. Veți primi criptomoneda sau banii fiat cât mai curând posibil",
+      HomeQuestionsBlock3: "Cât de curând îmi voi primi criptomoneda?",
+      HomeAnswersBlock3:
+        "În medie, procesul de schimb de criptomonede durează între 15 și 60 de minute. Cu toate acestea, acest timp poate crește dacă un anumit blockchain ",
+      HomeQuestionsBlock4: "Ce criptomonede suportați?",
+      HomeAnswersBlock4:
+        "Utilizatorii pot cumpăra și schimba peste 500 de criptomonede în câteva clicuri la cele mai bune rate de tranzacție. Deoarece piața criptomonedelor se dezvoltă foarte rapid, extindem în mod continuu lista de monede digitale disponibile pentru schimb rapid, cumpărare și vânzare la cele mai bune rate. Schimbați și cumpărați monede BTC, ETH, XRP, LTC și alte monede dintr-o gamă largă de criptomonede acceptate, alegând o metodă de plată convenabilă (Visa, Mastercard, Apple Pay sau transfer bancar).",
+      HomeQuestionsBlock5:
+        "Nu am putut găsi moneda mea în listă. Ce trebuie să fac?",
+      HomeAnswersBlock5:
+        "Avem o rețea extinsă de agenți de plată în toată lumea, dacă suma dvs. de schimb este mai mare de 10000 USD - vom găsi pentru dvs. o modalitate de plată și cea mai bună rată în orice valută a lumii",
+      HomeQuestionsBlock6: "Aveți cursuri de schimb angro?",
+      HomeAnswersBlock6:
+        "Avem tarife speciale pentru sume de schimb peste 10000 USD. Scrie-ne pe chat online. Serviciul de asistență USDTASIA, precum și serviciul de schimb în sine funcționează non-stop și vă vor ajuta cu plăcere",
+      AboutOurBrand: "Despre brandul nostru ",
+      AffilateProgram: "Programul Afiliat",
+      PrivacyPolicy: "Politica de confidențialitate",
+      Order: "Aplicație",
+      PersonalInformation: "Informații personale",
+      Created: "Creat",
+      Pending: "În așteptare",
+      Cancelled: "Anulat",
+      Success: "Succes",
+      WhatShouldBeDone: "Ce să faci în continuare:",
+      WhatShouldBeDone1:
+        "Verificați datele introduse, veți avea nevoie de ele în cazul în care aveți probleme cu schimbul",
+      WhatShouldBeDone2:
+        "Faceți clic pe butonul aplicație de plată și urmați instrucțiunile suplimentare",
+      WhatShouldBeDone3: "După plată, scrieți operatorului despre plată",
+      WhatShouldBeDone4: "Așteptați chitanța în contul sau în portofel",
+      Terms_h:
+        "Termenii și condițiile USDTAsia și Politica de confidențialitate.",
+      Terms_allTxt:
+        "<br /> 1. Părțile la Acord.<br /><br />" +
+        " 1.1 Acordul se încheie între serviciul de internet pentru schimbul de active electronice usdtasia, denumit în continuare Serviciul, pe de o parte, și Utilizator, în persoana celui care a utilizat serviciile Serviciului, pe de altă parte. mână.<br /><br />" +
+        "2. Listă de termeni.<br /><br />" +
+        "2.1. Serviciul este un sistem de furnizare de servicii de internet pentru schimbul, vânzarea și cumpărarea de monede digitale și/sau electronice <br /><br />" +
+        "2.2. Utilizator este orice persoană fizică care utilizează serviciile Serviciului<br /><br />" +
+        "2.3. Aplicația este o expresie a intenției Utilizatorului de a utiliza unul dintre serviciile oferite de Serviciu, prin completarea unui formular electronic prin intermediul site-ului Serviciului, în termenii și condițiile descrise în Acord și specificate în parametrii acestei Aplicații. <br /><br />" +
+        "2.4. Unitatea electronică este o unitate de cont a sistemelor electronice de decontare respective, care denotă un anumit număr de creanțe sau alte drepturi care decurg din acordul sistemelor electronice de decontare cu utilizatorii acestora <br /><br />" +
+        "3.Subiectul acordului.<br /><br />" +
+        "3.1. Obiectul prezentului acord este de a oferi utilizatorului serviciului serviciul de schimb de unități electronice. <br /><br />" +
+        "4. Termeni și condiții generale<br /><br />" +
+        "4.1. Prezentul Acord reglementează relațiile dintre Utilizator și Serviciu cu privire la serviciile furnizate de Serviciu către Utilizator și anulează toate acordurile anterioare dintre Serviciu și Utilizator pe acest subiect<br /><br />" +
+        "4.2. Acest acord intră în vigoare din momentul în care Utilizatorul finalizează formarea Aplicației<br /><br />" +
+        "4.3 Ambele părți, reprezentate de Serviciu și Utilizator, acceptă în scris acest acord ca un contract echivalent.<br /><br />" +
+        "4.4. Serviciul își rezervă dreptul de a face unilateral modificări acestui acord fără notificarea corespunzătoare a Utilizatorului, dar cu publicarea obligatorie a versiunii actuale a acordului pe această pagină.<br /><br />" +
+        "4.5. Acest acord include clauze și subclauze ale regulilor descrise în articolele „Reguli de depozit pentru criptomonede” și „Reguli de rambursare”. <br /><br />" +
+        "5. Termeni și condiții <br /><br />" +
+        "5.1. În cazul în care contul de Serviciu primește o sumă care diferă de suma specificată în cerere, Serviciul face o recalculare care corespunde cu primirea efectivă a Unităților Electronice. Majoritatea direcțiilor Serviciului sunt efectuate în mod automat, atunci când creând o Aplicație de direcționare manuală a schimbului, este necesar să vă asigurați că operatorul lucrează (în caz contrar, plata se va face în timpul programului de lucru al operatorului, procesarea criptomonedei are loc după atingerea numărului de rețea). confirmări definite de Bursă, în funcție de cazul specific Numărul necesar de confirmări de rețea pentru creditarea activelor criptomonede este specificat în articolul ”Reguli pentru depozitele în criptomonede”.<br /> <br />" +
+        "5.2. În cazul în care Utilizatorul solicită o rambursare, aceasta urmează regulile descrise în articolul ”Reguli de rambursare”.<br /><br />" +
+        "5.3. În cazul rezilierii contractului sau primirii unei plăți eronate, Unitățile Electronice se returnează în termen de 72 de ore de la data acordului la Retur.<br /><br />" +
+        "5.4. În cazul în care Unitățile Electronice nu sunt primite de la Utilizator pe contul Serviciului în perioada specificată, din momentul solicitării de către Utilizator, acordul dintre părți este reziliat de către Serviciu, pe de o parte, ca și acord. nu intră în vigoare În cazul în care unitățile electronice sunt transferate în contul Serviciului după perioada specificată, astfel de fonduri sunt supuse rambursării conform ”Regulilor de rambursare” după ce cererea utilizatorului sau Serviciul restabilește aplicația utilizatorului. Consimțământul utilizatorului.<br /><br />" +
+        "5.5. Dacă există o întârziere în transferul de fonduri la detaliile specificate de Utilizator din vina sistemului de decontare, Serviciul nu este răspunzător pentru daune rezultate din primirea îndelungată a fondurilor. În acest caz, Utilizatorul trebuie să fie de acord că toate revendicările vor fi aduse sistemului de soluționare, iar Serviciul își oferă asistența cât mai bine, în limitele legii <br /> <br />" +
+        "5.6. În cazul utilizării serviciilor Serviciului, Utilizatorul este pe deplin de acord că Serviciul poartă o responsabilitate limitată în cadrul acestor reguli a unităților de titlu primite și nu oferă garanții suplimentare Utilizatorului, precum și nu suportă responsabilitate suplimentară pentru Utilizator. În consecință, Utilizatorul nu poartă responsabilitate suplimentară pentru Serviciu" +
+        "5.7.Serviciul nu este responsabil pentru daune și consecințe în cazul transferului eronat al unităților electronice dacă Utilizatorul a specificat detalii incorecte la crearea Aplicației. <br /> <br />" +
+        "5.8. Cererile de plată sunt acceptate în cel mult 2 ore de la efectuarea plății. Costul serviciului de căutare și rambursare a plăților eronate este de 500 usdt. <br /> <br />" +
+        "5.8.1. În cazul în care Clientul specifică un card bancar emis de o instituție financiară care nu se potrivește cu banca selectată în direcția tranzacției de schimb, sau greșește detaliile specificate ale beneficiarului, în conformitate cu termenii prestarea serviciului, Clientul este obligat să plătească o taxă de 100 usdt pentru procesarea reclamației rezultată din această discrepanță <br /> <br />" +
+        "5.9.Este strict interzisă utilizarea Serviciului pentru transferuri ilegale și acțiuni frauduloase. La încheierea acestui acord, Utilizatorul se obligă să îndeplinească aceste cerințe și în caz de fraudă să poarte răspunderea penală stabilită de lege. <br /> <br />" +
+        "6.10. La prima solicitare Serviciul are dreptul de a transfera informații despre transferul unităților electronice către autoritățile de aplicare a legii, administrarea sistemelor de plată, precum și către victimele acțiunilor ilegale care au suferit ca urmare a fraudei dovedite de autoritățile judiciare. <br /> <br />" +
+        "5.11. Utilizatorul se obligă să prezinte toate documentele care dovedesc identitatea sa în caz de suspiciune de fraudă și spălare de bani <br /> <br />" +
+        "5.12. Utilizatorul se obligă să nu interfereze cu funcționarea Serviciului și să nu deterioreze software-ul și hardware-ul acestuia, iar Utilizatorul se obligă să furnizeze informații exacte pentru a se asigura că Antreprenorul îndeplinește toți termenii și condițiile contractului. <br / > <br />" +
+        "5.13. Utilizatorul este obligat să respecte normele corespunzătoare legislației, precum și să nu modifice fluxurile de comunicare și să nu creeze obstacole în funcționarea normală a codului de program al Serviciului <br /> <br / >" +
+        "5.14. Utilizatorului îi este interzis să facă schimburi în favoarea terților <br /> <br /> " +
+        "5.15. În cazul tranzacțiilor suspecte, Utilizatorului i se poate solicita verificarea. <br /> <br />" +
+        "5.16. În cazul utilizării cardurilor bancare cu comision de la destinatar (pentru utilizarea limitei de credit, carduri pentru plăți sociale etc.) taxa este plătită de către destinatar, serviciul de schimb nu poartă nicio responsabilitate pentru astfel de taxe <br /> <br />" +
+        "5.17. Toate plățile efectuate în monede fiat se fac fără a folosi fracții zecimale <br /> <br />" +
+        "6. Neprevăzute. <br /> <br />" +
+        "6.1 Dacă în procesul de prelucrare a Aplicației Utilizatorului apar circumstanțe neprevăzute care contribuie la neîndeplinirea de către Serviciu a termenilor și condițiilor Acordului, termenele limită pentru îndeplinirea Aplicației sunt amânate pentru perioada corespunzătoare a duratei de forță majoră. . Serviciul nu este responsabil pentru obligațiile restante <br />" +
+        "6.2 În cazul în care clientul nu a primit un transfer internațional, vom face o rambursare, perioada de rambursare este de 10 zile lucrătoare <br /> <br />" +
+        "7.Reclamații și dispute. <br /> <br />" +
+        "7.1 Reclamațiile conform prezentului Acord sunt acceptate de către Serviciu sub forma unui e-mail în care Utilizatorul specifică esența revendicării sau în chat-ul de asistență tehnică al Utilizatorilor. <br /> <br />" +
+        "8. Renunțarea la obligații <br /> <br />" +
+        "8.1. Serviciul are dreptul de a refuza încheierea contractului și de a îndeplini Aplicația fără a oferi niciun motiv. <br /> <br />" +
+        "9. Stocarea și prelucrarea datelor cu caracter personal <br /> <br />" +
+        "9.1. Serviciul acceptă date personale de la Utilizator în scopul efectuării de operațiuni, pe care Serviciul se obligă să le stocheze în formă criptată, să nu le facă publice, să nu le transfere către terți, cu excepția cazurilor descrise în clauza 5.9 din prezentul acord 5.9 din acest acord <br /> <br />" +
+        "9.2. Serviciul are dreptul, dacă este necesar, să desfășoare în mod independent activități de colectare a datelor suplimentare despre Utilizator prin orice mijloace disponibile. Toate informațiile colectate ca urmare a unor astfel de activități nu sunt făcute publice, nu sunt transferate către terți, cu excepția celor descrise în paragraful 5.9 din acest acord <br /> <br />" +
+        "9.3. Serviciul are dreptul de a transfera datele personale ale Utilizatorului și detaliile tranzacțiilor efectuate de către Utilizator, cu condiția ca statutul lor confidențial să fie păstrat la cererea oficială scrisă a Bursei sau a Sistemului de Decontare Electronică/hotărâre judecătorească/din proprie inițiativă ( în caz de necesitate a unei investigații) către autoritățile de aplicare a legii, precum și către Utilizatorul căruia îi aparțin <br /> <br />" +
+        "9.4. Toate datele colectate despre Utilizator, precum și detaliile tranzacțiilor efectuate de acesta/ea, vor fi stocate în baza de date a Serviciului timp de cinci ani din momentul executării de către Serviciu a ultimei Comenzi a Utilizatorului",
+      Support_q1:
+        "Contactarea asistenței tehnice pentru site-ul web este rapidă și ușoară!",
+      Support_q2: "Atenţie! Nu scriem niciodată mai întâi!",
+      Support_q3: "Online 24/7",
+      Support_a1:
+        "Echipa noastră de site vă va ajuta să vă rezolvați orice întrebare, asistența Clean Exchange este o echipă experimentată, calificată și de încredere. Alegeți o modalitate de comunicare adecvată și confortabilă și scrieți operatorilor noștri prin e-mail, telegramă sau în fereastra de chat de pe site! Veți primi un răspuns rapid și clar, este atât de ușor!",
+      Support_a2:
+        "În rețelele de socializare există un număr mare de escroci care vor încerca să vă deturneze banii pretinzând că suntem noi. Este important să știți că nu trimitem niciodată solicitări de adăugare sau trimitere de linkuri rău intenționate. O modalitate excelentă de a vă proteja ar fi să ne adăugați doar printr-un link de pe site, nu printr-o căutare. În caz contrar, nu vă garantăm că veți comunica cu noi și nu cu escrocii al căror scop este obținerea datelor dumneavoastră personale.",
+      Support_a3:
+        "În serviciul nostru beneficiați de asistență 24/7, puteți adresa orice întrebare operatorilor noștri, indiferent de rata bitcoin în acest moment sau aveți o eroare tehnică la traducere, personalul nostru este întotdeauna gata să vă răspundă! Cu toate acestea, eficiența specialiștilor noștri este la cel mai înalt nivel. Iar numărul lor ne permite să organizăm munca non-stop a serviciului de asistență - fără prânzuri, sărbători și weekenduri.",
+      Support_a4: "Telegram - @usdtasia_support",
+      Support_a5: "Mail support@usdtasia.com",
+      Support_a6: "24/7 - chat pe site",
+      Affilate_h: "Programul Afiliat ",
+      Affilate_txt1:
+        "Programul de afiliere permite utilizatorilor înregistrați să câștige din redevențe afiliate din schimburile de clienți care au venit pe site-ul nostru printr-un link de recomandare. Participarea la program este destul de simplă. Trebuie să vă înregistrați pe site-ul nostru. Și scrieți la asistența tehnică, vi se va oferi linkul personal pentru a face schimbul. Procentajul partenerului depinde de cantitatea totală de schimburi ale recomandărilor dvs. și va varia în funcție de tabel:",
+      Affilate_txt2:
+        "Retragerea profitului afiliatului se efectuează în fiecare zi. Suma minimă pentru retragere este de 10 USD.",
+      Affilate_level: "Nivel",
+      Affilate_refs: "Valoarea totală a schimburilor de recomandări ",
+      Affilate_yours: "Profitul tău",
+      Home_checkboxTxt1:
+        "Folosind site-ul și creând un schimb, sunteți de acord",
+      Home_checkboxTxt2: "Termenii și condițiile UsdtAsia",
+      Home_checkboxTxt3: "şi",
+      Home_checkboxTxt4: "Politica de confidențialitate.",
+      Order_data: "Data comenzii:",
+      Order_rate: "Rata de schimb:",
+      Order_statusLong: "Starea procesării comenzii",
+      Order_statusShort: "Stare:",
+      Order_pay: "PLATEȚI COMANDA",
+      Order2_congrat:
+        "Felicitări! Aproape ați finalizat schimbul, pentru a-l finaliza, urmați acești pași",
+      Order2_toFinish1: "Pentru a finaliza tranzacția",
+      Order2_toFinish2: "pentru suma de:",
+      Order2_toFinish3: "va trebui să faceți următoarele:",
+      Order2_inst1: "Efectuați o plată folosind detaliile furnizate mai jos",
+      Order2_inst2: "Așteptați ca tranzacția să fie confirmată în rețea.",
+      Order2_inst3: "Așteptați ca fondurile dvs. să fie transferate",
+      Order2_attention1: "Atenţie! ",
+      Order2_attention2:
+        "Înainte de a plăti, deschideți e-mailul și verificați numărul portofelului specificat mai jos cu numărul primit în mesajul de e-mail. Numerele portofelului trebuie să se potrivească. Dacă nu se potrivesc, nu efectuați plata și contactați asistența! Verificarea numărului portofelului este OBLIGATORIE.",
+      Order2_qr1: "Valută:",
+      Order2_qr2: "Detalii:",
+      Order2_qr3: "Copiați adresa",
+      Order2_t1:
+        "* În funcție de țară, fondurile se eliberează la birou sau printr-un reprezentant.",
+      Order2_t2:
+        "* Pentru sume de peste 10.000 USD în echivalent, un schimb este posibil la birou sau cu participarea unui reprezentant. Această opțiune este individuală și depinde de o serie de factori.",
+      Order2_t3:
+        "* REȚINEȚI că tranzacțiile cu criptomonede nu sunt revocabile. Verificați cu atenție adresa la care trimiteți fondurile. Nu vom putea returna fondurile dacă sunt trimise într-un portofel greșit.",
+      Order2_t4:
+        "* Tranzacția este considerată confirmată după 3 confirmări pentru rețeaua Bitcoin.",
+      Order2_cancel: "ANULAȚI COMANDA",
+      Order2_paid: "COMANDA PLATITA",
+      History_1: "DATA",
+      History_2: "DARE",
+      History_3: "CANTITATE",
+      History_4: "PRIMIREA",
+      History_5: "STARE",
+      Login_1: "Log in",
+      Login_2: "Înregistrare",
+      Login_3: "Parolă",
+      Login_4: "Ați uitat parola?",
+      Login_5: "Ține-mă minte",
+      Login_6: "LOG IN",
+      Registration_1: "Repetați parola",
+      Registration_2: "Am citit și sunt de acord cu termenii și condițiile",
+      Registration_3: "REGISTRU",
     },
   },
 };
