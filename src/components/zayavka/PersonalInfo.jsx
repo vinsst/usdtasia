@@ -29,7 +29,7 @@ function PersonalInfo({ name, email, telega, wallet }) {
           <p className="qrSection__reqizity_word white">
             {t("Order2_qr2")}&nbsp;
           </p>
-          <p className="qrSection__reqizity_code">{wallet}</p>
+          <p className="order__persInfo_email">{wallet}</p>
         </div>
       </div>
     </section>
