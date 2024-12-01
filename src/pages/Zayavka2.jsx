@@ -143,12 +143,6 @@ function Zayavka2() {
               <p className="pay__instruction_p">{t("Order2_inst3")}</p>
             </div>
           </section>
-          <section className="pay__waning_txt">
-            <p className="pay__warning_p">
-              <span className="white">{t("Order2_attention1")} </span>
-              <span>{t("Order2_attention2")}</span>
-            </p>
-          </section>
           <section className="qrSection">
             <div className="qrSection_content">
               <QRCodeSVG value={transactionData.wallet} size={193} />

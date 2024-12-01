@@ -141,6 +141,7 @@ function Zayavka() {
             email={transactionData.email}
             name={transactionData.name}
             telega={transactionData.telegram}
+            wallet={transactionData.wallet}
           />
           <section className="order_status">
             <p className="order__status_p">

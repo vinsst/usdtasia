@@ -4,7 +4,7 @@ import order_email from "../../assets/img/order_email.svg";
 import order_telegram from "../../assets/img/order_telegram.svg";
 import { useTranslation } from "react-i18next";
 
-function PersonalInfo({ name, email, telega }) {
+function PersonalInfo({ name, email, telega, wallet }) {
   const { t } = useTranslation();
   return (
     <section className="order_persInfo">
@@ -24,6 +24,12 @@ function PersonalInfo({ name, email, telega }) {
           <img src={order_telegram} alt="" className="order__persInfo_img" />
           <div className="order__persInfo_emailWord">Telegram:</div>
           <div className="order__persInfo_email">{telega}</div>
+        </div>
+        <div className="qrSection_reqizity">
+          <p className="qrSection__reqizity_word white">
+            {t("Order2_qr2")}&nbsp;
+          </p>
+          <p className="qrSection__reqizity_code">{wallet}</p>
         </div>
       </div>
     </section>
