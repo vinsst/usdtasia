@@ -32,7 +32,10 @@ function History() {
               headers: { Authorization: `Bearer ${token}` },
             }
           );
-          setTransactions(response.data.transactions);
+          const sortedTransactions = response.data.transactions.sort(
+            (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
+          );
+          setTransactions(sortedTransactions);
           setTotalPages(response.data.pages);
         } catch (error) {
           console.error("Error fetching data:", error);
