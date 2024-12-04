@@ -24,8 +24,10 @@ function Header() {
   const [login, setLogin] = useState(false);
   const [registr, setRegistr] = useState(false);
   const [burger, setBurger] = useState(false);
+  const [dropdown, setDropdown] = useState(false);
 
   const loginRef = useRef(null);
+  const logoutRef = useRef(null);
   const registrRef = useRef(null);
   const burgerContentRef = useRef(null);
 
@@ -47,6 +49,7 @@ function Header() {
     setLogin(false);
     setRegistr(false);
     setBurger(false);
+    setDropdown(false);
     document.body.classList.remove("no-scroll");
   };
 
@@ -58,6 +61,13 @@ function Header() {
 
   useEffect(() => {
     const handleClickOutside = (event) => {
+      if (
+        dropdown &&
+        logoutRef.current &&
+        !logoutRef.current.contains(event.target)
+      ) {
+        handleCloseModals();
+      }
       if (
         login &&
         loginRef.current &&
@@ -85,7 +95,7 @@ function Header() {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [login, registr, burger]);
+  }, [dropdown, login, registr, burger]);
 
   const loginTxt = useSelector((state) => state.loginReducer.login);
 
@@ -123,9 +133,6 @@ function Header() {
     dispatch(removeLogin());
   };
 
-  // dropdown
-
-  const [dropdown, setDropdown] = useState(false);
   const showDropdown = () => {
     setDropdown(!dropdown);
   };
@@ -273,6 +280,7 @@ function Header() {
                 <img src={arrow_down} alt="" className="group2__lang_arr" />
                 {dropdown && (
                   <div
+                    ref={logoutRef}
                     className="quick__curency_dropdown quick__curency_dropdown_header"
                     onClick={logout}
                   >

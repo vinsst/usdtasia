@@ -88,7 +88,7 @@ function ExchangeContainer() {
 
   const loginTxt = useSelector((state) => state.loginReducer.login);
 
-  const [buttonText, setButtonText] = useState("EXCHANGER NOW");
+  const [buttonText, setButtonText] = useState("EXCHANGE NOW");
 
   // checking if email is valid
 
@@ -107,7 +107,7 @@ function ExchangeContainer() {
     if (num < minSend || convertedValue < minGet) {
       setButtonText("Сумма обмена меньше минимума");
       setTimeout(() => {
-        setButtonText("EXCHANGER NOW");
+        setButtonText("EXCHANGE NOW");
       }, 2000);
     }
   };
@@ -303,7 +303,7 @@ function ExchangeContainer() {
               className="quick__exchange_btn"
               onClick={creatingTransaction}
             >
-              EXCHANGER NOW
+              EXCHANGE NOW
             </button>
           </div>
         ) : (
