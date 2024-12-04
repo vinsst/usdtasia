@@ -62,7 +62,7 @@ function ExchangeContainer() {
     dispatch(addHighlight());
   };
 
-  const [checked, setChecked] = useState(false);
+  const [checked, setChecked] = useState(true);
 
   const handleCheckboxChange = () => {
     setChecked(!checked);
